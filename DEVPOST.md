@@ -54,3 +54,7 @@ firebase-remote-config, firebase-hosting, react, vite, typescript
 ## Pre-existing work
 Catalog data and delivery-fee rules come from the open-source Shopmate Hermes plugin (Python). The web app, hybrid AI
 layer and all Firebase integration were built during the submission period.
+
+## Links
+- Live app: https://shopmate-web-xi.vercel.app
+- Source: https://github.com/DaveTech2/shopmate-web

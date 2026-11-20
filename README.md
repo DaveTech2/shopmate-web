@@ -7,6 +7,9 @@ Built for **#BuildHybridAI 2026** on **Firebase AI Logic hybrid inference**: the
 latency-sensitive run **on your device with Gemini Nano** (Chrome Prompt API), and the heavier reasoning runs on **cloud Gemini** , 
 with automatic fallback in both directions, and a badge on every AI answer showing which one actually replied.
 
+**Live app:** https://shopmate-web-xi.vercel.app  
+**Source:** https://github.com/DaveTech2/shopmate-web
+
 ## Value proposition
 Online shoppers in markets like Nigeria juggle vague search boxes, hidden delivery fees and slow comparisons on
 expensive mobile data. Shopmate turns one sentence into a ranked shortlist with reasons, a true landed price
@@ -23,8 +26,7 @@ like "flat feet") on the device whenever possible.
 - **Accounts**: instant anonymous guest sessions (judges can try immediately), email/password and Google sign-in;
   guests are upgraded in place (cart and orders carry over).
 - **Cart, demo checkout and order tracking**: Firestore-backed; checkout is **test mode only, no real charges**.
-- **Status chip**: shows whether Gemini Nano is available / downloadable / downloading, with a settings panel to switch inference mode
-  and warm up the on-device model.
+- **AI settings**: a settings panel lets you switch hybrid inference mode and, on a supported desktop Chrome, download or warm up Gemini Nano.
 
 ## How hybrid inference is used (`src/ai/hybrid.ts`)
 | Task | Mode | Why |

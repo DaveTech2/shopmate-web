@@ -9,3 +9,10 @@ shots
 *.log
 .env*
 scripts/__pycache__/
+
+# keys and service accounts
+*.pem
+*.p12
+*serviceAccount*.json
+google-services.json
+GoogleService-Info.plist
