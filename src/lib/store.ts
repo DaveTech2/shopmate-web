@@ -13,7 +13,7 @@ export interface Order {
   subtotal: number;
   delivery: number;
   total: number;
-  currency: string; // currency of amounts (NGN — catalog base)
+  currency: string; // currency of amounts (NGN, catalog base)
   speed: "standard" | "express";
   eta: string;
   city: string;

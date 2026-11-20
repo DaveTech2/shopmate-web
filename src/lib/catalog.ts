@@ -123,5 +123,5 @@ export function withinBudget(p: Product, q: SearchQuery): boolean {
 export function productBrief(p: Product, cur: Currency): string {
   const specs = Object.entries(p.specs || {}).map(([k, v]) => `${k}: ${v}`).join("; ");
   const sizes = p.sizes ? `; sizes EU ${p.sizes.join(",")}` : "";
-  return `[${p.id}] ${p.title} — ${money(p.price, p.currency, cur)}${specs ? "; " + specs : ""}${sizes}`;
+  return `[${p.id}] ${p.title}: ${money(p.price, p.currency, cur)}${specs ? "; " + specs : ""}${sizes}`;
 }

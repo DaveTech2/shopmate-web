@@ -81,7 +81,7 @@ export function StatusChip({ onClick }: { onClick(): void }) {
   const { st, prog } = useDeviceStatus();
   const cls = st === "available" ? "ok" : st === "downloadable" || st === "downloading" ? "warn" : "cloud";
   return (
-    <button className="chip" onClick={onClick} title="On-device model status — click for AI settings">
+    <button className="chip" onClick={onClick} title="On-device model status, click for AI settings">
       <span className={`dot ${cls}`} />
       {prog !== null ? `Downloading Nano ${Math.round(prog * 100)}%` : ST_TEXT[st]}
       {!isFirebaseConfigured && <span style={{ color: "var(--amber)", fontWeight: 600 }}>· Demo mode</span>}
@@ -121,7 +121,7 @@ export function SettingsDialog({ onClose }: { onClose(): void }) {
           </div>
           <div className="field"><label>Hybrid inference mode</label>
             <select className="select" value={mode} onChange={(e) => { const m = e.target.value as ModeSetting; setMode(m); setModeSetting(m); }}>
-              <option value="auto">Auto — on-device for light tasks, cloud for ranking (recommended)</option>
+              <option value="auto">Auto: on-device for light tasks, cloud for ranking (recommended)</option>
               <option value="PREFER_ON_DEVICE">Prefer on-device for everything</option>
               <option value="ONLY_ON_DEVICE">Only on-device (private / offline)</option>
               <option value="PREFER_IN_CLOUD">Prefer cloud</option>

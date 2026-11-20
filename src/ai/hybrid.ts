@@ -1,10 +1,10 @@
 /**
- * Shopmate hybrid inference — Firebase AI Logic (firebase/ai).
+ * Shopmate hybrid inference: Firebase AI Logic (firebase/ai).
  *
  * Light, private, latency-sensitive tasks prefer the on-device model (Gemini Nano via Chrome's
  * Prompt API) and fall back to cloud Gemini automatically:
  *   - intent parsing (what / budget / use / size / location → structured JSON)
- *   - 2–3 item compare, quick product summaries, natural-language cart edits
+ *   - 2 or 3 item compare, quick product summaries, natural-language cart edits
  * Heavier reasoning prefers the cloud and can still fall back to on-device:
  *   - ranking a candidate set with "why it fits" reasons
  * Tool-driven agent work is cloud-only (function calling is not supported on-device):
@@ -100,6 +100,8 @@ const SYSTEM: Record<Task, string> = {
     "You edit a shopping cart. Map the shopper's request to add/remove/set_qty operations using ONLY product ids from the given cart or catalog list.",
   summary: "You are a concise shopping assistant. Answer in at most 2 short sentences using only the facts given.",
 };
+const STYLE = " Write in plain, natural language. Never use em dashes or en dashes; use commas or periods instead.";
+(Object.keys(SYSTEM) as Task[]).forEach((k) => { SYSTEM[k] += STYLE; });
 
 const models = new Map<string, GenerativeModel>();
 function effectiveMode(task: Task): (typeof InferenceMode)[keyof typeof InferenceMode] {
@@ -298,7 +300,7 @@ export async function planBulkOrder(text: string, cur: Currency, place: Place): 
         tools,
         systemInstruction:
           `You are Shopmate's bulk-order planner. Delivery city: ${place.name}. Currency: ${cur}. ` +
-          "Use search_catalog to find items, add_to_plan for each line with a sensible quantity, optionally quote_delivery, then reply with a 2-sentence summary.",
+          "Use search_catalog to find items, add_to_plan for each line with a sensible quantity, optionally quote_delivery, then reply with a 2-sentence summary." + STYLE,
       },
     });
     const chat = agent.startChat();

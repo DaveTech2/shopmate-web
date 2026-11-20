@@ -24,7 +24,7 @@ export default function Checkout() {
     e.preventDefault();
     setBusy(true);
     const u = await ensureGuest();
-    await new Promise((r) => setTimeout(r, 900)); // simulated payment processing — no real charge
+    await new Promise((r) => setTimeout(r, 900)); // simulated payment processing, no real charge
     const id = await createOrder({
       uid: u.uid,
       lines: lines.map((l) => ({ id: l.id, title: l.p.title, qty: l.qty, price: l.p.price, currency: l.p.currency, image: l.p.image })),
@@ -39,7 +39,7 @@ export default function Checkout() {
     <AppShell>
       <main className="wrap page" style={{ maxWidth: 620 }}>
         <h1 className="pagetitle">Checkout</h1>
-        <div className="testnote" style={{ margin: "8px 0 16px" }}><ShieldCheck size={16} style={{ flex: "none" }} /> Demo checkout — test mode only. No real payment is taken and nothing will ship.</div>
+        <div className="testnote" style={{ margin: "8px 0 16px" }}><ShieldCheck size={16} style={{ flex: "none" }} /> Demo checkout, test mode only. No real payment is taken and nothing will ship.</div>
         <form className="stack" onSubmit={place_}>
           <div className="card" style={{ padding: 16 }}>
             <div className="field"><label>Full name</label><input className="input" required value={name} onChange={(e) => setName(e.target.value)} /></div>
@@ -56,7 +56,7 @@ export default function Checkout() {
               <div className="stack">
                 <input className="input" value="4084 0840 8408 4081" readOnly aria-label="Test card number" />
                 <div className="row"><input className="input" value="12/30" readOnly aria-label="Expiry" /><input className="input" value="408" readOnly aria-label="CVV" /></div>
-                <span className="tiny"><Lock size={11} /> Public sandbox test card (Paystack test mode format). Simulated — never charged.</span>
+                <span className="tiny"><Lock size={11} /> Public sandbox test card (Paystack test mode format). Simulated, never charged.</span>
               </div>
             )}
           </div>

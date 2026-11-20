@@ -1,4 +1,4 @@
-// Port of Shopmate's delivery.py (github.com/DaveTech2/Shopmate) — distance bands + size surcharges.
+// Port of Shopmate's delivery.py (github.com/DaveTech2/Shopmate): distance bands + size surcharges.
 import places from "../data/locations.json";
 import type { Product } from "./catalog";
 

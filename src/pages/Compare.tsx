@@ -32,7 +32,7 @@ export default function Compare() {
         <h1 className="pagetitle">Compare</h1>
         {items.length < 2 ? (
           <div className="card" style={{ padding: 20 }}>
-            <p className="muted" style={{ marginTop: 0 }}>Pick 2–3 products to compare side by side — tap “Compare” on any listing, or ask in chat: “compare the first two”.</p>
+            <p className="muted" style={{ marginTop: 0 }}>Pick 2 or 3 products to compare side by side. Tap “Compare” on any listing, or ask in chat: “compare the first two”.</p>
             <div className="row"><Link to="/discover" className="pill orange">Browse listings</Link><Link to="/shop" className="pill">Ask Shopmate</Link></div>
             {items.length === 1 && <p className="tiny">Selected: {items[0].title}</p>}
           </div>
@@ -61,10 +61,10 @@ export default function Compare() {
                 <tbody>
                   <tr><th>Price</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}><b>{money(p.price, p.currency, currency)}</b></td>)}</tr>
                   <tr><th>Delivery to {place.name}</th>{items.map((p) => { const q = quote(place, [[p, 1]]); return <td key={p.id} className={p.id === win ? "win" : ""}>{money(q.fee, q.fee_currency, currency)} · {q.eta}</td>; })}</tr>
-                  {specKeys.map((k) => <tr key={k}><th>{k}</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{p.specs?.[k] || "—"}</td>)}</tr>)}
-                  {res && <tr><th>Best for</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{res.data.items.find((i) => i.id === p.id)?.best_for || "—"}</td>)}</tr>}
-                  {res && <tr><th>Pros</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{(res.data.items.find((i) => i.id === p.id)?.pros || []).join(" · ") || "—"}</td>)}</tr>}
-                  {res && <tr><th>Cons</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{(res.data.items.find((i) => i.id === p.id)?.cons || []).join(" · ") || "—"}</td>)}</tr>}
+                  {specKeys.map((k) => <tr key={k}><th>{k}</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{p.specs?.[k] || "-"}</td>)}</tr>)}
+                  {res && <tr><th>Best for</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{res.data.items.find((i) => i.id === p.id)?.best_for || "-"}</td>)}</tr>}
+                  {res && <tr><th>Pros</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{(res.data.items.find((i) => i.id === p.id)?.pros || []).join(" · ") || "-"}</td>)}</tr>}
+                  {res && <tr><th>Cons</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{(res.data.items.find((i) => i.id === p.id)?.cons || []).join(" · ") || "-"}</td>)}</tr>}
                   <tr><th />{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}><button className="pill orange sm" onClick={() => addToCart(p.id)}><Plus size={13} /> Add</button></td>)}</tr>
                 </tbody>
               </table>

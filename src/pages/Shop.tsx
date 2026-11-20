@@ -75,7 +75,7 @@ export default function Shop() {
     ensureDeviceModel();
     setBusy(true);
     setMsgs((m) => [...m, { role: "user", text: q }, { role: "bot", pending: true }]);
-    const reply = (m: Omit<Msg, "role">) => setMsgs((all) => [...all.filter((x) => !x.pending), { ...m, role: "bot" }]);
+    const reply = (m: Omit<Msg, "role">) => setMsgs((all) => [...all.filter((x) => !x.pending), { ...m, ...(typeof m.text === "string" ? { text: m.text.replace(/\s*[—–]\s*/g, ", ") } : {}), role: "bot" }]);
     try {
       const pool = lastResults();
       const ir = await parseIntent(q, {
@@ -102,7 +102,7 @@ export default function Shop() {
         case "cart_add": {
           const ids = matchRefs(intent.product_refs, pool);
           const id = ids[0] || pool[0];
-          if (!id) return reply({ text: "Tell me which product to add — search for something first.", badges: [b1], intent });
+          if (!id) return reply({ text: "Tell me which product to add. Search for something first.", badges: [b1], intent });
           await addToCart(id, Math.max(1, intent.quantity || 1));
           return reply({ text: `Added ${Math.max(1, intent.quantity || 1)} × ${getProduct(id)!.title} to your cart.`, badges: [b1], intent });
         }

@@ -1,4 +1,4 @@
-// DEMO MODE ONLY — used when no Firebase project is configured (or as a labelled fallback if a
+// DEMO MODE ONLY. Used when no Firebase project is configured (or as a labelled fallback if a
 // Firebase AI Logic call fails). Deterministic rules, clearly badged "Demo · simulated" in the UI.
 import { categories, getProduct, money, toCurrency, type Currency, type Product } from "../lib/catalog";
 import type { CartOps, CompareResult, Intent, RankResult } from "./schemas";
@@ -56,7 +56,7 @@ function reasonsFor(p: Product, intent: Intent, cur: Currency): string[] {
   if (intent.budget_max) {
     const usd = toCurrency(p.price, p.currency, "USD");
     const cap = toCurrency(intent.budget_max, intent.budget_currency || "USD", "USD");
-    if (usd <= cap) r.push(`${money(p.price, p.currency, cur)} — within your ${intent.budget_currency === "NGN" ? "₦" : "$"}${intent.budget_max.toLocaleString()} budget`);
+    if (usd <= cap) r.push(`${money(p.price, p.currency, cur)}, within your ${intent.budget_currency === "NGN" ? "₦" : "$"}${intent.budget_max.toLocaleString()} budget`);
   }
   if (s.Battery && /battery/i.test(intent.query + (intent.must_have || []).join(" "))) r.push(`Battery: ${s.Battery}`);
   if (s.Support && /flat|arch|stability/i.test(intent.query + intent.use)) r.push(`${s.Support}`);
