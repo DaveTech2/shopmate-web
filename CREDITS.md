@@ -67,6 +67,10 @@ Every product photo is a real photo of that exact product. Photos were cut out o
 | Huawei Band 4 Fitness Smartwatch | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Huawei_Smartwatch_(Band_4).jpg) | CC0, TheArchivistMan |
 | Mechanical Keyboard (Hot-swap, RGB) | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:Mechanical_Keyboard.jpg) | CC BY-SA 4.0, SolarMainframe |
 | Wireless Optical Mouse | [commons.wikimedia.org](https://commons.wikimedia.org/wiki/File:A_wireless_computer_mouse.jpg) | CC BY-SA 4.0, Pixloom |
+| Monster Zero Ultra 1 can (16 oz) | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0070847012474) | CC BY-SA 3.0 (Open Food Facts contributors) |
+| Athletic Brewing Co Cerveza Atletica | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0855352008989) | CC BY-SA 3.0 (Open Food Facts contributors) |
+| Reser's Main St. Bistro Signature Macaroni & Cheese | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0071117025149) | CC BY-SA 3.0 (Open Food Facts contributors) |
+| Healthy Choice CAFÉ STEAMERS Chicken Margherita with Balsamic 9.5 oz | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0072655001053) | CC BY-SA 3.0 (Open Food Facts contributors) |
 
 ## Other
 

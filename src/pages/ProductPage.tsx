@@ -34,6 +34,7 @@ export default function ProductPage() {
             <span className="tiny">{categoryName(p.category)} · {p.merchant}</span>
             <h1 className="pagetitle" style={{ margin: 0 }}>{p.title}</h1>
             <div className="price" style={{ fontSize: 26 }}>{money(p.price, p.currency, currency)} {currency !== "USD" && <small>{money(p.price, p.currency, "USD")}</small>}</div>
+            {p.priceSource?.url && p.priceUpdatedAt && <span className="tiny">Price checked {p.priceUpdatedAt} at <a className="link" href={p.priceSource.url} target="_blank" rel="noopener noreferrer">{p.priceSource.name}</a></span>}
             {p.specs && (
               <table className="ctable"><tbody>{Object.entries(p.specs).map(([k, v]) => <tr key={k}><th>{k}</th><td>{v}</td></tr>)}</tbody></table>
             )}

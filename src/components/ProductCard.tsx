@@ -4,12 +4,15 @@ import { useState } from "react";
 import { money, type Product } from "../lib/catalog";
 import { quote } from "../lib/delivery";
 import { useShop } from "../state/shop";
+import { useTheme } from "./ThemeToggle";
 
 export function Thumb({ p, lg = false }: { p: Product; lg?: boolean }) {
   const [bad, setBad] = useState(false);
+  const [theme] = useTheme();
+  const src = theme === "light" && p.image.startsWith("/products/") ? p.image.replace("/products/", "/products/light/") : p.image;
   return (
     <div className={`thumb${lg ? " lg" : ""}`}>
-      {bad ? <ImageOff size={22} color="#9a8a84" /> : <img src={p.image} alt={p.title} loading="lazy" referrerPolicy="no-referrer" onError={() => setBad(true)} />}
+      {bad ? <ImageOff size={22} color="#9a8a84" /> : <img src={src} alt={p.title} loading="lazy" referrerPolicy="no-referrer" onError={() => setBad(true)} />}
     </div>
   );
 }

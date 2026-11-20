@@ -82,3 +82,29 @@ earlier Shopmate design mock-up (landing + auth screens only).
 
 ## License
 Apache-2.0, see [LICENSE](LICENSE). Image credits in [CREDITS.md](CREDITS.md).
+
+## Scripts
+
+### Catalog refresh (`scripts/refresh_catalog.py`)
+
+Keeps product prices current in **USD from real US sources** and adds a few new popular products each run.
+
+```bash
+# full run: refresh prices, add 4 new products, build, commit locally, deploy to Vercel prod
+SHOPMATE_IMG_PY=/path/to/python-with-pillow-and-rembg \
+VERCEL_BIN=vercel \
+python3 scripts/refresh_catalog.py --offers scripts/offers/$(date +%F).json --new 4 --deploy
+
+# preview what would change, write nothing
+python3 scripts/refresh_catalog.py --dry-run
+```
+
+How it works:
+
+- **Open Prices** (prices.openfoodfacts.org): dated, crowdsourced receipts from US stores (Walmart, Safeway, Whole Foods, ALDI...) in USD. Used for any product with a `barcode`.
+- **Offer files** (`--offers`, optional): a JSON list of US retailer listings `{id, price, currency: "USD", seller, url, date}` (e.g. gathered by the Shopmate agent with a shopping search). Each entry is checked (USD, has a URL, price ratio vs the last price looks like the same product) before it's used.
+- **New products**: the most-receipted US products from the last 60 days on Open Prices that the catalog doesn't carry yet, in our grocery, drinks, toiletries, beauty, baby and household categories. Each one uses that product's own Open Food/Beauty Facts photo (CC BY-SA), processed by `scripts/process_image.py` into dark and light tiles, and credited in `CREDITS.md`.
+- **No invented prices**: if no fresh source is found, the last price and its `priceUpdatedAt` date are kept. Every refreshed item stores `priceUpdatedAt` and `priceSource {name, url}`; the product page links to it and Discover shows "Prices updated <date>".
+- Runs non-interactively (no prompts), so it can be scheduled daily (cron or a routine).
+
+`scripts/process_image.py SRC OUT_DARK OUT_LIGHT [--framed]` turns any product photo into the 600x600 WebP tiles used by the app (rembg cutout when available, framed card otherwise).

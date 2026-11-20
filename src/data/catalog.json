@@ -108,7 +108,13 @@
    "merchant": "Shopmate demo catalog",
    "product_type": "toothpaste",
    "brand": "Close-Up",
-   "size": "140g"
+   "size": "140g",
+   "barcode": "8934839122508",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi6",
@@ -117,7 +123,12 @@
    "price": 1.73,
    "currency": "USD",
    "image": "/products/d-toi6.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi7",
@@ -126,7 +137,12 @@
    "price": 3.67,
    "currency": "USD",
    "image": "/products/d-toi7.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi8",
@@ -137,7 +153,13 @@
    "image": "/products/d-toi8.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "shampoo",
-   "brand": "Head & Shoulders"
+   "brand": "Head & Shoulders",
+   "barcode": "5601059062534",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-bea1",
@@ -146,7 +168,13 @@
    "price": 3.47,
    "currency": "USD",
    "image": "/products/d-bea1.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "barcode": "4005900369581",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-bea3",
@@ -157,18 +185,30 @@
    "image": "/products/d-bea3.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "soap",
-   "brand": "Dove"
+   "brand": "Dove",
+   "barcode": "8720182264664",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-bea4",
    "title": "Vaseline Original Healing Jelly 368g",
    "category": "beauty",
-   "price": 1.2,
+   "price": 5.97,
    "currency": "USD",
    "image": "/products/d-bea4.webp",
    "merchant": "Shopmate demo catalog",
    "brand": "Vaseline",
-   "size": "368g"
+   "size": "368g",
+   "barcode": "0305210691001",
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/Vaseline-100-Pure-Skin-Protectant-Petroleum-Jelly-13-Oz/10898766"
+   }
   },
   {
    "id": "d-bab3",
@@ -177,7 +217,13 @@
    "price": 6.53,
    "currency": "USD",
    "image": "/products/d-bab3.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "barcode": "6221007032540",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-pha4",
@@ -186,7 +232,13 @@
    "price": 1.87,
    "currency": "USD",
    "image": "/products/d-pha4.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "barcode": "0000208077247",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-pho4",
@@ -195,7 +247,12 @@
    "price": 766.67,
    "currency": "USD",
    "image": "/products/d-pho4.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-pho6",
@@ -204,16 +261,26 @@
    "price": 1233.33,
    "currency": "USD",
    "image": "/products/d-pho6.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-pho3",
    "title": "Samsung Galaxy A16 128GB",
    "category": "phones",
-   "price": 163.33,
+   "price": 189.99,
    "currency": "USD",
    "image": "/products/d-pho3.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/product/samsung-galaxy-a16-128gb-unlocked-latin-america-version-black/BGTKK3LJX3/sku/6675881"
+   }
   },
   {
    "id": "d-gam1",
@@ -222,13 +289,18 @@
    "price": 566.67,
    "currency": "USD",
    "image": "/products/d-gam1.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-foo1",
    "title": "Nike Air Force 1 Sneakers",
    "category": "footwear",
-   "price": 63.33,
+   "price": 115.0,
    "currency": "USD",
    "image": "/products/d-foo1.webp",
    "merchant": "Shopmate demo catalog",
@@ -244,13 +316,18 @@
    "tags": [
     "sneakers",
     "casual"
-   ]
+   ],
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "Nike",
+    "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-DZejrQoC"
+   }
   },
   {
    "id": "d-foo2",
    "title": "Adidas Superstar Sneakers",
    "category": "footwear",
-   "price": 58.67,
+   "price": 49.97,
    "currency": "USD",
    "image": "/products/d-foo2.webp",
    "merchant": "Shopmate demo catalog",
@@ -266,34 +343,54 @@
    "tags": [
     "sneakers",
     "casual"
-   ]
+   ],
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "DICK'S Sporting Goods",
+    "url": "https://www.dickssportinggoods.com/p/adidas-mens-superstar-ii-shoes-24adimsprstrblkwhmns/24adimsprstrblkwhmns"
+   }
   },
   {
    "id": "d-jew1",
    "title": "Casio Digital Watch",
    "category": "jewelry-watches",
-   "price": 18.67,
+   "price": 29.95,
    "currency": "USD",
    "image": "/products/d-jew1.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "Casio America",
+    "url": "https://www.casio.com/us/watches/casio/product.F-91W-1/"
+   }
   },
   {
    "id": "d-jew2",
    "title": "Ray-Ban New Wayfarer Sunglasses",
    "category": "jewelry-watches",
-   "price": 90.0,
+   "price": 133.99,
    "currency": "USD",
    "image": "/products/d-jew2.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "Macy's",
+    "url": "https://www.macys.com/shop/product/ray-ban-unisex-new-wayfarer-classic-square-sunglasses-rb2132?ID=27354523"
+   }
   },
   {
    "id": "d-kid4",
    "title": "Board Game: Monopoly",
    "category": "kids-toys",
-   "price": 16.0,
+   "price": 19.99,
    "currency": "USD",
    "image": "/products/d-kid4.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "Target",
+    "url": "https://www.target.com/p/hasbro-monopoly-board-game/-/A-94111131"
+   }
   },
   {
    "id": "d-spo3",
@@ -302,7 +399,12 @@
    "price": 6.33,
    "currency": "USD",
    "image": "/products/d-spo3.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-spo2",
@@ -311,7 +413,12 @@
    "price": 8.33,
    "currency": "USD",
    "image": "/products/d-spo2.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-hom1",
@@ -320,7 +427,12 @@
    "price": 30.0,
    "currency": "USD",
    "image": "/products/d-hom1.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-hom2",
@@ -329,7 +441,12 @@
    "price": 76.67,
    "currency": "USD",
    "image": "/products/d-hom2.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-ele4",
@@ -351,7 +468,12 @@
     "programming",
     "office",
     "student"
-   ]
+   ],
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-gar1",
@@ -360,7 +482,12 @@
    "price": 63.33,
    "currency": "USD",
    "image": "/products/d-gar1.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-ele1",
@@ -382,16 +509,26 @@
     "headphones",
     "bluetooth",
     "battery"
-   ]
+   ],
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-com3",
    "title": "Samsung 1TB SATA SSD",
    "category": "computing",
-   "price": 76.67,
+   "price": 349.99,
    "currency": "USD",
    "image": "/products/d-com3.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/product/samsung-870-evo-1tb-internal-ssd-sata/J3ZYGCHH2Z/sku/6447127"
+   }
   },
   {
    "id": "d-com5",
@@ -400,7 +537,12 @@
    "price": 12.0,
    "currency": "USD",
    "image": "/products/d-com5.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-off3",
@@ -409,7 +551,12 @@
    "price": 13.0,
    "currency": "USD",
    "image": "/products/d-off3.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-fur1",
@@ -418,7 +565,12 @@
    "price": 80.0,
    "currency": "USD",
    "image": "/products/d-fur1.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi2",
@@ -429,7 +581,13 @@
    "image": "/products/d-toi2.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "toothbrush",
-   "brand": "Oral-B"
+   "brand": "Oral-B",
+   "barcode": "4987176130051",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi5",
@@ -438,7 +596,13 @@
    "price": 5.0,
    "currency": "USD",
    "image": "/products/d-toi5.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "barcode": "7702018465385",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-dri5",
@@ -447,7 +611,12 @@
    "price": 0.33,
    "currency": "USD",
    "image": "/products/d-dri5.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-dri3",
@@ -456,7 +625,13 @@
    "price": 2.53,
    "currency": "USD",
    "image": "/products/d-dri3.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "barcode": "8720608632633",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-bab2",
@@ -466,7 +641,13 @@
    "currency": "USD",
    "image": "/products/d-bab2.webp",
    "merchant": "Shopmate demo catalog",
-   "size": "56 wipes"
+   "size": "56 wipes",
+   "barcode": "4015400636649",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-hou3",
@@ -475,7 +656,13 @@
    "price": 1.6,
    "currency": "USD",
    "image": "/products/d-hou3.webp",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "barcode": "8698898453972",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi9",
@@ -487,7 +674,13 @@
    "size": "150g",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi9.webp"
+   "image": "/products/d-toi9.webp",
+   "barcode": "6281001112013",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi10",
@@ -499,7 +692,13 @@
    "size": "75ml",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi10.webp"
+   "image": "/products/d-toi10.webp",
+   "barcode": "5054563070951",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi11",
@@ -511,7 +710,13 @@
    "size": "180g",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi11.webp"
+   "image": "/products/d-toi11.webp",
+   "barcode": "8934839128302",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi12",
@@ -523,7 +728,13 @@
    "size": "75ml",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi12.webp"
+   "image": "/products/d-toi12.webp",
+   "barcode": "8001090559890",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi13",
@@ -535,7 +746,13 @@
    "size": "500ml",
    "product_type": "body wash",
    "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi13.webp"
+   "image": "/products/d-toi13.webp",
+   "barcode": "0072140810849",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi14",
@@ -547,7 +764,13 @@
    "size": "500ml",
    "product_type": "body wash",
    "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi14.webp"
+   "image": "/products/d-toi14.webp",
+   "barcode": "8717163742839",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "d-toi15",
@@ -559,7 +782,13 @@
    "product_type": "body wash",
    "merchant": "Shopmate demo catalog",
    "image": "/products/d-toi15.webp",
-   "size": "500ml"
+   "size": "500ml",
+   "barcode": "8901396368205",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-hp1",
@@ -583,7 +812,12 @@
     "battery"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-hp2",
@@ -608,7 +842,12 @@
     "battery"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-hp3",
@@ -633,7 +872,12 @@
     "battery"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-hp4",
@@ -658,7 +902,12 @@
     "battery"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-lp1",
@@ -682,7 +931,12 @@
     "office"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-lp2",
@@ -707,7 +961,12 @@
     "16gb"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-lp3",
@@ -732,7 +991,12 @@
     "lightweight"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-lp4",
@@ -756,7 +1020,12 @@
     "budget"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-lp5",
@@ -781,13 +1050,18 @@
     "refurbished"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-rs1",
    "title": "ASICS GEL-Kayano Stability Running Shoes",
    "category": "footwear",
-   "price": 140.0,
+   "price": 164.99,
    "brand": "ASICS",
    "product_type": "running shoes",
    "image": "/products/w-rs1.webp",
@@ -815,7 +1089,12 @@
     "arch support"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": "2026-11-20",
+   "priceSource": {
+    "name": "DICK'S Sporting Goods",
+    "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-kayano-31-running-shoes-24asimglkyn31smggmns/24asimglkyn31smggmns"
+   }
   },
   {
    "id": "w-rs2",
@@ -849,7 +1128,12 @@
     "arch support"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-rs3",
@@ -882,7 +1166,12 @@
     "cushioning"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-rs4",
@@ -913,7 +1202,12 @@
     "waterproof"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-rs5",
@@ -944,7 +1238,12 @@
     "neutral"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-rs6",
@@ -975,7 +1274,12 @@
     "neutral"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-sp1",
@@ -996,7 +1300,12 @@
     "party"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-sw1",
@@ -1017,7 +1326,12 @@
     "tracker"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-kb1",
@@ -1038,7 +1352,12 @@
     "gaming"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
   },
   {
    "id": "w-ms1",
@@ -1059,7 +1378,112 @@
     "programming"
    ],
    "currency": "USD",
-   "merchant": "Shopmate demo catalog"
+   "merchant": "Shopmate demo catalog",
+   "priceUpdatedAt": null,
+   "priceSource": {
+    "name": "Seed catalog (not yet re-checked)",
+    "url": ""
+   }
+  },
+  {
+   "id": "op-0070847012474",
+   "title": "Monster Zero Ultra 1 can (16 oz)",
+   "category": "drinks",
+   "price": 2.5,
+   "currency": "USD",
+   "image": "/products/op-0070847012474.webp",
+   "merchant": "Shopmate partner store",
+   "brand": "Monster",
+   "product_type": "ultra",
+   "size": "1 can (16 oz)",
+   "barcode": "0070847012474",
+   "priceUpdatedAt": "2026-11-06",
+   "priceSource": {
+    "name": "Safeway (Open Prices receipt)",
+    "url": "https://prices.openfoodfacts.org/products/0070847012474"
+   },
+   "imageCredit": {
+    "source": "https://world.openfoodfacts.org/product/0070847012474",
+    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+   },
+   "addedAt": "2026-11-20"
+  },
+  {
+   "id": "op-0855352008989",
+   "title": "Athletic Brewing Co Cerveza Atletica",
+   "category": "drinks",
+   "price": 10.99,
+   "currency": "USD",
+   "image": "/products/op-0855352008989.webp",
+   "merchant": "Shopmate partner store",
+   "brand": "Athletic Brewing Co",
+   "product_type": "atletica",
+   "size": null,
+   "barcode": "0855352008989",
+   "priceUpdatedAt": "2026-11-11",
+   "priceSource": {
+    "name": "Whole Foods Market (Open Prices receipt)",
+    "url": "https://prices.openfoodfacts.org/products/0855352008989"
+   },
+   "imageCredit": {
+    "source": "https://world.openfoodfacts.org/product/0855352008989",
+    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+   },
+   "addedAt": "2026-11-20"
+  },
+  {
+   "id": "op-0071117025149",
+   "title": "Reser's Main St. Bistro Signature Macaroni & Cheese",
+   "category": "groceries",
+   "price": 5.0,
+   "currency": "USD",
+   "image": "/products/op-0071117025149.webp",
+   "merchant": "Shopmate partner store",
+   "brand": "Reser's Main St. Bistro",
+   "product_type": "cheese",
+   "size": null,
+   "barcode": "0071117025149",
+   "priceUpdatedAt": "2026-11-06",
+   "priceSource": {
+    "name": "Safeway (Open Prices receipt)",
+    "url": "https://prices.openfoodfacts.org/products/0071117025149"
+   },
+   "imageCredit": {
+    "source": "https://world.openfoodfacts.org/product/0071117025149",
+    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+   },
+   "addedAt": "2026-11-20"
+  },
+  {
+   "id": "op-0072655001053",
+   "title": "Healthy Choice CAFÉ STEAMERS Chicken Margherita with Balsamic 9.5 oz",
+   "category": "groceries",
+   "price": 3.99,
+   "currency": "USD",
+   "image": "/products/op-0072655001053.webp",
+   "merchant": "Shopmate partner store",
+   "brand": "Healthy Choice CAFÉ STEAMERS",
+   "product_type": "balsamic",
+   "size": "9.5 oz",
+   "barcode": "0072655001053",
+   "priceUpdatedAt": "2026-11-06",
+   "priceSource": {
+    "name": "Safeway (Open Prices receipt)",
+    "url": "https://prices.openfoodfacts.org/products/0072655001053"
+   },
+   "imageCredit": {
+    "source": "https://world.openfoodfacts.org/product/0072655001053",
+    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+   },
+   "addedAt": "2026-11-20"
   }
- ]
+ ],
+ "pricesUpdatedAt": "2026-11-20",
+ "refreshedAt": "2026-11-20",
+ "refreshStats": {
+  "refreshed": 9,
+  "added": 4,
+  "kept": 52,
+  "total": 65
+ }
 }

@@ -388,3 +388,5 @@ html, body { overflow-x: hidden; max-width: 100%; }
 [data-theme="light"] .thumb { box-shadow: 0 4px 14px rgba(80,30,10,.18); }
 .themebtn svg { transition: transform .4s ease; }
 .themebtn:hover svg { transform: rotate(25deg); }
+[data-theme="light"] .thumb { background: radial-gradient(circle at 50% 42%, #ffd9bf 0%, #fbeee5 60%, #f7efe9 100%); box-shadow: 0 4px 14px rgba(120,50,20,.10); }
+[data-theme="light"] .thumb::after { box-shadow: inset 0 0 0 1px rgba(200,110,60,.14); }

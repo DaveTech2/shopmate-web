@@ -16,11 +16,16 @@ export interface Product {
   sizes?: number[];
   specs?: Record<string, string>;
   tags?: string[];
+  barcode?: string;
+  priceUpdatedAt?: string | null;
+  priceSource?: { name: string; url: string };
 }
 export interface Category { id: string; name: string }
 
 export const categories: Category[] = data.categories;
 export const products: Product[] = data.products as Product[];
+/** Latest date any price was re-checked against a real US source (set by scripts/refresh_catalog.py). */
+export const pricesUpdatedAt: string | null = (data as { pricesUpdatedAt?: string | null }).pricesUpdatedAt ?? null;
 const byId = new Map(products.map((p) => [p.id, p]));
 export const getProduct = (id: string) => byId.get(id);
 export const categoryName = (id: string) => categories.find((c) => c.id === id)?.name ?? id;

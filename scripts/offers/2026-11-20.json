@@ -1,0 +1,11 @@
+[
+ {"id": "d-pho3", "price": 189.99, "currency": "USD", "seller": "Best Buy", "url": "https://www.bestbuy.com/product/samsung-galaxy-a16-128gb-unlocked-latin-america-version-black/BGTKK3LJX3/sku/6675881", "date": "2026-11-20"},
+ {"id": "d-foo1", "price": 115.00, "currency": "USD", "seller": "Nike", "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-DZejrQoC", "date": "2026-11-20"},
+ {"id": "d-foo2", "price": 49.97, "currency": "USD", "seller": "DICK'S Sporting Goods", "url": "https://www.dickssportinggoods.com/p/adidas-mens-superstar-ii-shoes-24adimsprstrblkwhmns/24adimsprstrblkwhmns", "date": "2026-11-20"},
+ {"id": "d-jew1", "price": 29.95, "currency": "USD", "seller": "Casio America", "url": "https://www.casio.com/us/watches/casio/product.F-91W-1/", "date": "2026-11-20"},
+ {"id": "d-jew2", "price": 133.99, "currency": "USD", "seller": "Macy's", "url": "https://www.macys.com/shop/product/ray-ban-unisex-new-wayfarer-classic-square-sunglasses-rb2132?ID=27354523", "date": "2026-11-20"},
+ {"id": "d-kid4", "price": 19.99, "currency": "USD", "seller": "Target", "url": "https://www.target.com/p/hasbro-monopoly-board-game/-/A-94111131", "date": "2026-11-20"},
+ {"id": "d-com3", "price": 349.99, "currency": "USD", "seller": "Best Buy", "url": "https://www.bestbuy.com/product/samsung-870-evo-1tb-internal-ssd-sata/J3ZYGCHH2Z/sku/6447127", "date": "2026-11-20", "force": true},
+ {"id": "d-bea4", "price": 5.97, "currency": "USD", "seller": "Walmart", "url": "https://www.walmart.com/ip/Vaseline-100-Pure-Skin-Protectant-Petroleum-Jelly-13-Oz/10898766", "date": "2026-11-20"},
+ {"id": "w-rs1", "price": 164.99, "currency": "USD", "seller": "DICK'S Sporting Goods", "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-kayano-31-running-shoes-24asimglkyn31smggmns/24asimglkyn31smggmns", "date": "2026-11-20"}
+]

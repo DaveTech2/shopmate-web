@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom";
 import { Search } from "lucide-react";
 import { AppShell, Footer } from "../components/ui";
 import { CompareTray, ProductCard } from "../components/ProductCard";
-import { categories, products, searchCatalog } from "../lib/catalog";
+import { categories, products, pricesUpdatedAt, searchCatalog } from "../lib/catalog";
 
 export default function Discover() {
   const [params, setParams] = useSearchParams();
@@ -19,6 +19,7 @@ export default function Discover() {
       <main className="wrap wide page">
         <h1 className="pagetitle">Discover</h1>
         <p className="muted" style={{ fontSize: 14, marginTop: 0 }}>Browse listings from Shopmate merchants. Delivery fees are calculated to your city.</p>
+        {pricesUpdatedAt && <p className="tiny" style={{ marginTop: -6 }}>Prices updated {new Date(pricesUpdatedAt + "T12:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })} · USD</p>}
         <div className="composer" style={{ position: "static", background: "none", padding: "8px 0 12px" }}>
           <form onSubmit={(e) => e.preventDefault()}><Search size={16} color="var(--muted)" />
             <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Filter listings" aria-label="Filter listings" />
