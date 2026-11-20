@@ -19,7 +19,7 @@ export default function Landing() {
     <AppShell landing>
       <main className="wrap landing">
         <h1 className="hero">Let’s Shop Smarter</h1>
-        <p className="sub">Your AI personal shopper. Say what you need — Shopmate finds real listings, compares prices and delivers to your door.</p>
+        <p className="sub">Your AI personal shopper. Say what you need and Shopmate finds real listings, compares prices and delivers to your door.</p>
 
         <section className="card glow hero-card">
           <span className="label"><Sparkles size={12} /> AI-powered shopping</span>
