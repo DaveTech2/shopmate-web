@@ -11,7 +11,8 @@ export interface Intent {
   query: string;
   category?: string;
   budget_max?: number;
-  budget_currency?: "USD" | "NGN";
+  budget_currency?: string;
+  location_country?: string;
   use?: string;
   size?: number;
   location?: string;
@@ -28,10 +29,11 @@ export const intentSchema = {
     query: { type: "string", description: "short product search phrase, e.g. 'wireless headphones'" },
     category: { type: "string", enum: ["", ...categories.map((c) => c.id)] },
     budget_max: { type: "number", description: "max budget amount, 0 if none" },
-    budget_currency: { type: "string", enum: ["USD", "NGN"] },
+    budget_currency: { type: "string", description: "ISO 4217 code of the budget currency, e.g. USD, EUR, GBP, NGN, INR. Empty if no budget" },
     use: { type: "string", description: "what it is for, e.g. 'programming', 'flat feet'" },
     size: { type: "number", description: "EU shoe size or 0" },
-    location: { type: "string", description: "delivery city if mentioned, else empty" },
+    location: { type: "string", description: "delivery city (any city worldwide) if the shopper mentions one, else empty" },
+    location_country: { type: "string", description: "ISO 3166 alpha-2 code of that delivery city's country, e.g. US, DE, NG, GB, else empty" },
     quantity: { type: "integer" },
     product_refs: { type: "array", items: { type: "string" }, description: "product ids or names the user refers to" },
     must_have: { type: "array", items: { type: "string" } },

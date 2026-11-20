@@ -13,12 +13,14 @@ export interface Order {
   subtotal: number;
   delivery: number;
   total: number;
-  currency: string; // currency of amounts (NGN, catalog base)
+  currency: string; // currency of amounts (USD catalog base; older orders may differ)
   speed: "standard" | "express";
   eta: string;
   city: string;
   address: string;
-  payment: "demo-card" | "pay-on-delivery";
+  payment: string; // demo method: card | wallet | bank | paypal | crypto (older: demo-card, pay-on-delivery)
+  pay_currency?: string;
+  pay_amount?: number;
   reference: string;
   createdAt: number;
 }

@@ -33,14 +33,14 @@ export default function ProductPage() {
           <div className="stack">
             <span className="tiny">{categoryName(p.category)} · {p.merchant}</span>
             <h1 className="pagetitle" style={{ margin: 0 }}>{p.title}</h1>
-            <div className="price" style={{ fontSize: 26 }}>{money(p.price, p.currency, currency)} <small>{money(p.price, p.currency, currency === "USD" ? "NGN" : "USD")}</small></div>
+            <div className="price" style={{ fontSize: 26 }}>{money(p.price, p.currency, currency)} {currency !== "USD" && <small>{money(p.price, p.currency, "USD")}</small>}</div>
             {p.specs && (
               <table className="ctable"><tbody>{Object.entries(p.specs).map(([k, v]) => <tr key={k}><th>{k}</th><td>{v}</td></tr>)}</tbody></table>
             )}
             <div className="card sum">
-              <div className="r"><span className="row"><Truck size={14} /> Standard to {place.name}</span><b>{money(std.fee, std.fee_currency, currency)} · {std.eta}</b></div>
+              <div className="r"><span className="row"><Truck size={14} /> Standard to {place.name}, {place.country}</span><b>{money(std.fee, std.fee_currency, currency)} · {std.eta}</b></div>
               <div className="r"><span>Express</span><b>{money(exp.fee, exp.fee_currency, currency)} · {exp.eta}</b></div>
-              <div className="tiny">Ships from Lagos · {std.band} · ~{std.distance_km} km</div>
+              <div className="tiny">Estimate · ships from {std.from}{std.international ? " (international)" : ""} · {std.band} · ~{std.distance_km.toLocaleString()} km</div>
             </div>
             <div className="row">
               <div className="qty"><button onClick={() => setQty(Math.max(1, qty - 1))}>−</button><span>{qty}</span><button onClick={() => setQty(qty + 1)}>+</button></div>

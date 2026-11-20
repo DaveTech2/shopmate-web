@@ -1,7 +1,8 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import { useAuth } from "./auth";
 import { watchCart, setCartQty, type CartLine } from "../lib/store";
-import { resolvePlace, type Place } from "../lib/delivery";
+import { DEFAULT_PLACE, type Place } from "../lib/delivery";
+import { countryOf } from "../data/countries";
 import type { Currency } from "../lib/catalog";
 
 interface ShopCtx {
@@ -24,8 +25,9 @@ export const useShop = () => useContext(Ctx);
 
 export function ShopProvider({ children }: { children: ReactNode }) {
   const { user, ensureGuest } = useAuth();
-  const [place, setPlaceState] = useState<Place>(() => JSON.parse(localStorage.getItem("sm_place") || "null") || resolvePlace("lagos")!);
-  const [currency, setCurrencyState] = useState<Currency>(() => (localStorage.getItem("sm_cur") as Currency) || "USD");
+  // v2 keys: older builds stored a different default, so every visitor starts on United States.
+  const [place, setPlaceState] = useState<Place>(() => { try { return JSON.parse(localStorage.getItem("sm_place_v2") || "null") || DEFAULT_PLACE; } catch { return DEFAULT_PLACE; } });
+  const [currency, setCurrencyState] = useState<Currency>(() => localStorage.getItem("sm_cur_v2") || countryOf(place.country)?.currency || "USD");
   const [cart, setCart] = useState<CartLine[]>([]);
   const [compare, setCompare] = useState<string[]>(() => JSON.parse(localStorage.getItem("sm_compare") || "[]"));
   const [toast, setToast] = useState<string | null>(null);
@@ -38,9 +40,13 @@ export function ShopProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<ShopCtx>(() => ({
     place,
-    setPlace(p) { setPlaceState(p); localStorage.setItem("sm_place", JSON.stringify(p)); },
+    setPlace(p) {
+      setPlaceState(p); localStorage.setItem("sm_place_v2", JSON.stringify(p));
+      const c = countryOf(p.country)?.currency || "USD";
+      setCurrencyState(c); localStorage.setItem("sm_cur_v2", c);
+    },
     currency,
-    setCurrency(c) { setCurrencyState(c); localStorage.setItem("sm_cur", c); },
+    setCurrency(c) { setCurrencyState(c); localStorage.setItem("sm_cur_v2", c); },
     cart,
     cartCount: cart.reduce((n, l) => n + l.qty, 0),
     async addToCart(id, qty = 1) {

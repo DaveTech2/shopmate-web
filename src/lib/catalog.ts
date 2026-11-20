@@ -1,5 +1,6 @@
 import data from "../data/catalog.json";
 import { flag } from "./firebase";
+import { DEFAULT_RATES } from "../data/countries";
 
 export interface Product {
   id: string;
@@ -24,21 +25,35 @@ const byId = new Map(products.map((p) => [p.id, p]));
 export const getProduct = (id: string) => byId.get(id);
 export const categoryName = (id: string) => categories.find((c) => c.id === id)?.name ?? id;
 
-export type Currency = "USD" | "NGN";
-export const fxNgnPerUsd = () => Number(flag("fx_ngn_per_usd")) || 1500;
+export type Currency = string;
+/** Units per 1 USD. Remote Config "fx_rates" (JSON) overrides individual rates. */
+export function rate(cur: string): number {
+  if (cur === "USD") return 1;
+  try {
+    const o = JSON.parse(flag("fx_rates") || "{}") as Record<string, number>;
+    if (o[cur]) return Number(o[cur]);
+  } catch { /* ignore bad JSON */ }
+  return DEFAULT_RATES[cur] ?? 1;
+}
+export const currencies = Object.keys(DEFAULT_RATES);
 
 export function toCurrency(amount: number, from: string, to: Currency): number {
   if (from === to) return amount;
-  if (from === "NGN" && to === "USD") return amount / fxNgnPerUsd();
-  if (from === "USD" && to === "NGN") return amount * fxNgnPerUsd();
-  return amount;
+  return (amount / rate(from)) * rate(to);
 }
 
+const ZERO_DEC = new Set(["JPY", "KRW", "VND", "IDR", "CLP", "COP", "UGX", "RWF", "XAF", "XOF", "TZS", "NGN", "HUF", "PKR", "LKR", "ARS", "KES", "INR", "BDT", "ETB", "TWD", "PHP", "THB", "JMD", "UAH", "EGP", "TRY"]);
 export function money(amount: number, from: string, to: Currency): string {
   const v = toCurrency(amount, from, to);
-  return to === "USD"
-    ? "$" + v.toLocaleString("en-US", { minimumFractionDigits: v < 100 ? 2 : 0, maximumFractionDigits: v < 100 ? 2 : 0 })
-    : "₦" + Math.round(v).toLocaleString("en-US");
+  const dec = ZERO_DEC.has(to) || v >= 100 ? 0 : 2;
+  try {
+    return new Intl.NumberFormat("en-US", { style: "currency", currency: to, currencyDisplay: "narrowSymbol", minimumFractionDigits: dec, maximumFractionDigits: dec }).format(v);
+  } catch {
+    return `${to} ${v.toFixed(dec)}`;
+  }
+}
+export function symbolOf(cur: string): string {
+  try { return new Intl.NumberFormat("en-US", { style: "currency", currency: cur, currencyDisplay: "narrowSymbol" }).formatToParts(0).find((x) => x.type === "currency")?.value || cur; } catch { return cur; }
 }
 
 export interface SearchQuery {

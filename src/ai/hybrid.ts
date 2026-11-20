@@ -21,8 +21,8 @@ import {
   type FunctionCall,
 } from "firebase/ai";
 import { ai, flag, isFirebaseConfigured, loadRemoteConfig } from "../lib/firebase";
-import { getProduct, productBrief, searchCatalog, money, type Currency, type Product } from "../lib/catalog";
-import { quote, resolvePlace, DISPATCH, type Place } from "../lib/delivery";
+import { getProduct, productBrief, searchCatalog, money, symbolOf, type Currency, type Product } from "../lib/catalog";
+import { quote, resolvePlace, placeLabel, type Place } from "../lib/delivery";
 import {
   cartOpsSchema, compareSchema, intentSchema, rankSchema,
   type CartOps, type CompareResult, type Intent, type RankResult,
@@ -90,7 +90,8 @@ const SYSTEM: Record<Task, string> = {
     "You are Shopmate's intent parser. Convert the shopper's message into JSON that matches the schema. " +
     "Use action=search for product requests, compare when they want to compare items, cart_add/cart_remove for cart edits, " +
     "bulk_plan for big multi-item orders (office, event, restock, many people), track_order for order status, chitchat otherwise. " +
-    "budget_currency is USD for $ and NGN for ₦/naira. Use 0 or empty string when unknown.",
+    "budget_currency is the ISO 4217 code of any money amount the shopper gives ($ is USD, € EUR, £ GBP, ₦ or naira NGN, ₹ INR, etc.); if they give a bare number use the shopper's current currency stated in the message. " +
+    "location is any delivery city in the world they mention, with location_country as its ISO country code. Use 0 or empty string when unknown.",
   rank:
     "You are Shopmate, a personal shopper. Rank ONLY the given catalog items for the shopper's need. " +
     "Never invent products, prices or specs. Give 2-3 short, concrete reasons per pick, referencing budget, specs, size and delivery.",
@@ -161,23 +162,26 @@ async function run<T>(task: Task, prompt: string, route: Route, fallback: () => 
 }
 
 // ---------- public tasks ----------
-export function parseIntent(text: string, ctx: { lastResults?: string[]; cart?: string[] } = {}) {
+export function parseIntent(text: string, ctx: { lastResults?: string[]; cart?: string[]; place?: Place; currency?: string } = {}) {
   const prompt =
     `Shopper message: "${text}"\n` +
+    (ctx.place ? `Shopper currently delivers to ${placeLabel(ctx.place)}; current currency ${ctx.currency || "USD"}.\n` : "") +
     (ctx.lastResults?.length ? `Products currently on screen: ${ctx.lastResults.join(" | ")}\n` : "") +
     (ctx.cart?.length ? `Cart: ${ctx.cart.join(" | ")}\n` : "") +
     "Return the JSON.";
-  return run<Intent>("intent", prompt, "on-device", () => mockIntent(text)).then((r) => ({ ...r, data: normalizeIntent(r.data, text) }));
+  return run<Intent>("intent", prompt, "on-device", () => mockIntent(text, ctx.currency)).then((r) => ({ ...r, data: normalizeIntent(r.data, text, ctx.currency) }));
 }
 
-function normalizeIntent(i: Intent, text: string): Intent {
-  const m = mockIntent(text);
+function normalizeIntent(i: Intent, text: string, cur?: string): Intent {
+  const m = mockIntent(text, cur);
   return {
     ...i,
     action: i.action || m.action,
     query: i.query || m.query,
     budget_max: i.budget_max || m.budget_max,
-    budget_currency: i.budget_currency || m.budget_currency,
+    budget_currency: (i.budget_currency || m.budget_currency || cur || "USD").toUpperCase(),
+    location: i.location || m.location,
+    location_country: (i.location_country || m.location_country || "").toUpperCase(),
     size: i.size || m.size,
     category: i.category || "",
   };
@@ -186,10 +190,10 @@ function normalizeIntent(i: Intent, text: string): Intent {
 export function rankProducts(text: string, intent: Intent, candidates: Product[], cur: Currency, place: Place) {
   const lines = candidates.map((p) => {
     const q = quote(place, [[p, 1]]);
-    return `${productBrief(p, cur)}; delivery to ${place.name}: ${money(q.fee, q.fee_currency, cur)} (${q.eta})`;
+    return `${productBrief(p, cur)}; estimated delivery to ${placeLabel(place)}: ${money(q.fee, q.fee_currency, cur)} (${q.eta}${q.international ? ", international from " + q.from : ""})`;
   });
   const prompt =
-    `Shopper said: "${text}"\n${intent.budget_max ? `Shopper budget: up to ${intent.budget_currency === "NGN" ? "₦" : "$"}${intent.budget_max} per item. Quote each item's own price, never call the price the budget.\n` : ""}Parsed need: ${JSON.stringify({ query: intent.query, budget: intent.budget_max, currency: intent.budget_currency, use: intent.use, size: intent.size })}\n` +
+    `Shopper said: "${text}"\nShopper delivers to ${placeLabel(place)} and sees prices in ${cur}. Quote all prices and fees in ${cur}.\n${intent.budget_max ? `Shopper budget: up to ${symbolOf(intent.budget_currency || cur)}${intent.budget_max} per item. Quote each item's own price, never call the price the budget.\n` : ""}Parsed need: ${JSON.stringify({ query: intent.query, budget: intent.budget_max, currency: intent.budget_currency, use: intent.use, size: intent.size })}\n` +
     `Catalog candidates:\n${lines.join("\n")}\n` +
     `Rank the best ${Math.min(candidates.length, Number(flag("max_results")) || 6)} (ids from the list only). Drop items that clearly don't fit.`;
   return run<RankResult>("rank", prompt, "cloud", () => mockRank(intent, candidates, cur)).then((r) => ({
@@ -238,7 +242,7 @@ const tools = [
       },
       {
         name: "quote_delivery",
-        description: "Delivery fee and ETA for a set of items to the shopper's city.",
+        description: "Estimated delivery fee and ETA for a set of items to the shopper's chosen city and country.",
         parameters: Schema.object({
           properties: {
             items: Schema.array({ items: Schema.object({ properties: { id: Schema.string(), qty: Schema.integer() } }) }),
@@ -267,7 +271,7 @@ export async function planBulkOrder(text: string, cur: Currency, place: Place): 
     if (call.name === "quote_delivery") {
       const items = ((a.items as Array<{ id: string; qty: number }>) || []).map((i) => [getProduct(i.id), i.qty] as const).filter((x) => x[0]);
       const q = quote(place, items as Array<[Product, number]>);
-      return { fee: money(q.fee, q.fee_currency, cur), eta: q.eta, from: DISPATCH.name, to: place.name };
+      return { fee: money(q.fee, q.fee_currency, cur), eta: q.eta, from: q.from, to: placeLabel(place), international: q.international, note: "estimate" };
     }
     if (call.name === "add_to_plan") {
       const p = getProduct(String(a.id));
@@ -299,7 +303,7 @@ export async function planBulkOrder(text: string, cur: Currency, place: Place): 
         model: flag("cloud_model"),
         tools,
         systemInstruction:
-          `You are Shopmate's bulk-order planner. Delivery city: ${place.name}. Currency: ${cur}. ` +
+          `You are Shopmate's bulk-order planner. Delivery to: ${placeLabel(place)}. Quote everything in ${cur}. ` +
           "Use search_catalog to find items, add_to_plan for each line with a sensible quantity, optionally quote_delivery, then reply with a 2-sentence summary." + STYLE,
       },
     });

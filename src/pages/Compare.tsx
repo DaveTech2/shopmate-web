@@ -60,7 +60,7 @@ export default function Compare() {
                 </thead>
                 <tbody>
                   <tr><th>Price</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}><b>{money(p.price, p.currency, currency)}</b></td>)}</tr>
-                  <tr><th>Delivery to {place.name}</th>{items.map((p) => { const q = quote(place, [[p, 1]]); return <td key={p.id} className={p.id === win ? "win" : ""}>{money(q.fee, q.fee_currency, currency)} · {q.eta}</td>; })}</tr>
+                  <tr><th>Est. delivery to {place.name}</th>{items.map((p) => { const q = quote(place, [[p, 1]]); return <td key={p.id} className={p.id === win ? "win" : ""}>{money(q.fee, q.fee_currency, currency)} · {q.eta}</td>; })}</tr>
                   {specKeys.map((k) => <tr key={k}><th>{k}</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{p.specs?.[k] || "-"}</td>)}</tr>)}
                   {res && <tr><th>Best for</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{res.data.items.find((i) => i.id === p.id)?.best_for || "-"}</td>)}</tr>}
                   {res && <tr><th>Pros</th>{items.map((p) => <td key={p.id} className={p.id === win ? "win" : ""}>{(res.data.items.find((i) => i.id === p.id)?.pros || []).join(" · ") || "-"}</td>)}</tr>}

@@ -8,7 +8,7 @@ import { useShop } from "../state/shop";
 import { useAuth } from "../state/auth";
 import { listOrders, type Order } from "../lib/store";
 
-const STEPS = ["Order placed", "Payment confirmed (test)", "Packed at Lagos hub", "Out for delivery", "Delivered"];
+const STEPS = ["Order placed", "Payment confirmed (test)", "Packed at the Shopmate hub", "Out for delivery", "Delivered"];
 // Demo tracking: status advances with elapsed time so the timeline is visible during judging.
 const stepFor = (o: Order) => Math.min(STEPS.length - 1, 1 + Math.floor((Date.now() - o.createdAt) / (3 * 60 * 1000)));
 
@@ -43,7 +43,7 @@ export default function Orders() {
                   <div className="timeline">
                     {STEPS.map((st, i) => <div key={st} className={`st ${i <= s ? "done" : ""}`}><span className="b" />{st}</div>)}
                   </div>
-                  <div className="tiny">Ref {o.reference} · {o.payment === "demo-card" ? "test card" : "pay on delivery"}</div>
+                  <div className="tiny">Ref {o.reference} · {({ "demo-card": "test card", "pay-on-delivery": "pay on delivery", card: "card", wallet: "Apple Pay / Google Pay", bank: "bank transfer", paypal: "PayPal", crypto: "crypto" } as Record<string, string>)[o.payment] || o.payment}{o.pay_currency ? ` in ${o.pay_currency}` : ""} (demo)</div>
                 </div>
               );
             })}

@@ -74,9 +74,9 @@ export default function Cart() {
               </div>
             ))}
             <div className="card sum">
-              <div className="r"><span>Subtotal</span><b>{money(subtotal, "NGN", currency)}</b></div>
-              <div className="r"><span>Delivery to {place.name} ({q!.eta})</span><b>{money(q!.fee, q!.fee_currency, currency)}</b></div>
-              <div className="r t"><span>Total</span><span>{money(total, "NGN", currency)}</span></div>
+              <div className="r"><span>Subtotal</span><b>{money(subtotal, "USD", currency)}</b></div>
+              <div className="r"><span>Est. delivery to {place.name}, {place.country} ({q!.eta})</span><b>{money(q!.fee, q!.fee_currency, currency)}</b></div>
+              <div className="r t"><span>Total</span><span>{money(total, "USD", currency)}</span></div>
               <button className="btn block" onClick={() => nav("/checkout")}>Checkout</button>
             </div>
           </div>

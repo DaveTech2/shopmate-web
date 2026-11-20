@@ -9,7 +9,9 @@ import { isFirebaseConfigured } from "../lib/firebase";
 import {
   aiLive, deviceStatus, ensureDeviceModel, getModeSetting, onDownloadProgress, setModeSetting, type DeviceStatus, type ModeSetting, type Source, type Route,
 } from "../ai/hybrid";
-import { placeOptions } from "../lib/delivery";
+import { PlacePicker, PlaceChip } from "./PlacePicker";
+import { currencies } from "../lib/catalog";
+import { countryOf } from "../data/countries";
 import { BagMark } from "./BagMark";
 
 export function Logo() {
@@ -104,7 +106,7 @@ export function AIBadge({ source, route, label, ms }: { source: Source; route: R
 }
 
 export function SettingsDialog({ onClose }: { onClose(): void }) {
-  const { place, setPlace, currency, setCurrency } = useShop();
+  const { place, currency, setCurrency } = useShop();
   const { st, prog } = useDeviceStatus();
   const [mode, setMode] = useState<ModeSetting>(getModeSetting());
   return (
@@ -112,13 +114,13 @@ export function SettingsDialog({ onClose }: { onClose(): void }) {
       <div className="card menu" style={{ padding: 20, maxWidth: 420 }} onClick={(e) => e.stopPropagation()}>
         <div className="between"><b>AI & delivery settings</b><button className="iconbtn" onClick={onClose} aria-label="Close"><X size={16} /></button></div>
         <div className="stack" style={{ marginTop: 16 }}>
-          <div className="field"><label>Deliver to</label>
-            <select className="select" value={`${place.name}|${place.country}`} onChange={(e) => setPlace(placeOptions.find((p) => `${p.name}|${p.country}` === e.target.value)!)}>
-              {placeOptions.map((p) => <option key={`${p.name}|${p.country}`} value={`${p.name}|${p.country}`}>{p.name}{p.state && p.state !== p.name ? `, ${p.state}` : ""} ({p.country})</option>)}
-            </select>
+          <div className="field"><label>Deliver to: {place.name}, {countryOf(place.country)?.name ?? place.country}</label>
+            <PlacePicker />
           </div>
           <div className="between"><span className="tiny" style={{ color: "var(--text)", fontWeight: 600, fontSize: 12 }}>Show prices in</span>
-            <div className="seg">{(["USD", "NGN"] as const).map((c) => <button key={c} className={currency === c ? "on" : ""} onClick={() => setCurrency(c)}>{c === "USD" ? "$ USD" : "₦ NGN"}</button>)}</div>
+            <select className="select" style={{ width: "auto" }} value={currency} onChange={(e) => setCurrency(e.target.value)} aria-label="Display currency">
+              {currencies.map((c) => <option key={c} value={c}>{c}</option>)}
+            </select>
           </div>
           <div className="field"><label>Hybrid inference mode</label>
             <select className="select" value={mode} onChange={(e) => { const m = e.target.value as ModeSetting; setMode(m); setModeSetting(m); }}>
@@ -147,6 +149,7 @@ export function SettingsDialog({ onClose }: { onClose(): void }) {
 export function AppShell({ children, landing = false }: { children: ReactNode; landing?: boolean }) {
   const [menu, setMenu] = useState(false);
   const [settings, setSettings] = useState(false);
+  const [picker, setPicker] = useState(false);
   const { user } = useAuth();
   const { cartCount, toast } = useShop();
   const nav = useNavigate();
@@ -157,6 +160,7 @@ export function AppShell({ children, landing = false }: { children: ReactNode; l
       <Logo />
       <span className="sp" />
       {!landing && <span className="hide-sm"><StatusChip onClick={() => setSettings(true)} /></span>}
+      {!landing && <span className="hide-sm"><PlaceChip onClick={() => setPicker(true)} /></span>}
       {!landing && (
         <button className="iconbtn" onClick={() => nav("/cart")} aria-label="Cart">
           <ShoppingCart size={17} />{cartCount > 0 && <span className="count">{cartCount}</span>}
@@ -180,13 +184,22 @@ export function AppShell({ children, landing = false }: { children: ReactNode; l
         <div className="apphead">
           <div className="wrap wide">
             {head}
-            <div className="show-sm" style={{ paddingBottom: 10 }}><StatusChip onClick={() => setSettings(true)} /></div>
+            <div className="show-sm chiprow" style={{ paddingBottom: 10 }}><PlaceChip onClick={() => setPicker(true)} /><StatusChip onClick={() => setSettings(true)} /></div>
           </div>
         </div>
       )}
       {children}
       {menu && <MenuDialog onClose={() => setMenu(false)} onSettings={() => setSettings(true)} />}
       {settings && <SettingsDialog onClose={() => setSettings(false)} />}
+      {picker && (
+        <div className="scrim" onClick={() => setPicker(false)} role="dialog" aria-modal="true" aria-label="Deliver to">
+          <div className="card menu" style={{ padding: 20, maxWidth: 420 }} onClick={(e) => e.stopPropagation()}>
+            <div className="between"><b>Deliver to</b><button className="iconbtn" onClick={() => setPicker(false)} aria-label="Close"><X size={16} /></button></div>
+            <p className="tiny" style={{ margin: "6px 0 12px" }}>Pick any country and city. Prices, delivery fees and times switch to match. Fees are estimates.</p>
+            <PlacePicker onDone={() => setPicker(false)} />
+          </div>
+        </div>
+      )}
       {toast && <div className="toast">{toast}</div>}
     </>
   );

@@ -34,7 +34,8 @@ let rc: RemoteConfig | null = null;
 const RC_DEFAULTS = {
   cloud_model: (env.VITE_CLOUD_MODEL as string) || "gemini-3.5-flash-lite",
   inference_mode: "PREFER_ON_DEVICE",
-  fx_ngn_per_usd: "1500",
+  fx_rates: "{}",
+  default_country: "US",
   enable_bulk_planner: "true",
   max_results: "6",
 };

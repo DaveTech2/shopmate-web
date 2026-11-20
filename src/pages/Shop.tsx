@@ -6,8 +6,9 @@ import { BagMark } from "../components/BagMark";
 import { CompareTray, ProductCard, Thumb } from "../components/ProductCard";
 import { useShop } from "../state/shop";
 import { useAuth } from "../state/auth";
-import { getProduct, money, searchCatalog, withinBudget, type Product } from "../lib/catalog";
-import { resolvePlace } from "../lib/delivery";
+import { getProduct, money, searchCatalog, symbolOf, withinBudget, type Product } from "../lib/catalog";
+import { resolvePlace, placeLabel } from "../lib/delivery";
+import { countryOf } from "../data/countries";
 import { flag } from "../lib/firebase";
 import { saveSearch, setCartQty } from "../lib/store";
 import {
@@ -50,7 +51,8 @@ function matchRefs(refs: string[] | undefined, pool: string[]): string[] {
 
 export default function Shop() {
   const [params, setParams] = useSearchParams();
-  const { currency, place, setPlace, addToCart, cart, compare, toggleCompare } = useShop();
+  const { currency: curNow, place, setPlace, addToCart, cart, compare, toggleCompare, notify } = useShop();
+  const currency = curNow;
   const { ensureGuest } = useAuth();
   const [msgs, setMsgs] = useState<Msg[]>(() => JSON.parse(sessionStorage.getItem(KEY) || "[]"));
   const [text, setText] = useState("");
@@ -83,13 +85,18 @@ export default function Shop() {
       const ir = await parseIntent(q, {
         lastResults: pool.map((id, i) => `${i + 1}. [${id}] ${getProduct(id)?.title}`),
         cart: cart.map((l) => `[${l.id}] ${getProduct(l.id)?.title} x${l.qty}`),
+        place, currency: curNow,
       });
       const intent = ir.data;
       const b1 = badge("Understood", ir);
       let dest = place;
-      if (intent.location) {
-        const p = resolvePlace(intent.location);
-        if (p) { dest = p; setPlace(p); }
+      let currency = curNow;
+      if (intent.location || intent.location_country) {
+        const p = resolvePlace(intent.location, intent.location_country);
+        if (p && (p.name !== place.name || p.country !== place.country)) {
+          dest = p; setPlace(p); currency = countryOf(p.country)?.currency || currency;
+          notify(`Delivering to ${placeLabel(p)}`);
+        }
       }
       switch (intent.action) {
         case "compare": {
@@ -177,7 +184,7 @@ export default function Shop() {
                   {m.intent && m.intent.action === "search" && (
                     <div className="intent">
                       {m.intent.query && <span>“{m.intent.query}”</span>}
-                      {m.intent.budget_max ? <span>budget ≤ {m.intent.budget_currency === "NGN" ? "₦" : "$"}{m.intent.budget_max.toLocaleString()}</span> : null}
+                      {m.intent.budget_max ? <span>budget ≤ {symbolOf(m.intent.budget_currency || "USD")}{m.intent.budget_max.toLocaleString()}</span> : null}
                       {m.intent.use && <span>for {m.intent.use}</span>}
                       {m.intent.size ? <span>size {m.intent.size}</span> : null}
                       {m.intent.category && <span>{m.intent.category}</span>}
@@ -210,7 +217,7 @@ export default function Shop() {
                     {m.plan.lines.map((l) => getProduct(l.id) && (
                       <div key={l.id} className="between" style={{ padding: "6px 0", fontSize: 13 }}>
                         <span>{l.qty} × {getProduct(l.id)!.title}<div className="tiny">{l.why}</div></span>
-                        <b>{money(getProduct(l.id)!.price * l.qty, "NGN", currency)}</b>
+                        <b>{money(getProduct(l.id)!.price * l.qty, getProduct(l.id)!.currency, currency)}</b>
                       </div>
                     ))}
                     <button className="pill orange sm" style={{ marginTop: 8 }} onClick={async () => { for (const l of m.plan!.lines) await addToCart(l.id, l.qty); }}>

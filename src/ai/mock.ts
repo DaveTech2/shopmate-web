@@ -1,6 +1,7 @@
 // DEMO MODE ONLY. Used when no Firebase project is configured (or as a labelled fallback if a
 // Firebase AI Logic call fails). Deterministic rules, clearly badged "Demo · simulated" in the UI.
-import { categories, getProduct, money, toCurrency, type Currency, type Product } from "../lib/catalog";
+import { categories, getProduct, money, symbolOf, toCurrency, type Currency, type Product } from "../lib/catalog";
+import { resolvePlace } from "../lib/delivery";
 import type { CartOps, CompareResult, Intent, RankResult } from "./schemas";
 
 const CAT_HINTS: Array<[RegExp, string]> = [
@@ -13,23 +14,30 @@ const CAT_HINTS: Array<[RegExp, string]> = [
   [/watch|sunglasses/i, "jewelry-watches"],
 ];
 
-export function mockIntent(text: string): Intent {
+const CUR_SIGNS: Array<[RegExp, string]> = [
+  [/€|\beur(?:os?)?\b/, "EUR"], [/£|\bgbp\b|\bpounds?\b/, "GBP"], [/₦|\bngn\b|\bnaira\b/, "NGN"], [/₹|\binr\b|\brupees?\b/, "INR"],
+  [/¥|\bjpy\b|\byen\b/, "JPY"], [/\bkes\b|\bksh\b/, "KES"], [/\bghs\b|\bcedis?\b|₵/, "GHS"], [/\bzar\b|\brand\b/, "ZAR"],
+  [/\bcad\b|c\$/, "CAD"], [/\baud\b|a\$/, "AUD"], [/\baed\b|\bdirhams?\b/, "AED"], [/\$|\busd\b|\bdollars?\b/, "USD"],
+];
+
+export function mockIntent(text: string, cur = "USD"): Intent {
   const t = text.trim();
   const lower = t.toLowerCase();
   let budget_max = 0;
-  let budget_currency: "USD" | "NGN" = "USD";
-  const usd = lower.match(/(?:under|below|less than|max|budget(?: of)?|<)\s*\$\s?(\d[\d,]*(?:\.\d+)?)\s*(k)?/) || lower.match(/\$\s?(\d[\d,]*)(k)?/);
-  const ngn = lower.match(/(?:₦|ngn|n)\s?(\d[\d,]*)(k)?|(\d[\d,]*)(k)?\s*(?:naira|ngn)/);
-  if (usd) budget_max = Number(usd[1].replace(/,/g, "")) * (usd[2] ? 1000 : 1);
-  else if (ngn) {
-    budget_currency = "NGN";
-    budget_max = Number((ngn[1] || ngn[3]).replace(/,/g, "")) * ((ngn[2] || ngn[4]) ? 1000 : 1);
+  let budget_currency = cur;
+  const amt = lower.match(/(?:under|below|less than|max|budget(?: of)?|<|for)\s*(?:[^\d\s]{1,3}\s?)?(\d[\d,]*(?:\.\d+)?)\s*(k)?/) || lower.match(/[$€£₦₹¥]\s?(\d[\d,]*)(k)?/);
+  if (amt && /under|below|less than|max|budget|<|[$€£₦₹¥]/.test(amt[0])) {
+    budget_max = Number(amt[1].replace(/,/g, "")) * (amt[2] ? 1000 : 1);
+    budget_currency = CUR_SIGNS.find(([re]) => re.test(lower))?.[1] || cur;
   }
   const size = Number(lower.match(/size\s*(\d{2})/)?.[1] || 0);
   const qty = Number(lower.match(/\b(\d{1,3})\s*(?:x|pcs|pieces|units|of)\b/)?.[1] || lower.match(/\bfor\s+(\d{1,3})\s+(?:people|staff|guests|students)/)?.[1] || 0);
   const category = CAT_HINTS.find(([re]) => re.test(lower))?.[1] || "";
   const use = lower.match(/\bfor\s+([a-z ]+?)(?:,|\.|$| under| below| size)/)?.[1]?.trim() || "";
-  const location = lower.match(/\b(?:to|in|deliver(?:ed)? to)\s+(lagos|abuja|ibadan|kano|port harcourt|enugu|london|accra|nairobi|new york)/)?.[1] || "";
+  const lm = t.match(/\b(?:deliver(?:ed|y)? to|ship(?:ped)? to|to|in)\s+([A-Z][\p{L}.' -]+(?:,\s*[A-Z][\p{L}. ]+)?)/u);
+  const resolved = lm ? resolvePlace(lm[1].trim()) : null;
+  const location = resolved ? resolved.name : "";
+  const location_country = resolved ? resolved.country : "";
   let action: Intent["action"] = "search";
   if (/\bcompare\b|\bvs\.?\b|\bversus\b|which is better/.test(lower)) action = "compare";
   else if (/\b(remove|delete|take out)\b/.test(lower)) action = "cart_remove";
@@ -38,13 +46,14 @@ export function mockIntent(text: string): Intent {
   else if (/\b(bulk|office|event|party|restock|for \d+ (people|staff|guests|students))\b/.test(lower)) action = "bulk_plan";
   else if (/^(hi|hello|hey|thanks|thank you)\b/.test(lower)) action = "chitchat";
   const query = lower
-    .replace(/(?:under|below|less than|budget(?: of)?)\s*[$₦]?\s?\d[\d,]*k?\s*(naira|ngn)?/g, "")
+    .replace(/(?:under|below|less than|budget(?: of)?)\s*[^\d\s]{0,3}\s?\d[\d,]*k?\s*(naira|ngn|euros?|eur|pounds?|gbp|usd|dollars?|rupees?)?/g, "")
+    .replace(/\b(?:deliver(?:ed|y)? to|ship(?:ped)? to)\s+.*$/, "")
     .replace(/size\s*\d+/g, "")
     .replace(/[,.]/g, " ")
     .replace(/\s+/g, " ")
     .trim();
   return {
-    action, query, category, budget_max, budget_currency, use, size, location, quantity: qty || 1,
+    action, query, category, budget_max, budget_currency, use, size, location, location_country, quantity: qty || 1,
     must_have: /battery/.test(lower) ? ["battery"] : [],
     reply: action === "chitchat" ? "Hi! Tell me what you need, your budget and what it's for." : "",
   };
@@ -56,7 +65,7 @@ function reasonsFor(p: Product, intent: Intent, cur: Currency): string[] {
   if (intent.budget_max) {
     const usd = toCurrency(p.price, p.currency, "USD");
     const cap = toCurrency(intent.budget_max, intent.budget_currency || "USD", "USD");
-    if (usd <= cap) r.push(`${money(p.price, p.currency, cur)}, within your ${intent.budget_currency === "NGN" ? "₦" : "$"}${intent.budget_max.toLocaleString()} budget`);
+    if (usd <= cap) r.push(`${money(p.price, p.currency, cur)}, within your ${symbolOf(intent.budget_currency || "USD")}${intent.budget_max.toLocaleString()} budget`);
   }
   if (s.Battery && /battery/i.test(intent.query + (intent.must_have || []).join(" "))) r.push(`Battery: ${s.Battery}`);
   if (s.Support && /flat|arch|stability/i.test(intent.query + intent.use)) r.push(`${s.Support}`);
@@ -64,7 +73,7 @@ function reasonsFor(p: Product, intent: Intent, cur: Currency): string[] {
   if (s.RAM && /program|coding|develop/i.test(intent.query + intent.use)) r.push(`${s.RAM} RAM + ${s.Storage || "SSD"} for dev tools`);
   if (s.CPU && r.length < 2) r.push(`${s.CPU} processor`);
   if (s.Type && r.length < 3) r.push(s.Type);
-  if (r.length < 2) r.push(`Sold by ${p.merchant}, ships from Lagos`);
+  if (r.length < 2) r.push(`Sold by ${p.merchant}, ships from the nearest Shopmate hub`);
   return r.slice(0, 3);
 }
 

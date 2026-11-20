@@ -26,9 +26,9 @@ export function ProductCard({ p, reasons, fit }: { p: Product; reasons?: string[
           <Link to={`/p/${p.id}`}><h3>{p.title}</h3></Link>
           <div className="price">
             {money(p.price, p.currency, currency)}
-            <small>{currency === "USD" ? money(p.price, p.currency, "NGN") : money(p.price, p.currency, "USD")}</small>
+            {currency !== "USD" && <small>{money(p.price, p.currency, "USD")}</small>}
           </div>
-          <div className="deliv"><Truck size={12} /> {money(q.fee, q.fee_currency, currency)} delivery to {place.name} · {q.eta}</div>
+          <div className="deliv"><Truck size={12} /> est. {money(q.fee, q.fee_currency, currency)} delivery to {place.name} · {q.eta}</div>
           {fit !== undefined && <div className="fit" style={{ marginTop: 4 }}>{fit}% fit</div>}
         </div>
       </div>
