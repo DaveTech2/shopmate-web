@@ -13,6 +13,7 @@ import { PlacePicker, PlaceChip } from "./PlacePicker";
 import { currencies } from "../lib/catalog";
 import { countryOf } from "../data/countries";
 import { BagMark } from "./BagMark";
+import { ThemeToggle, useTheme } from "./ThemeToggle";
 
 export function Logo() {
   return (
@@ -109,6 +110,7 @@ export function SettingsDialog({ onClose }: { onClose(): void }) {
   const { place, currency, setCurrency } = useShop();
   const { st, prog } = useDeviceStatus();
   const [mode, setMode] = useState<ModeSetting>(getModeSetting());
+  const [theme, setTheme] = useTheme();
   return (
     <div className="scrim" onClick={onClose} role="dialog" aria-modal="true" aria-label="Settings">
       <div className="card menu" style={{ padding: 20, maxWidth: 420 }} onClick={(e) => e.stopPropagation()}>
@@ -121,6 +123,9 @@ export function SettingsDialog({ onClose }: { onClose(): void }) {
             <select className="select" style={{ width: "auto" }} value={currency} onChange={(e) => setCurrency(e.target.value)} aria-label="Display currency">
               {currencies.map((c) => <option key={c} value={c}>{c}</option>)}
             </select>
+          </div>
+          <div className="between"><span className="tiny" style={{ color: "var(--text)", fontWeight: 600, fontSize: 12 }}>Theme</span>
+            <div className="seg"><button className={theme === "light" ? "on" : ""} onClick={() => setTheme("light")}>Light</button><button className={theme === "dark" ? "on" : ""} onClick={() => setTheme("dark")}>Dark</button></div>
           </div>
           <div className="field"><label>Hybrid inference mode</label>
             <select className="select" value={mode} onChange={(e) => { const m = e.target.value as ModeSetting; setMode(m); setModeSetting(m); }}>
@@ -159,6 +164,7 @@ export function AppShell({ children, landing = false }: { children: ReactNode; l
       <button className="iconbtn" onClick={() => setMenu(true)} aria-label="Menu"><Menu size={17} /></button>
       <Logo />
       <span className="sp" />
+      <ThemeToggle />
       {!landing && <span className="hide-sm"><StatusChip onClick={() => setSettings(true)} /></span>}
       {!landing && <span className="hide-sm"><PlaceChip onClick={() => setPicker(true)} /></span>}
       {!landing && (
