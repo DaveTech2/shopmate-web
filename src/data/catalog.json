@@ -99,99 +99,52 @@
  ],
  "products": [
   {
-   "id": "d-toi1",
-   "title": "Close-Up Toothpaste 140g",
-   "category": "toiletries",
-   "price": 0.87,
-   "currency": "USD",
-   "image": "/products/d-toi1.webp",
-   "merchant": "Shopmate demo catalog",
-   "product_type": "toothpaste",
-   "brand": "Close-Up",
-   "size": "140g",
-   "barcode": "8934839122508",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-toi6",
-   "title": "Rexona Roll-On Deodorant 50ml",
-   "category": "toiletries",
-   "price": 1.73,
-   "currency": "USD",
-   "image": "/products/d-toi6.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-toi7",
-   "title": "Dettol Mould & Mildew Remover Spray",
-   "category": "household",
-   "price": 3.67,
-   "currency": "USD",
-   "image": "/products/d-toi7.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
    "id": "d-toi8",
-   "title": "Head & Shoulders Shampoo 400ml",
+   "title": "Head & Shoulders Classic Clean Shampoo 13.5 fl oz",
    "category": "toiletries",
-   "price": 4.13,
+   "price": 7.99,
    "currency": "USD",
    "image": "/products/d-toi8.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "shampoo",
    "brand": "Head & Shoulders",
-   "barcode": "5601059062534",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Target",
+    "url": "https://www.target.com/p/head-38-shoulders-dandruff-shampoo-anti-dandruff-treatment-classic-clean-for-daily-use-paraben-free-12-5-fl-oz/-/A-13974348"
    }
   },
   {
    "id": "d-bea1",
-   "title": "Nivea Body Lotion 400ml",
+   "title": "Nivea Essentially Enriched Body Lotion 16.9 fl oz",
    "category": "beauty",
-   "price": 3.47,
+   "price": 6.79,
    "currency": "USD",
    "image": "/products/d-bea1.webp",
    "merchant": "Shopmate demo catalog",
-   "barcode": "4005900369581",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Target",
+    "url": "https://www.target.com/p/nivea-essentially-enriched-dry-skin-body-lotion-with-almond-oil-scented-16-9-fl-oz/-/A-11001234"
+   },
+   "photoBarcode": "4005900369581"
   },
   {
    "id": "d-bea3",
-   "title": "Dove Beauty Cream Bar",
+   "title": "Dove White Beauty Bar (2 x 3.75 oz)",
    "category": "beauty",
-   "price": 4.53,
+   "price": 5.49,
    "currency": "USD",
    "image": "/products/d-bea3.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "soap",
    "brand": "Dove",
-   "barcode": "8720182264664",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Target",
+    "url": "https://www.target.com/p/dove-beauty-white-moisturizing-beauty-bar-soap-2pk-3-75oz-each/-/A-11012602"
+   },
+   "photoBarcode": "8720182264664"
   },
   {
    "id": "d-bea4",
@@ -212,60 +165,45 @@
   },
   {
    "id": "d-bab3",
-   "title": "Cerelac Wheat 1kg",
+   "title": "Nestlé Cerelac Wheat with Milk Infant Cereal 14.1 oz",
    "category": "baby",
-   "price": 6.53,
+   "price": 6.17,
    "currency": "USD",
    "image": "/products/d-bab3.webp",
    "merchant": "Shopmate demo catalog",
-   "barcode": "6221007032540",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-pha4",
-   "title": "Hand Sanitizer 500ml",
-   "category": "pharmacy",
-   "price": 1.87,
-   "currency": "USD",
-   "image": "/products/d-pha4.webp",
-   "merchant": "Shopmate demo catalog",
-   "barcode": "0000208077247",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/Nestle-Nestum-Cerelac-Wheat-Infant-Cereal-with-Milk-14-1-oz-Canister/14711224"
+   },
+   "photoBarcode": "6221007032540"
   },
   {
    "id": "d-pho4",
-   "title": "Apple iPhone 15 128GB (Black)",
+   "title": "Apple iPhone 15 128GB (Black, Refurbished Excellent)",
    "category": "phones",
-   "price": 766.67,
+   "price": 539.99,
    "currency": "USD",
    "image": "/products/d-pho4.webp",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/site/questions/apple-iphone-15-5g-128gb-unlocked-black/6586081"
    }
   },
   {
    "id": "d-pho6",
-   "title": "Apple iPhone 15 Pro Max 256GB (Natural Titanium)",
+   "title": "Apple iPhone 15 Pro Max 256GB (Natural Titanium, Unlocked)",
    "category": "phones",
-   "price": 1233.33,
+   "price": 669.97,
    "currency": "USD",
    "image": "/products/d-pho6.webp",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Walmart (IGM Inc)",
+    "url": "https://www.walmart.com/ip/Apple-iPhone-15-Pro-Max-Carrier-Unlocked-256GB-Natural-Titanium/20823558345"
    }
   },
   {
@@ -284,16 +222,16 @@
   },
   {
    "id": "d-gam1",
-   "title": "PlayStation 5 Slim (Disc Edition)",
+   "title": "PlayStation 5 Slim Console 1TB",
    "category": "gaming",
-   "price": 566.67,
+   "price": 649.99,
    "currency": "USD",
    "image": "/products/d-gam1.webp",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/product/playstation-5-slim-console-1tb/JXHQ37TYLC"
    }
   },
   {
@@ -393,66 +331,24 @@
    }
   },
   {
-   "id": "d-spo3",
-   "title": "Li-Ning Size 5 Football",
-   "category": "sports",
-   "price": 6.33,
-   "currency": "USD",
-   "image": "/products/d-spo3.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
    "id": "d-spo2",
-   "title": "Yoga Mat 6mm (Pink)",
+   "title": "Gaiam Essentials Yoga Mat 6mm",
    "category": "sports",
-   "price": 8.33,
+   "price": 22.99,
    "currency": "USD",
    "image": "/products/d-spo2.webp",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-hom1",
-   "title": "Bosch Glass Electric Kettle 1.7L",
-   "category": "home-kitchen",
-   "price": 30.0,
-   "currency": "USD",
-   "image": "/products/d-hom1.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-hom2",
-   "title": "Panasonic NN-GM333 Microwave Oven 23L",
-   "category": "home-kitchen",
-   "price": 76.67,
-   "currency": "USD",
-   "image": "/products/d-hom2.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/Essentials-Yoga-Mat-6mm/183300567"
    }
   },
   {
    "id": "d-ele4",
-   "title": "HP 15s Laptop Core i5 8GB/512GB",
+   "title": "HP 15.6\" Touch Laptop Core i5 8GB/512GB SSD",
    "category": "electronics",
-   "price": 480.0,
+   "price": 519.0,
    "currency": "USD",
    "image": "/products/d-ele4.webp",
    "merchant": "Shopmate demo catalog",
@@ -469,38 +365,39 @@
     "office",
     "student"
    ],
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/HP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i5-1334U-8GB-RAM-512GB-SSD-Natural-Silver/16401519615"
    }
   },
   {
    "id": "d-gar1",
-   "title": "Makita 18V Cordless Drill",
+   "title": "Makita XFD131 18V LXT Brushless 1/2\" Drill Driver Kit",
    "category": "garden-tools",
-   "price": 63.33,
+   "price": 179.0,
    "currency": "USD",
    "image": "/products/d-gar1.webp",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Acme Tools",
+    "url": "https://www.acmetools.com/makita-18v-lxt-lithium-ion-brushless-cordless-1-2-in-driver-drill-kit-30ah-xfd131/088381866347.html"
    }
   },
   {
    "id": "d-ele1",
-   "title": "Samsung Galaxy Buds Wireless Earbuds",
+   "title": "Samsung Galaxy Buds2 True Wireless Earbuds",
    "category": "electronics",
-   "price": 46.67,
+   "price": 96.69,
    "currency": "USD",
    "image": "/products/d-ele1.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "earbuds",
    "specs": {
     "Type": "True wireless earbuds",
-    "Battery": "Up to 13 hours with case",
+    "Noise cancelling": "Active",
+    "Battery": "Up to 20 hours with case",
     "Charging": "USB-C, wireless"
    },
    "tags": [
@@ -508,13 +405,15 @@
     "earbuds",
     "headphones",
     "bluetooth",
-    "battery"
+    "battery",
+    "noise cancelling"
    ],
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/site/questions/samsung-galaxy-buds2-true-wireless-earbud-headphones-white/12374208"
+   },
+   "brand": "Samsung"
   },
   {
    "id": "d-com3",
@@ -531,216 +430,137 @@
    }
   },
   {
-   "id": "d-com5",
-   "title": "TP-Link TL-WR740N Wi-Fi Router",
-   "category": "computing",
-   "price": 12.0,
-   "currency": "USD",
-   "image": "/products/d-com5.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
    "id": "d-off3",
-   "title": "Casio fx-991DE CW Scientific Calculator",
+   "title": "Casio fx-991CW ClassWiz Scientific Calculator",
    "category": "office",
-   "price": 13.0,
+   "price": 29.98,
    "currency": "USD",
    "image": "/products/d-off3.webp",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-fur1",
-   "title": "ErgoFlip Ergonomic Mesh Office Chair",
-   "category": "furniture",
-   "price": 80.0,
-   "currency": "USD",
-   "image": "/products/d-fur1.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/FX-991CW-Scientific-Calculator-for-High-School-College/2559506645"
    }
   },
   {
    "id": "d-toi2",
-   "title": "Oral-B Toothbrush",
+   "title": "Oral-B CrossAction All in One Toothbrush (Soft)",
    "category": "toiletries",
-   "price": 1.87,
+   "price": 5.97,
    "currency": "USD",
    "image": "/products/d-toi2.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "toothbrush",
    "brand": "Oral-B",
-   "barcode": "4987176130051",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/Oral-B-CrossAction-All-in-One-Toothbrush-Deep-Plaque-Removal-Soft-1-Ct-for-Adults-Children-3/24512082"
+   },
+   "photoBarcode": "4987176130051"
   },
   {
    "id": "d-toi5",
-   "title": "Gillette Mach3 Turbo Razor Blades (8 pack)",
+   "title": "Gillette Mach3 Razor Blade Refills (8 count)",
    "category": "toiletries",
-   "price": 5.0,
+   "price": 22.97,
    "currency": "USD",
    "image": "/products/d-toi5.webp",
    "merchant": "Shopmate demo catalog",
-   "barcode": "7702018465385",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/MACH3-Mach3-Cartridges-8-ct/895318"
+   },
+   "photoBarcode": "7702018465385"
   },
   {
    "id": "d-dri5",
-   "title": "Coca-Cola 50cl Bottle",
+   "title": "Coca-Cola Classic 16.9 fl oz Bottles (6 pack)",
    "category": "drinks",
-   "price": 0.33,
+   "price": 7.49,
    "currency": "USD",
    "image": "/products/d-dri5.webp",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Kroger",
+    "url": "https://www.kroger.com/p/coca-cola-soda-bottles/0004900002468"
    }
   },
   {
    "id": "d-dri3",
-   "title": "Lipton Yellow Label Tea (100 bags)",
+   "title": "Lipton Black Tea Bags 100 ct (3 pack)",
    "category": "drinks",
-   "price": 2.53,
+   "price": 14.91,
    "currency": "USD",
    "image": "/products/d-dri3.webp",
    "merchant": "Shopmate demo catalog",
-   "barcode": "8720608632633",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/Lipton-Black-Tea-Bags-100-Count/17223623484"
+   },
+   "photoBarcode": "8720608632633"
   },
   {
    "id": "d-bab2",
-   "title": "Pampers Sensitive Baby Wipes (56 pack)",
+   "title": "Pampers Sensitive Baby Wipes (56 count)",
    "category": "baby",
-   "price": 1.67,
+   "price": 2.39,
    "currency": "USD",
    "image": "/products/d-bab2.webp",
    "merchant": "Shopmate demo catalog",
    "size": "56 wipes",
-   "barcode": "4015400636649",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-hou3",
-   "title": "Sio Dishwashing Liquid 500ml",
-   "category": "household",
-   "price": 1.6,
-   "currency": "USD",
-   "image": "/products/d-hou3.webp",
-   "merchant": "Shopmate demo catalog",
-   "barcode": "8698898453972",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Target",
+    "url": "https://www.target.com/p/pampers-sensitive-baby-wipes-56ct/-/A-14596962"
+   },
+   "photoBarcode": "4015400636649"
   },
   {
    "id": "d-toi9",
-   "title": "Colgate Triple Action Toothpaste 150g",
+   "title": "Colgate Triple Action Toothpaste 4 oz",
    "category": "toiletries",
-   "price": 0.8,
+   "price": 2.59,
    "currency": "USD",
    "brand": "Colgate",
    "size": "150g",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
    "image": "/products/d-toi9.webp",
-   "barcode": "6281001112013",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "CVS",
+    "url": "https://www.cvs.com/shop/colgate-triple-action-toothpaste-4-oz-prodid-823794?skuId=823794"
+   },
+   "photoBarcode": "6281001112013"
   },
   {
    "id": "d-toi10",
-   "title": "Sensodyne Repair & Protect Toothpaste 75ml",
+   "title": "Sensodyne Repair & Protect Toothpaste 3.4 oz",
    "category": "toiletries",
-   "price": 2.33,
+   "price": 7.47,
    "currency": "USD",
    "brand": "Sensodyne",
    "size": "75ml",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
    "image": "/products/d-toi10.webp",
-   "barcode": "5054563070951",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-toi11",
-   "title": "Pepsodent Cavity Fighter Toothpaste 180g",
-   "category": "toiletries",
-   "price": 0.73,
-   "currency": "USD",
-   "brand": "Pepsodent",
-   "size": "180g",
-   "product_type": "toothpaste",
-   "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi11.webp",
-   "barcode": "8934839128302",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-toi12",
-   "title": "Oral-B Pro-Expert Toothpaste 75ml",
-   "category": "toiletries",
-   "price": 1.87,
-   "currency": "USD",
-   "brand": "Oral-B",
-   "size": "75ml",
-   "product_type": "toothpaste",
-   "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi12.webp",
-   "barcode": "8001090559890",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+    "name": "Walmart",
+    "url": "https://www.walmart.com/ip/Sensodyne-Repair-and-Protect-Fluoride-Toothpaste-for-Sensitive-Teeth-Mint-Flavor-3-4Oz-for-Adults/23814510"
+   },
+   "photoBarcode": "5054563070951"
   },
   {
    "id": "d-toi13",
-   "title": "Nivea Sensitive 3-in-1 Body Wash 500ml",
+   "title": "Nivea Men Sensitive 3-in-1 Body Wash 16.9 fl oz",
    "category": "toiletries",
-   "price": 2.8,
+   "price": 10.49,
    "currency": "USD",
    "brand": "Nivea",
    "size": "500ml",
@@ -748,112 +568,35 @@
    "merchant": "Shopmate demo catalog",
    "image": "/products/d-toi13.webp",
    "barcode": "0072140810849",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "CVS",
+    "url": "https://www.cvs.com/shop/nivea-men-sensitive-skin-body-wash-16-9-oz-prodid-1013088"
    }
   },
   {
    "id": "d-toi14",
-   "title": "Dove Deeply Nourishing Body Wash 500ml",
+   "title": "Dove Deep Moisture Body Wash 20 fl oz",
    "category": "toiletries",
-   "price": 3.0,
+   "price": 10.79,
    "currency": "USD",
    "brand": "Dove",
    "size": "500ml",
    "product_type": "body wash",
    "merchant": "Shopmate demo catalog",
    "image": "/products/d-toi14.webp",
-   "barcode": "8717163742839",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "d-toi15",
-   "title": "Dettol Fresh Body Wash 500ml",
-   "category": "toiletries",
-   "price": 2.53,
-   "currency": "USD",
-   "brand": "Dettol",
-   "product_type": "body wash",
-   "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi15.webp",
-   "size": "500ml",
-   "barcode": "8901396368205",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "w-hp1",
-   "title": "JBL Synchros E50BT Wireless Headphones",
-   "category": "electronics",
-   "price": 40.0,
-   "brand": "JBL",
-   "product_type": "headphones",
-   "image": "/products/w-hp1.webp",
-   "specs": {
-    "Type": "Over-ear, Bluetooth",
-    "Battery": "24 hours",
-    "Charging": "Micro-USB",
-    "Mic": "Yes"
+    "name": "CVS",
+    "url": "https://www.cvs.com/shop/dove-deep-moisture-body-wash-for-dry-skin-20-oz-prodid-978106"
    },
-   "tags": [
-    "wireless",
-    "headphones",
-    "bluetooth",
-    "over-ear",
-    "battery"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "w-hp2",
-   "title": "Sony WI-XB400 Wireless Neckband Earphones",
-   "category": "electronics",
-   "price": 30.0,
-   "brand": "Sony",
-   "product_type": "headphones",
-   "image": "/products/w-hp2.webp",
-   "specs": {
-    "Type": "Neckband, Bluetooth",
-    "Battery": "15 hours",
-    "Charging": "USB-C, 10 min = 1 hr",
-    "Mic": "Yes"
-   },
-   "tags": [
-    "wireless",
-    "headphones",
-    "earphones",
-    "bluetooth",
-    "extra bass",
-    "battery"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
+   "photoBarcode": "8717163742839"
   },
   {
    "id": "w-hp3",
    "title": "JBL Live 650BTNC Noise Cancelling Headphones",
    "category": "electronics",
-   "price": 90.0,
+   "price": 129.95,
    "brand": "JBL",
    "product_type": "headphones",
    "image": "/products/w-hp3.webp",
@@ -873,17 +616,17 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Audio Advice",
+    "url": "https://www.audioadvice.com/products/jbl-live-650btnc-wireless-over-ear-noise-cancelling-headphones-black?variant=41288204943444"
    }
   },
   {
    "id": "w-hp4",
    "title": "Sony WH-CH510 Wireless On-Ear Headphones",
    "category": "electronics",
-   "price": 44.0,
+   "price": 32.0,
    "brand": "Sony",
    "product_type": "headphones",
    "image": "/products/w-hp4.webp",
@@ -903,17 +646,17 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "BirdieBox",
+    "url": "https://birdiebox.com/products/sony-wh-ch510-wireless-headphones"
    }
   },
   {
    "id": "w-lp1",
-   "title": "Acer Aspire 5 Laptop Core i5 8GB/512GB SSD",
+   "title": "Acer Aspire 5 15.6\" Laptop Core i5 8GB/512GB SSD",
    "category": "computing",
-   "price": 520.0,
+   "price": 599.99,
    "brand": "Acer",
    "product_type": "laptop",
    "image": "/products/w-lp1.webp",
@@ -932,17 +675,17 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/site/reviews/acer-aspire-5-15-6-laptop-intel-core-i5-8gb-memory-512gb-solid-state-drive-cha-black/6359966"
    }
   },
   {
    "id": "w-lp2",
-   "title": "Lenovo IdeaPad Laptop Ryzen 5 16GB/512GB SSD",
+   "title": "Lenovo IdeaPad Slim 3 15.6\" Laptop Ryzen 5 8GB/256GB SSD",
    "category": "computing",
-   "price": 650.0,
+   "price": 629.99,
    "brand": "Lenovo",
    "product_type": "laptop",
    "image": "/products/w-lp2.webp",
@@ -962,17 +705,17 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/product/lenovo-ideapad-slim-3-15-6-full-hd-laptop-amd-ryzen-5-40-2025-8gb-memory-256gb-storage-abyss-blue/JJGH3Q8P2K/sku/6668500"
    }
   },
   {
    "id": "w-lp3",
-   "title": "Apple MacBook Air M1 8GB/256GB",
+   "title": "Apple MacBook Air 13.3\" M1 8GB/256GB",
    "category": "computing",
-   "price": 680.0,
+   "price": 779.95,
    "brand": "Apple",
    "product_type": "laptop",
    "image": "/products/w-lp3.webp",
@@ -992,69 +735,10 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "w-lp4",
-   "title": "Dell Inspiron 15 3000 Laptop Core i3 8GB/256GB SSD",
-   "category": "computing",
-   "price": 400.0,
-   "brand": "Dell",
-   "product_type": "laptop",
-   "image": "/products/w-lp4.webp",
-   "specs": {
-    "CPU": "Intel Core i3",
-    "RAM": "8GB",
-    "Storage": "256GB SSD",
-    "Screen": "15.6\" HD",
-    "Battery": "Up to 6 hours"
-   },
-   "tags": [
-    "laptop",
-    "student",
-    "office",
-    "budget"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "w-lp5",
-   "title": "Lenovo ThinkPad T430 (Refurbished) Core i5 8GB/240GB SSD",
-   "category": "computing",
-   "price": 220.0,
-   "brand": "Lenovo",
-   "product_type": "laptop",
-   "image": "/products/w-lp5.webp",
-   "specs": {
-    "CPU": "Intel Core i5 (3rd gen)",
-    "RAM": "8GB",
-    "Storage": "240GB SSD",
-    "Screen": "14\" HD",
-    "Condition": "Refurbished"
-   },
-   "tags": [
-    "laptop",
-    "programming",
-    "budget",
-    "keyboard",
-    "refurbished"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/product/macbook-air-13-3-laptop-apple-m1-chip-8gb-memory-256gb-ssd-space-gray/JJ8ZHP82L3"
    }
   },
   {
@@ -1098,9 +782,9 @@
   },
   {
    "id": "w-rs2",
-   "title": "Brooks Adrenaline GTS Running Shoes",
+   "title": "Brooks Adrenaline GTS 24 Running Shoes",
    "category": "footwear",
-   "price": 130.0,
+   "price": 104.95,
    "brand": "Brooks",
    "product_type": "running shoes",
    "image": "/products/w-rs2.webp",
@@ -1129,17 +813,17 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Dave's Running Shop",
+    "url": "https://davesrunning.com/products/adrenaline-gts-24?variant=42247375192160"
    }
   },
   {
    "id": "w-rs3",
-   "title": "ASICS Gel-Cumulus Neutral Running Shoes",
+   "title": "ASICS Gel-Cumulus 26 Running Shoes",
    "category": "footwear",
-   "price": 100.0,
+   "price": 85.97,
    "brand": "ASICS",
    "product_type": "running shoes",
    "image": "/products/w-rs3.webp",
@@ -1167,25 +851,25 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "DICK'S Sporting Goods",
+    "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-cumulus-26-running-shoes-24asimcmls26blkcnmns/24asimcmls26blkcnmns"
    }
   },
   {
    "id": "w-rs4",
-   "title": "Brooks Ghost 14 GTX Running Shoes",
+   "title": "Brooks Ghost 16 GTX Running Shoes",
    "category": "footwear",
-   "price": 113.33,
+   "price": 169.99,
    "brand": "Brooks",
    "product_type": "running shoes",
    "image": "/products/w-rs4.webp",
    "specs": {
     "Support": "Neutral",
-    "Sizes (EU)": "40–45",
+    "Sizes (EU)": "40 to 45",
     "Drop": "12mm",
-    "Use": "Waterproof road running"
+    "Use": "Waterproof road running (GORE-TEX)"
    },
    "sizes": [
     40,
@@ -1203,17 +887,17 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "DICK'S Sporting Goods",
+    "url": "https://www.dickssportinggoods.com/p/brooks-mens-ghost-16-gtx-running-shoes-24bromghst16gtxblmns/24bromghst16gtxblmns"
    }
   },
   {
    "id": "w-rs5",
-   "title": "Brooks Glycerin 19 Max-Cushion Running Shoes",
+   "title": "Brooks Glycerin 23 Max-Cushion Running Shoes",
    "category": "footwear",
-   "price": 150.0,
+   "price": 175.0,
    "brand": "Brooks",
    "product_type": "running shoes",
    "image": "/products/w-rs5.webp",
@@ -1239,85 +923,50 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "w-rs6",
-   "title": "Mizuno Wave Ibuki 2 Trail Running Shoes",
-   "category": "footwear",
-   "price": 80.0,
-   "brand": "Mizuno",
-   "product_type": "running shoes",
-   "image": "/products/w-rs6.webp",
-   "specs": {
-    "Support": "Neutral",
-    "Sizes (EU)": "39–44",
-    "Drop": "12mm",
-    "Use": "Trail"
-   },
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44
-   ],
-   "tags": [
-    "running",
-    "shoes",
-    "trail",
-    "neutral"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Fleet Feet",
+    "url": "https://www.fleetfeet.com/products/mens-brooks-glycerin-23?upc=195394767650"
    }
   },
   {
    "id": "w-sp1",
-   "title": "JBL Flip 3 Portable Bluetooth Speaker",
+   "title": "Soundcore Select 4 Go Portable Bluetooth Speaker (Blue)",
    "category": "electronics",
-   "price": 56.67,
-   "brand": "JBL",
+   "price": 19.99,
+   "brand": "Soundcore",
    "product_type": "speaker",
    "image": "/products/w-sp1.webp",
    "specs": {
-    "Battery": "10 hours",
-    "Water resistance": "Splashproof"
+    "Battery": "20 hours",
+    "Water resistance": "IP67, floats"
    },
    "tags": [
     "speaker",
     "bluetooth",
     "portable",
+    "waterproof",
     "party"
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/product/soundcore-by-anker-select-4-go-ip67-waterproof-dustproof-floatable-ultra-portable-bluetooth-speaker-with-20h-playtime-black/JJ858RX2QX/sku/12091095"
    }
   },
   {
    "id": "w-sw1",
-   "title": "Huawei Band 4 Fitness Smartwatch",
+   "title": "Fitbit Inspire 3 Fitness Tracker (Midnight Zen)",
    "category": "jewelry-watches",
-   "price": 26.67,
-   "brand": "Huawei",
+   "price": 69.95,
+   "brand": "Fitbit",
    "product_type": "smartwatch",
    "image": "/products/w-sw1.webp",
    "specs": {
-    "Battery": "Up to 9 days",
-    "Sensors": "Heart rate, sleep"
+    "Battery": "Up to 10 days",
+    "Sensors": "Heart rate, sleep, SpO2"
    },
    "tags": [
     "smartwatch",
@@ -1327,49 +976,23 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
-   }
-  },
-  {
-   "id": "w-kb1",
-   "title": "Mechanical Keyboard (Hot-swap, RGB)",
-   "category": "computing",
-   "price": 36.67,
-   "brand": "Generic",
-   "product_type": "keyboard",
-   "image": "/products/w-kb1.webp",
-   "specs": {
-    "Switches": "Hot-swappable",
-    "Connection": "USB-C"
-   },
-   "tags": [
-    "keyboard",
-    "programming",
-    "mechanical",
-    "gaming"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
-   "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Best Buy",
+    "url": "https://www.bestbuy.com/product/google-fitbit-inspire-3-health-fitness-tracker-works-with-android-and-ios-midnight-zen-2022/J3GWJ6S29F/sku/6514030"
    }
   },
   {
    "id": "w-ms1",
-   "title": "Wireless Optical Mouse",
+   "title": "Logitech M185 Wireless Mouse",
    "category": "computing",
-   "price": 10.0,
-   "brand": "Generic",
+   "price": 12.99,
+   "brand": "Logitech",
    "product_type": "mouse",
    "image": "/products/w-ms1.webp",
    "specs": {
     "Connection": "2.4GHz USB receiver",
-    "Battery": "AA, ~12 months"
+    "Battery": "AA, up to 12 months"
    },
    "tags": [
     "mouse",
@@ -1379,10 +1002,10 @@
    ],
    "currency": "USD",
    "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": null,
+   "priceUpdatedAt": "2026-11-20",
    "priceSource": {
-    "name": "Seed catalog (not yet re-checked)",
-    "url": ""
+    "name": "Logitech",
+    "url": "https://www.logitech.com/en-us/shop/p/m185-wireless-mouse.910-002225"
    }
   },
   {
@@ -1481,9 +1104,9 @@
  "pricesUpdatedAt": "2026-11-20",
  "refreshedAt": "2026-11-20",
  "refreshStats": {
-  "refreshed": 9,
-  "added": 4,
-  "kept": 52,
-  "total": 65
+  "refreshed": 37,
+  "added": 0,
+  "kept": 9,
+  "total": 46
  }
 }
