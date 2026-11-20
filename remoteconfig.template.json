@@ -1,0 +1,9 @@
+{
+  "parameters": {
+    "cloud_model": { "defaultValue": { "value": "gemini-3.5-flash-lite" }, "description": "Cloud fallback / research model" },
+    "inference_mode": { "defaultValue": { "value": "PREFER_ON_DEVICE" }, "description": "Default hybrid mode for light tasks" },
+    "fx_ngn_per_usd": { "defaultValue": { "value": "1500" }, "description": "Approximate NGN per USD for display" },
+    "enable_bulk_planner": { "defaultValue": { "value": "true" }, "description": "Cloud function-calling bulk order planner" },
+    "max_results": { "defaultValue": { "value": "6" }, "description": "Results per search" }
+  }
+}
