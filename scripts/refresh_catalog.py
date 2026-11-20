@@ -165,8 +165,8 @@ def write_credits(cat):
     rows = [f"| {p['title']} | [{p['imageCredit']['source'].split('/')[2]}]({p['imageCredit']['source']}) | {p['imageCredit']['license']} |"
             for p in cat["products"] if p.get("imageCredit") and p["imageCredit"]["source"] not in s]
     if rows:
-        marker = "\n## Other"
-        s = s.replace(marker, "\n".join(rows) + "\n" + marker, 1) if marker in s else s + "\n" + "\n".join(rows) + "\n"
+        marker = next((m for m in ("\nClose equivalents:", "\n## Other") if m in s), None)
+        s = s.replace(marker, "\n".join(rows) + "\n" + marker, 1) if marker else s + "\n" + "\n".join(rows) + "\n"
         open(CREDITS, "w").write(s)
 
 

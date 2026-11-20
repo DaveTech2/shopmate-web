@@ -1,0 +1,299 @@
+[
+ {
+  "id": "d-toi8",
+  "price": 7.99,
+  "currency": "USD",
+  "seller": "Target",
+  "url": "https://www.target.com/p/head-38-shoulders-dandruff-shampoo-anti-dandruff-treatment-classic-clean-for-daily-use-paraben-free-12-5-fl-oz/-/A-13974348",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-bea1",
+  "price": 6.79,
+  "currency": "USD",
+  "seller": "Target",
+  "url": "https://www.target.com/p/nivea-essentially-enriched-dry-skin-body-lotion-with-almond-oil-scented-16-9-fl-oz/-/A-11001234",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-bea3",
+  "price": 5.49,
+  "currency": "USD",
+  "seller": "Target",
+  "url": "https://www.target.com/p/dove-beauty-white-moisturizing-beauty-bar-soap-2pk-3-75oz-each/-/A-11012602",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-bab3",
+  "price": 6.17,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/Nestle-Nestum-Cerelac-Wheat-Infant-Cereal-with-Milk-14-1-oz-Canister/14711224",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-pho4",
+  "price": 539.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/site/questions/apple-iphone-15-5g-128gb-unlocked-black/6586081",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-pho6",
+  "price": 669.97,
+  "currency": "USD",
+  "seller": "Walmart (IGM Inc)",
+  "url": "https://www.walmart.com/ip/Apple-iPhone-15-Pro-Max-Carrier-Unlocked-256GB-Natural-Titanium/20823558345",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-gam1",
+  "price": 649.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/playstation-5-slim-console-1tb/JXHQ37TYLC",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-spo2",
+  "price": 22.99,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/Essentials-Yoga-Mat-6mm/183300567",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-toi2",
+  "price": 5.97,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/Oral-B-CrossAction-All-in-One-Toothbrush-Deep-Plaque-Removal-Soft-1-Ct-for-Adults-Children-3/24512082",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-ele4",
+  "price": 519.0,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/HP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i5-1334U-8GB-RAM-512GB-SSD-Natural-Silver/16401519615",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-lp1",
+  "price": 599.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/site/reviews/acer-aspire-5-15-6-laptop-intel-core-i5-8gb-memory-512gb-solid-state-drive-cha-black/6359966",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-lp2",
+  "price": 629.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/lenovo-ideapad-slim-3-15-6-full-hd-laptop-amd-ryzen-5-40-2025-8gb-memory-256gb-storage-abyss-blue/JJGH3Q8P2K/sku/6668500",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-lp3",
+  "price": 779.95,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/macbook-air-13-3-laptop-apple-m1-chip-8gb-memory-256gb-ssd-space-gray/JJ8ZHP82L3",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-gar1",
+  "price": 179.0,
+  "currency": "USD",
+  "seller": "Acme Tools",
+  "url": "https://www.acmetools.com/makita-18v-lxt-lithium-ion-brushless-cordless-1-2-in-driver-drill-kit-30ah-xfd131/088381866347.html",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-toi5",
+  "price": 22.97,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/MACH3-Mach3-Cartridges-8-ct/895318",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-dri5",
+  "price": 7.49,
+  "currency": "USD",
+  "seller": "Kroger",
+  "url": "https://www.kroger.com/p/coca-cola-soda-bottles/0004900002468",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-dri3",
+  "price": 14.91,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/Lipton-Black-Tea-Bags-100-Count/17223623484",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-bab2",
+  "price": 2.39,
+  "currency": "USD",
+  "seller": "Target",
+  "url": "https://www.target.com/p/pampers-sensitive-baby-wipes-56ct/-/A-14596962",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-toi9",
+  "price": 2.59,
+  "currency": "USD",
+  "seller": "CVS",
+  "url": "https://www.cvs.com/shop/colgate-triple-action-toothpaste-4-oz-prodid-823794?skuId=823794",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-toi10",
+  "price": 7.47,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/Sensodyne-Repair-and-Protect-Fluoride-Toothpaste-for-Sensitive-Teeth-Mint-Flavor-3-4Oz-for-Adults/23814510",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-toi13",
+  "price": 10.49,
+  "currency": "USD",
+  "seller": "CVS",
+  "url": "https://www.cvs.com/shop/nivea-men-sensitive-skin-body-wash-16-9-oz-prodid-1013088",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-toi14",
+  "price": 10.79,
+  "currency": "USD",
+  "seller": "CVS",
+  "url": "https://www.cvs.com/shop/dove-deep-moisture-body-wash-for-dry-skin-20-oz-prodid-978106",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-hp3",
+  "price": 129.95,
+  "currency": "USD",
+  "seller": "Audio Advice",
+  "url": "https://www.audioadvice.com/products/jbl-live-650btnc-wireless-over-ear-noise-cancelling-headphones-black?variant=41288204943444",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-hp4",
+  "price": 32.0,
+  "currency": "USD",
+  "seller": "BirdieBox",
+  "url": "https://birdiebox.com/products/sony-wh-ch510-wireless-headphones",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-rs2",
+  "price": 104.95,
+  "currency": "USD",
+  "seller": "Dave's Running Shop",
+  "url": "https://davesrunning.com/products/adrenaline-gts-24?variant=42247375192160",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-rs3",
+  "price": 85.97,
+  "currency": "USD",
+  "seller": "DICK'S Sporting Goods",
+  "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-cumulus-26-running-shoes-24asimcmls26blkcnmns/24asimcmls26blkcnmns",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-rs4",
+  "price": 169.99,
+  "currency": "USD",
+  "seller": "DICK'S Sporting Goods",
+  "url": "https://www.dickssportinggoods.com/p/brooks-mens-ghost-16-gtx-running-shoes-24bromghst16gtxblmns/24bromghst16gtxblmns",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-rs5",
+  "price": 175.0,
+  "currency": "USD",
+  "seller": "Fleet Feet",
+  "url": "https://www.fleetfeet.com/products/mens-brooks-glycerin-23?upc=195394767650",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-off3",
+  "price": 29.98,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/FX-991CW-Scientific-Calculator-for-High-School-College/2559506645",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "d-ele1",
+  "price": 96.69,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/site/questions/samsung-galaxy-buds2-true-wireless-earbud-headphones-white/12374208",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-sp1",
+  "price": 19.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/soundcore-by-anker-select-4-go-ip67-waterproof-dustproof-floatable-ultra-portable-bluetooth-speaker-with-20h-playtime-black/JJ858RX2QX/sku/12091095",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-sw1",
+  "price": 69.95,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/google-fitbit-inspire-3-health-fitness-tracker-works-with-android-and-ios-midnight-zen-2022/J3GWJ6S29F/sku/6514030",
+  "date": "2026-11-20",
+  "force": true
+ },
+ {
+  "id": "w-ms1",
+  "price": 12.99,
+  "currency": "USD",
+  "seller": "Logitech",
+  "url": "https://www.logitech.com/en-us/shop/p/m185-wireless-mouse.910-002225",
+  "date": "2026-11-20",
+  "force": true
+ }
+]

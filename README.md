@@ -90,7 +90,7 @@ Apache-2.0, see [LICENSE](LICENSE). Image credits in [CREDITS.md](CREDITS.md).
 Keeps product prices current in **USD from real US sources** and adds a few new popular products each run.
 
 ```bash
-# full run: refresh prices, add 4 new products, build, commit locally, deploy to Vercel prod
+# full run: refresh prices from Open Prices + today's offers file, add 4 new products, build, commit locally, deploy to Vercel prod
 SHOPMATE_IMG_PY=/path/to/python-with-pillow-and-rembg \
 VERCEL_BIN=vercel \
 python3 scripts/refresh_catalog.py --offers scripts/offers/$(date +%F).json --new 4 --deploy
@@ -106,5 +106,14 @@ How it works:
 - **New products**: the most-receipted US products from the last 60 days on Open Prices that the catalog doesn't carry yet, in our grocery, drinks, toiletries, beauty, baby and household categories. Each one uses that product's own Open Food/Beauty Facts photo (CC BY-SA), processed by `scripts/process_image.py` into dark and light tiles, and credited in `CREDITS.md`.
 - **No invented prices**: if no fresh source is found, the last price and its `priceUpdatedAt` date are kept. Every refreshed item stores `priceUpdatedAt` and `priceSource {name, url}`; the product page links to it and Discover shows "Prices updated <date>".
 - Runs non-interactively (no prompts), so it can be scheduled daily (cron or a routine).
+
+Daily routine (7 AM Lagos):
+
+1. Agent step: for every product whose price is older than today (or any product, if time allows), run a US shopping search and pick a **new**-condition listing from a known US retailer (Walmart, Target, Best Buy, CVS, Kroger, DICK'S, brand stores...). Match the title's model and size; never use marketplace junk, used items, or non-US shops. Write them to `scripts/offers/YYYY-MM-DD.json` as `{id, price, currency: "USD", seller, url, date}`. Add `"force": true` only when a real listing moves more than 4x from the last price.
+2. Run the script with that file (`--new 4` adds new Open Prices products; use `--new 0` for a price-only run), with `--deploy`.
+3. If a product has no exact US listing any more (discontinued or non-US), retitle it to the close US equivalent you priced and note it in `CREDITS.md`, or remove it (catalog entry, both image tiles and its credits row).
+4. Check the live site: Discover shows today's "Prices updated" date and product pages link to each price source.
+
+Only US barcodes are kept in the `barcode` field (Open Prices lookups). Photos taken from another market's Open Food/Beauty Facts page keep that code in `photoBarcode`, so a receipt for a different pack size can never overwrite a checked US price.
 
 `scripts/process_image.py SRC OUT_DARK OUT_LIGHT [--framed]` turns any product photo into the 600x600 WebP tiles used by the app (rembg cutout when available, framed card otherwise).
