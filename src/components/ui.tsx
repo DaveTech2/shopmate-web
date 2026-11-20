@@ -81,18 +81,6 @@ const ST_TEXT: Record<DeviceStatus, string> = {
   unsupported: "No on-device AI · cloud",
 };
 
-export function StatusChip({ onClick }: { onClick(): void }) {
-  const { st, prog } = useDeviceStatus();
-  const cls = st === "available" ? "ok" : st === "downloadable" || st === "downloading" ? "warn" : "cloud";
-  return (
-    <button className="chip" onClick={onClick} title="On-device model status, click for AI settings">
-      <span className={`dot ${cls}`} />
-      {prog !== null ? `Downloading Nano ${Math.round(prog * 100)}%` : ST_TEXT[st]}
-      {!isFirebaseConfigured && <span style={{ color: "var(--amber)", fontWeight: 600 }}>· Demo mode</span>}
-    </button>
-  );
-}
-
 export function AIBadge({ source, route, label, ms }: { source: Source; route: Route; label?: string; ms?: number }) {
   const t = ms ? ` · ${ms < 1000 ? ms + "ms" : (ms / 1000).toFixed(1) + "s"}` : "";
   if (source === "on_device")
@@ -165,7 +153,6 @@ export function AppShell({ children, landing = false }: { children: ReactNode; l
       <Logo />
       <span className="sp" />
       <ThemeToggle />
-      {!landing && <span className="hide-sm"><StatusChip onClick={() => setSettings(true)} /></span>}
       {!landing && <span className="hide-sm"><PlaceChip onClick={() => setPicker(true)} /></span>}
       {!landing && (
         <button className="iconbtn" onClick={() => nav("/cart")} aria-label="Cart">
@@ -190,7 +177,7 @@ export function AppShell({ children, landing = false }: { children: ReactNode; l
         <div className="apphead">
           <div className="wrap wide">
             {head}
-            <div className="show-sm chiprow" style={{ paddingBottom: 10 }}><PlaceChip onClick={() => setPicker(true)} /><StatusChip onClick={() => setSettings(true)} /></div>
+            <div className="show-sm chiprow" style={{ paddingBottom: 10 }}><PlaceChip onClick={() => setPicker(true)} /></div>
           </div>
         </div>
       )}
