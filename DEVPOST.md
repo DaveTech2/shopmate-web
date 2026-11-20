@@ -1,20 +1,20 @@
-# Shopmate — your hybrid AI personal shopper
+# Shopmate, your hybrid AI personal shopper
 
 ## Inspiration
 Shopping online in Lagos means typing vague keywords into five apps, guessing delivery fees and burning mobile data
 on comparison tabs. We'd already built Shopmate as a chat shopping agent; #BuildHybridAI was the push to make it a web
-app where the *personal* parts of shopping — your budget, your shoe size, "flat feet" — are understood **on your own device**.
+app where the *personal* parts of shopping, your budget, your shoe size, "flat feet", are understood **on your own device**.
 
 ## What it does
 Say what you need in one sentence. Shopmate:
 1. understands it **on-device with Gemini Nano** (product, budget, use, size, delivery city → structured JSON),
-2. retrieves real catalog listings and ranks them with **cloud Gemini**, giving 2–3 concrete "why it fits" reasons per pick,
-3. shows the landed price — item + delivery fee and ETA to your city,
-4. compares 2–3 items side by side with an AI verdict, edits your cart from plain language, and plans bulk orders
+2. retrieves real catalog listings and ranks them with **cloud Gemini**, giving 2-3 concrete "why it fits" reasons per pick,
+3. shows the landed price, item + delivery fee and ETA to your city,
+4. compares 2-3 items side by side with an AI verdict, edits your cart from plain language, and plans bulk orders
    ("office restock for 20 staff") with a cloud agent that calls the shop's own tools,
 5. checks out (test mode, no real charges) and tracks the order.
 
-Every AI answer carries a badge — **On-device · Gemini Nano** or **Cloud · Gemini** — with latency, so you can see hybrid inference working.
+Every AI answer carries a badge, **On-device · Gemini Nano** or **Cloud · Gemini**: with latency, so you can see hybrid inference working.
 
 ## How we built it
 - **Firebase AI Logic hybrid inference** (`firebase/ai`, Gemini Developer API backend):
@@ -32,7 +32,7 @@ Every AI answer carries a badge — **On-device · Gemini Nano** or **Cloud · G
 ## Challenges we ran into
 - On-device models are single-turn and have no tool calling, so we split the product into tasks that fit each side,
   and made the chat stateless per turn by passing the products on screen as context.
-- Keeping Nano honest: the model never invents listings — retrieval and prices come from the catalog; the model parses and explains.
+- Keeping Nano honest: the model never invents listings, retrieval and prices come from the catalog; the model parses and explains.
 - Making hybrid *visible*: surfacing `inferenceSource` and latency as badges without cluttering a shopping UI.
 
 ## Accomplishments we're proud of
@@ -44,7 +44,7 @@ Small structured tasks are where on-device models shine: they're instant, privat
 model's job smaller and cheaper.
 
 ## What's next
-Real merchant feeds and Paystack live payments, image search ("find shoes like this photo" — multimodal on-device),
+Real merchant feeds and Paystack live payments, image search ("find shoes like this photo", multimodal on-device),
 Android with Gemini Nano, and WhatsApp ordering through the existing Shopmate agent.
 
 ## Built with

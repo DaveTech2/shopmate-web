@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { ShoppingBag } from "lucide-react";
+import { BagMark } from "../components/BagMark";
 import { AppShell } from "../components/ui";
 import { useAuth } from "../state/auth";
 import { isFirebaseConfigured } from "../lib/firebase";
@@ -52,7 +52,7 @@ export default function AuthPage({ mode }: { mode: "signup" | "login" }) {
     <AppShell>
       <main className="wrap authwrap">
         <form className="card authcard" onSubmit={submit}>
-          <span className="logo" style={{ justifyContent: "center" }}><span className="tile"><ShoppingBag size={15} color="#fff" strokeWidth={2.4} /></span></span>
+          <span style={{ display: "flex", justifyContent: "center", marginTop: 6 }}><BagMark size={68} /></span>
           <h1>{isUp ? "Create your account" : "Welcome back"}</h1>
           {isUp && (
             <div className="field"><label htmlFor="n">Name</label><input id="n" className="input" value={name} onChange={(e) => setName(e.target.value)} autoComplete="name" /></div>

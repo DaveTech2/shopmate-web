@@ -47,6 +47,7 @@ export function ShopProvider({ children }: { children: ReactNode }) {
       const u = await ensureGuest();
       const cur = cart.find((l) => l.id === id)?.qty || 0;
       await setCartQty(u.uid, id, cur + qty);
+      window.dispatchEvent(new Event("sm-cart-add"));
       notifyFn("Added to cart");
     },
     async setQty(id, qty) {

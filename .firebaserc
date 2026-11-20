@@ -1,1 +1,7 @@
-{ "projects": { "default": "your-firebase-project-id" } }
+{
+  "projects": {
+    "default": "shopmate-58cb5"
+  },
+  "targets": {},
+  "etags": {}
+}

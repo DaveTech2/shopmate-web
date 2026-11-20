@@ -1,5 +1,4 @@
 {
- "_note": "Demo catalog for Shopmate web. Ported from the Shopmate Hermes plugin (github.com/DaveTech2/Shopmate) data/catalog.json and extended. Prices are sample NGN prices; images are from Wikimedia Commons / Open Food & Beauty Facts (see CREDITS.md).",
  "categories": [
   {
    "id": "groceries",
@@ -105,7 +104,7 @@
    "category": "toiletries",
    "price": 1300,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/893/483/912/2508/front_en.10.400.jpg",
+   "image": "/products/d-toi1.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "toothpaste",
    "brand": "Close-Up",
@@ -117,16 +116,16 @@
    "category": "toiletries",
    "price": 2600,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/000/005/009/6725/front_en.8.400.jpg",
+   "image": "/products/d-toi6.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-toi7",
-   "title": "Dettol Antiseptic Liquid 500ml",
-   "category": "toiletries",
-   "price": 3900,
+   "title": "Dettol Mould & Mildew Remover Spray",
+   "category": "household",
+   "price": 5500,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/890/139/660/1227/front_en.3.400.jpg",
+   "image": "/products/d-toi7.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
@@ -135,7 +134,7 @@
    "category": "toiletries",
    "price": 6200,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/560/105/906/2534/front_tr.3.400.jpg",
+   "image": "/products/d-toi8.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "shampoo",
    "brand": "Head & Shoulders"
@@ -146,28 +145,30 @@
    "category": "beauty",
    "price": 5200,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/400/590/036/9581/front_ar.21.400.jpg",
+   "image": "/products/d-bea1.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-bea3",
-   "title": "Dove Beauty Bar (Pack of 4)",
+   "title": "Dove Beauty Cream Bar",
    "category": "beauty",
    "price": 6800,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/872/018/226/4664/front_en.12.400.jpg",
+   "image": "/products/d-bea3.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "soap",
    "brand": "Dove"
   },
   {
    "id": "d-bea4",
-   "title": "Arimis Petroleum Jelly 250ml",
+   "title": "Vaseline Original Healing Jelly 368g",
    "category": "beauty",
    "price": 1800,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/000/004/218/2634/front_en.88.400.jpg",
-   "merchant": "Shopmate demo catalog"
+   "image": "/products/d-bea4.webp",
+   "merchant": "Shopmate demo catalog",
+   "brand": "Vaseline",
+   "size": "368g"
   },
   {
    "id": "d-bab3",
@@ -175,7 +176,7 @@
    "category": "baby",
    "price": 9800,
    "currency": "NGN",
-   "image": "https://images.openfoodfacts.org/images/products/622/100/703/2540/front_en.20.400.jpg",
+   "image": "/products/d-bab3.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
@@ -184,25 +185,25 @@
    "category": "pharmacy",
    "price": 2800,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/000/020/807/7247/front_id.3.400.jpg",
+   "image": "/products/d-pha4.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-pho4",
-   "title": "Apple iPhone 15 128GB",
+   "title": "Apple iPhone 15 128GB (Black)",
    "category": "phones",
    "price": 1150000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ee/IPhone_15_Vector.svg/1280px-IPhone_15_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-pho4.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-pho6",
-   "title": "Apple iPhone 15 Pro Max 256GB",
+   "title": "Apple iPhone 15 Pro Max 256GB (Natural Titanium)",
    "category": "phones",
    "price": 1850000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/IPhone_15_Pro_Vector.svg/1280px-IPhone_15_Pro_Vector.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-pho6.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
@@ -211,16 +212,16 @@
    "category": "phones",
    "price": 245000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/Samsung_Galaxy_A16_5G_2025.jpg/1280px-Samsung_Galaxy_A16_5G_2025.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-pho3.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-gam1",
-   "title": "PlayStation 5 Slim Console",
+   "title": "PlayStation 5 Slim (Disc Edition)",
    "category": "gaming",
    "price": 850000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Black_and_white_Playstation_5_base_edition_with_controller.png/1280px-Black_and_white_Playstation_5_base_edition_with_controller.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-gam1.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
@@ -229,7 +230,7 @@
    "category": "footwear",
    "price": 95000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/Nike_air_Force_1_white_on_white.jpg/1280px-Nike_air_Force_1_white_on_white.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-foo1.webp",
    "merchant": "Shopmate demo catalog",
    "sizes": [
     39,
@@ -251,7 +252,7 @@
    "category": "footwear",
    "price": 88000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/Adidas_Superstar_shoes_pair.jpg/1280px-Adidas_Superstar_shoes_pair.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-foo2.webp",
    "merchant": "Shopmate demo catalog",
    "sizes": [
     39,
@@ -273,34 +274,16 @@
    "category": "jewelry-watches",
    "price": 28000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Casio_F-91W_5051.jpg/1280px-Casio_F-91W_5051.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-   "merchant": "Shopmate demo catalog"
-  },
-  {
-   "id": "d-boo3",
-   "title": "Oxford English Dictionary (Paperback)",
-   "category": "books",
-   "price": 18000,
-   "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/OED2_volumes.jpg/1280px-OED2_volumes.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-jew1.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-jew2",
-   "title": "Ray-Ban Style Sunglasses",
+   "title": "Ray-Ban New Wayfarer Sunglasses",
    "category": "jewelry-watches",
-   "price": 15000,
+   "price": 135000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d1/Ray-Ban_logo.svg/1280px-Ray-Ban_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
-   "merchant": "Shopmate demo catalog"
-  },
-  {
-   "id": "d-kid1",
-   "title": "Lego Classic Creative Box",
-   "category": "kids-toys",
-   "price": 42000,
-   "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/LEGO_logo.svg/1280px-LEGO_logo.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-jew2.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
@@ -309,52 +292,52 @@
    "category": "kids-toys",
    "price": 24000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Monopoly_board_on_white_bg.jpg/1280px-Monopoly_board_on_white_bg.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-kid4.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-spo3",
-   "title": "Size 5 Football",
+   "title": "Li-Ning Size 5 Football",
    "category": "sports",
    "price": 9500,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Stoppage_in_an_AFL_game.jpg/1280px-Stoppage_in_an_AFL_game.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-spo3.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-spo2",
-   "title": "Yoga Mat 6mm",
+   "title": "Yoga Mat 6mm (Pink)",
    "category": "sports",
    "price": 12500,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Ardha-Nav%C4%81sana.JPG/1280px-Ardha-Nav%C4%81sana.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-spo2.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-hom1",
-   "title": "Binatone 1.7L Electric Kettle",
+   "title": "Bosch Glass Electric Kettle 1.7L",
    "category": "home-kitchen",
-   "price": 18500,
+   "price": 45000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Bernadotte_Wasserkessel.jpg/1280px-Bernadotte_Wasserkessel.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-hom1.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-hom2",
-   "title": "Scanfrost 20L Microwave",
+   "title": "Panasonic NN-GM333 Microwave Oven 23L",
    "category": "home-kitchen",
-   "price": 98000,
+   "price": 115000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/08/Panasonic_NN-SD69LS_20220410.jpg/1280px-Panasonic_NN-SD69LS_20220410.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-hom2.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-ele4",
-   "title": "HP 15 Laptop Core i5 8GB/512GB",
+   "title": "HP 15s Laptop Core i5 8GB/512GB",
    "category": "electronics",
    "price": 720000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Laptop_collage.jpg/1280px-Laptop_collage.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-ele4.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "laptop",
    "specs": {
@@ -372,25 +355,26 @@
   },
   {
    "id": "d-gar1",
-   "title": "Cordless Drill 18V",
+   "title": "Makita 18V Cordless Drill",
    "category": "garden-tools",
-   "price": 78000,
+   "price": 95000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Drill_scheme.svg/1280px-Drill_scheme.svg.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-gar1.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-ele1",
-   "title": "Oraimo FreePods 4 Earbuds",
+   "title": "Samsung Galaxy Buds Wireless Earbuds",
    "category": "electronics",
-   "price": 32000,
+   "price": 70000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/S%C5%82uchawki_referencyjne_K-701_firmy_AKG.jpg/1280px-S%C5%82uchawki_referencyjne_K-701_firmy_AKG.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-ele1.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "earbuds",
    "specs": {
     "Type": "True wireless earbuds",
-    "Battery": "Up to 30 hours with case"
+    "Battery": "Up to 13 hours with case",
+    "Charging": "USB-C, wireless"
    },
    "tags": [
     "wireless",
@@ -402,67 +386,67 @@
   },
   {
    "id": "d-com3",
-   "title": "Samsung 1TB External SSD",
+   "title": "Samsung 1TB SATA SSD",
    "category": "computing",
    "price": 115000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Samsung_870_QVO_8TB_SATA_2%2C5_Zoll_Internes_Solid_State_Drive_%28SSD%29_%28MZ-77Q8T0BW%29_20211008_SSD023_corr.png/1280px-Samsung_870_QVO_8TB_SATA_2%2C5_Zoll_Internes_Solid_State_Drive_%28SSD%29_%28MZ-77Q8T0BW%29_20211008_SSD023_corr.png?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-com3.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-com5",
-   "title": "TP-Link 4G Wi-Fi Router",
+   "title": "TP-Link TL-WR740N Wi-Fi Router",
    "category": "computing",
-   "price": 48000,
+   "price": 18000,
    "currency": "NGN",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cc/Tp_sz.jpg/1280px-Tp_sz.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+   "image": "/products/d-com5.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-off3",
-   "title": "Casio Scientific Calculator fx-991",
+   "title": "Casio fx-991DE CW Scientific Calculator",
    "category": "office",
    "price": 19500,
    "currency": "NGN",
-   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4f/FX-77.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "image": "/products/d-off3.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-fur1",
-   "title": "Office Chair Ergonomic",
+   "title": "ErgoFlip Ergonomic Mesh Office Chair",
    "category": "furniture",
    "price": 120000,
    "currency": "NGN",
-   "image": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Desk_chair.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+   "image": "/products/d-fur1.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-toi2",
-   "title": "Oral-B Toothbrush (Pack of 3)",
+   "title": "Oral-B Toothbrush",
    "category": "toiletries",
    "price": 2800,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/498/717/613/0051/front_en.3.400.jpg",
+   "image": "/products/d-toi2.webp",
    "merchant": "Shopmate demo catalog",
    "product_type": "toothbrush",
    "brand": "Oral-B"
   },
   {
    "id": "d-toi5",
-   "title": "Gillette Mach3 Razor + 2 Blades",
+   "title": "Gillette Mach3 Turbo Razor Blades (8 pack)",
    "category": "toiletries",
    "price": 7500,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/770/201/846/5385/front_en.3.400.jpg",
+   "image": "/products/d-toi5.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-dri5",
-   "title": "Coca-Cola 50cl (Pack of 12)",
+   "title": "Coca-Cola 50cl Bottle",
    "category": "drinks",
-   "price": 4200,
+   "price": 500,
    "currency": "NGN",
-   "image": "https://images.openfoodfacts.org/images/products/544/900/005/4227/front_en.563.400.jpg",
+   "image": "/products/d-dri5.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
@@ -471,30 +455,31 @@
    "category": "drinks",
    "price": 3800,
    "currency": "NGN",
-   "image": "https://images.openfoodfacts.org/images/products/872/060/863/2633/front_fr.14.400.jpg",
+   "image": "/products/d-dri3.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-bab2",
-   "title": "Pampers Baby Wipes (Pack of 3)",
+   "title": "Pampers Sensitive Baby Wipes (56 pack)",
    "category": "baby",
-   "price": 7200,
+   "price": 2500,
    "currency": "NGN",
-   "image": "https://images.openbeautyfacts.org/images/products/871/186/800/4773/front_fr.14.400.jpg",
-   "merchant": "Shopmate demo catalog"
+   "image": "/products/d-bab2.webp",
+   "merchant": "Shopmate demo catalog",
+   "size": "56 wipes"
   },
   {
    "id": "d-hou3",
-   "title": "Morning Fresh Dishwashing Liquid 900ml",
+   "title": "Sio Dishwashing Liquid 500ml",
    "category": "household",
    "price": 2400,
    "currency": "NGN",
-   "image": "https://images.openfoodfacts.org/images/products/869/889/845/3972/front_en.3.400.jpg",
+   "image": "/products/d-hou3.webp",
    "merchant": "Shopmate demo catalog"
   },
   {
    "id": "d-toi9",
-   "title": "Colgate Strong Teeth Toothpaste 150g",
+   "title": "Colgate Triple Action Toothpaste 150g",
    "category": "toiletries",
    "price": 1200,
    "currency": "NGN",
@@ -502,7 +487,7 @@
    "size": "150g",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "https://images.openbeautyfacts.org/images/products/628/100/111/2013/front_en.5.400.jpg"
+   "image": "/products/d-toi9.webp"
   },
   {
    "id": "d-toi10",
@@ -514,7 +499,7 @@
    "size": "75ml",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "https://images.openbeautyfacts.org/images/products/505/456/307/0951/front_fr.6.400.jpg"
+   "image": "/products/d-toi10.webp"
   },
   {
    "id": "d-toi11",
@@ -526,7 +511,7 @@
    "size": "180g",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "https://images.openbeautyfacts.org/images/products/893/483/912/8302/front_en.3.400.jpg"
+   "image": "/products/d-toi11.webp"
   },
   {
    "id": "d-toi12",
@@ -538,7 +523,7 @@
    "size": "75ml",
    "product_type": "toothpaste",
    "merchant": "Shopmate demo catalog",
-   "image": "https://images.openbeautyfacts.org/images/products/800/109/055/9890/front_en.8.400.jpg"
+   "image": "/products/d-toi12.webp"
   },
   {
    "id": "d-toi13",
@@ -550,7 +535,7 @@
    "size": "500ml",
    "product_type": "body wash",
    "merchant": "Shopmate demo catalog",
-   "image": "https://images.openbeautyfacts.org/images/products/007/214/081/0849/front_en.3.400.jpg"
+   "image": "/products/d-toi13.webp"
   },
   {
    "id": "d-toi14",
@@ -562,7 +547,7 @@
    "size": "500ml",
    "product_type": "body wash",
    "merchant": "Shopmate demo catalog",
-   "image": "https://images.openbeautyfacts.org/images/products/871/716/374/2839/front_en.4.400.jpg"
+   "image": "/products/d-toi14.webp"
   },
   {
    "id": "d-toi15",
@@ -573,7 +558,7 @@
    "brand": "Dettol",
    "product_type": "body wash",
    "merchant": "Shopmate demo catalog",
-   "image": "https://images.openbeautyfacts.org/images/products/890/139/636/8205/front_en.7.400.jpg",
+   "image": "/products/d-toi15.webp",
    "size": "500ml"
   },
   {
@@ -583,7 +568,7 @@
    "price": 60000,
    "brand": "JBL",
    "product_type": "headphones",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/JBL_Synchros_E50BT.jpg/500px-JBL_Synchros_E50BT.jpg",
+   "image": "/products/w-hp1.webp",
    "specs": {
     "Type": "Over-ear, Bluetooth",
     "Battery": "24 hours",
@@ -607,7 +592,7 @@
    "price": 45000,
    "brand": "Sony",
    "product_type": "headphones",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/2023_S%C5%82uchawki_Sony_WI-XB400_%281%29.jpg/500px-2023_S%C5%82uchawki_Sony_WI-XB400_%281%29.jpg",
+   "image": "/products/w-hp2.webp",
    "specs": {
     "Type": "Neckband, Bluetooth",
     "Battery": "15 hours",
@@ -632,7 +617,7 @@
    "price": 135000,
    "brand": "JBL",
    "product_type": "headphones",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/JBL_LIVE_650_BTNC_%28Over-Ear_Noise_Cancelling_Headphone%29._%2851127342181%29.jpg/500px-JBL_LIVE_650_BTNC_%28Over-Ear_Noise_Cancelling_Headphone%29._%2851127342181%29.jpg",
+   "image": "/products/w-hp3.webp",
    "specs": {
     "Type": "Over-ear, Bluetooth",
     "Battery": "20 hours (ANC on)",
@@ -652,15 +637,15 @@
   },
   {
    "id": "w-hp4",
-   "title": "Sony Wireless Over-Ear Headphones (S series)",
+   "title": "Sony WH-CH510 Wireless On-Ear Headphones",
    "category": "electronics",
-   "price": 72000,
+   "price": 66000,
    "brand": "Sony",
    "product_type": "headphones",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a2/Sony_S_Wireless_Headphones_%2847103208%29.jpeg/500px-Sony_S_Wireless_Headphones_%2847103208%29.jpeg",
+   "image": "/products/w-hp4.webp",
    "specs": {
-    "Type": "Over-ear, Bluetooth",
-    "Battery": "30 hours",
+    "Type": "On-ear, Bluetooth",
+    "Battery": "35 hours",
     "Charging": "USB-C quick charge",
     "Mic": "Yes"
    },
@@ -682,7 +667,7 @@
    "price": 780000,
    "brand": "Acer",
    "product_type": "laptop",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1d/Acer_Aspire_A515-51.jpg/500px-Acer_Aspire_A515-51.jpg",
+   "image": "/products/w-lp1.webp",
    "specs": {
     "CPU": "Intel Core i5",
     "RAM": "8GB",
@@ -706,7 +691,7 @@
    "price": 975000,
    "brand": "Lenovo",
    "product_type": "laptop",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Lenovo_ideapad_corner_view_%2826660714555%29.jpg/500px-Lenovo_ideapad_corner_view_%2826660714555%29.jpg",
+   "image": "/products/w-lp2.webp",
    "specs": {
     "CPU": "AMD Ryzen 5",
     "RAM": "16GB",
@@ -731,7 +716,7 @@
    "price": 1020000,
    "brand": "Apple",
    "product_type": "laptop",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/MacBook_Air_M1.png/500px-MacBook_Air_M1.png",
+   "image": "/products/w-lp3.webp",
    "specs": {
     "CPU": "Apple M1",
     "RAM": "8GB",
@@ -751,12 +736,12 @@
   },
   {
    "id": "w-lp4",
-   "title": "Dell Inspiron 15 Laptop Core i3 8GB/256GB SSD",
+   "title": "Dell Inspiron 15 3000 Laptop Core i3 8GB/256GB SSD",
    "category": "computing",
    "price": 600000,
    "brand": "Dell",
    "product_type": "laptop",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b4/Dell_Inspiron_1525_250618.jpg/500px-Dell_Inspiron_1525_250618.jpg",
+   "image": "/products/w-lp4.webp",
    "specs": {
     "CPU": "Intel Core i3",
     "RAM": "8GB",
@@ -780,7 +765,7 @@
    "price": 330000,
    "brand": "Lenovo",
    "product_type": "laptop",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/ThinkPad_T430_%28keyboard%29.jpg/500px-ThinkPad_T430_%28keyboard%29.jpg",
+   "image": "/products/w-lp5.webp",
    "specs": {
     "CPU": "Intel Core i5 (3rd gen)",
     "RAM": "8GB",
@@ -805,7 +790,7 @@
    "price": 210000,
    "brand": "ASICS",
    "product_type": "running shoes",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/88/ASICS_GEL-Kayano_19.jpg/500px-ASICS_GEL-Kayano_19.jpg",
+   "image": "/products/w-rs1.webp",
    "specs": {
     "Support": "Stability (overpronation / flat feet)",
     "Sizes (EU)": "40–46",
@@ -839,7 +824,7 @@
    "price": 195000,
    "brand": "Brooks",
    "product_type": "running shoes",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Brooks_Adrenaline_GTS_18.jpg/500px-Brooks_Adrenaline_GTS_18.jpg",
+   "image": "/products/w-rs2.webp",
    "specs": {
     "Support": "Stability (GuideRails, flat feet)",
     "Sizes (EU)": "39–45",
@@ -873,7 +858,7 @@
    "price": 150000,
    "brand": "ASICS",
    "product_type": "running shoes",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Asics_Gel-Cumulus_22.jpg/500px-Asics_Gel-Cumulus_22.jpg",
+   "image": "/products/w-rs3.webp",
    "specs": {
     "Support": "Neutral",
     "Sizes (EU)": "39–46",
@@ -906,7 +891,7 @@
    "price": 170000,
    "brand": "Brooks",
    "product_type": "running shoes",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Brooks_Ghost_14_GTX.jpg/500px-Brooks_Ghost_14_GTX.jpg",
+   "image": "/products/w-rs4.webp",
    "specs": {
     "Support": "Neutral",
     "Sizes (EU)": "40–45",
@@ -937,7 +922,7 @@
    "price": 225000,
    "brand": "Brooks",
    "product_type": "running shoes",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Brooks_Glycerin_19_running_shoe.jpg/500px-Brooks_Glycerin_19_running_shoe.jpg",
+   "image": "/products/w-rs5.webp",
    "specs": {
     "Support": "Neutral, max cushion",
     "Sizes (EU)": "41–46",
@@ -968,7 +953,7 @@
    "price": 120000,
    "brand": "Mizuno",
    "product_type": "running shoes",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Mizuno_Wave_Ibuki_2.jpg/500px-Mizuno_Wave_Ibuki_2.jpg",
+   "image": "/products/w-rs6.webp",
    "specs": {
     "Support": "Neutral",
     "Sizes (EU)": "39–44",
@@ -999,7 +984,7 @@
    "price": 85000,
    "brand": "JBL",
    "product_type": "speaker",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/JBL_Flip_3_bluetooth_speaker_%28DSCF2653%29.jpg/500px-JBL_Flip_3_bluetooth_speaker_%28DSCF2653%29.jpg",
+   "image": "/products/w-sp1.webp",
    "specs": {
     "Battery": "10 hours",
     "Water resistance": "Splashproof"
@@ -1020,7 +1005,7 @@
    "price": 40000,
    "brand": "Huawei",
    "product_type": "smartwatch",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4e/Huawei_Smartwatch_%28Band_4%29.jpg/500px-Huawei_Smartwatch_%28Band_4%29.jpg",
+   "image": "/products/w-sw1.webp",
    "specs": {
     "Battery": "Up to 9 days",
     "Sensors": "Heart rate, sleep"
@@ -1041,7 +1026,7 @@
    "price": 55000,
    "brand": "Generic",
    "product_type": "keyboard",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5a/Mechanical_Keyboard.jpg/500px-Mechanical_Keyboard.jpg",
+   "image": "/products/w-kb1.webp",
    "specs": {
     "Switches": "Hot-swappable",
     "Connection": "USB-C"
@@ -1062,7 +1047,7 @@
    "price": 15000,
    "brand": "Generic",
    "product_type": "mouse",
-   "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/A_wireless_computer_mouse.jpg/500px-A_wireless_computer_mouse.jpg",
+   "image": "/products/w-ms1.webp",
    "specs": {
     "Connection": "2.4GHz USB receiver",
     "Battery": "AA, ~12 months"

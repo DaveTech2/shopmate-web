@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
-  Menu, ShoppingBag, Home, LogIn, UserPlus, Search, Compass, Scale, ShoppingCart, Package, Settings, LogOut, X, Cpu, Cloud, FlaskConical,
+  Menu, Home, LogIn, UserPlus, Search, Compass, Scale, ShoppingCart, Package, Settings, LogOut, X, Cpu, Cloud, FlaskConical,
 } from "lucide-react";
 import { useAuth } from "../state/auth";
 import { useShop } from "../state/shop";
@@ -10,11 +10,12 @@ import {
   aiLive, deviceStatus, ensureDeviceModel, getModeSetting, onDownloadProgress, setModeSetting, type DeviceStatus, type ModeSetting, type Source, type Route,
 } from "../ai/hybrid";
 import { placeOptions } from "../lib/delivery";
+import { BagMark } from "./BagMark";
 
 export function Logo() {
   return (
     <Link to="/" className="logo" aria-label="Shopmate home">
-      <span className="tile"><ShoppingBag size={15} color="#fff" strokeWidth={2.4} /></span>
+      <BagMark size={30} />
       Shopmate
     </Link>
   );

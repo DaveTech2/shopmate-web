@@ -1,36 +1,36 @@
-# Shopmate — hybrid AI personal shopper
+# Shopmate: hybrid AI personal shopper
 
-**Let's Shop Smarter.** Say what you need — *"wireless headphones under $50 with good battery life"* — and Shopmate
+**Let's Shop Smarter.** Say what you need, *"wireless headphones under $50 with good battery life"*, and Shopmate
 finds real listings, explains why each one fits, compares prices side by side, quotes delivery to your door and checks out.
 
 Built for **#BuildHybridAI 2026** on **Firebase AI Logic hybrid inference**: the parts of shopping that are personal and
-latency-sensitive run **on your device with Gemini Nano** (Chrome Prompt API), and the heavier reasoning runs on **cloud Gemini** —
+latency-sensitive run **on your device with Gemini Nano** (Chrome Prompt API), and the heavier reasoning runs on **cloud Gemini** , 
 with automatic fallback in both directions, and a badge on every AI answer showing which one actually replied.
 
 ## Value proposition
 Online shoppers in markets like Nigeria juggle vague search boxes, hidden delivery fees and slow comparisons on
 expensive mobile data. Shopmate turns one sentence into a ranked shortlist with reasons, a true landed price
-(item + delivery to your city), and a one-tap compare — while keeping the raw request (budget, sizes, health needs
+(item + delivery to your city), and a one-tap compare, while keeping the raw request (budget, sizes, health needs
 like "flat feet") on the device whenever possible.
 
 ## Features
-- **Chat-first shopping** — natural language → structured intent → grounded catalog search → ranked picks with "why it fits".
-- **Product cards** — image, price (USD/NGN), delivery fee + ETA to your city, fit score and reasons.
-- **Discover** — browse the catalog by category.
-- **Compare** — 2–3 items side by side with an AI verdict, pros/cons, delivery and specs.
-- **Natural-language cart edits** — "make it 2 kettles and remove the toothpaste".
-- **Bulk-order planner** — "plan an office restock of toiletries for 20 staff": a cloud agent calls the shop's own tools.
-- **Accounts** — instant anonymous guest sessions (judges can try immediately), email/password and Google sign-in;
+- **Chat-first shopping**: natural language → structured intent → grounded catalog search → ranked picks with "why it fits".
+- **Product cards**: image, price (USD/NGN), delivery fee + ETA to your city, fit score and reasons.
+- **Discover**: browse the catalog by category.
+- **Compare**: 2-3 items side by side with an AI verdict, pros/cons, delivery and specs.
+- **Natural-language cart edits**: "make it 2 kettles and remove the toothpaste".
+- **Bulk-order planner**: "plan an office restock of toiletries for 20 staff": a cloud agent calls the shop's own tools.
+- **Accounts**: instant anonymous guest sessions (judges can try immediately), email/password and Google sign-in;
   guests are upgraded in place (cart and orders carry over).
-- **Cart, demo checkout and order tracking** — Firestore-backed; checkout is **test mode only, no real charges**.
-- **Status chip** — shows whether Gemini Nano is available / downloadable / downloading, with a settings panel to switch inference mode
+- **Cart, demo checkout and order tracking**: Firestore-backed; checkout is **test mode only, no real charges**.
+- **Status chip**: shows whether Gemini Nano is available / downloadable / downloading, with a settings panel to switch inference mode
   and warm up the on-device model.
 
 ## How hybrid inference is used (`src/ai/hybrid.ts`)
 | Task | Mode | Why |
 |---|---|---|
 | Intent parsing (product, budget, use, size, location → JSON) | `PREFER_ON_DEVICE` | private, instant, free; runs on every message |
-| 2–3 item compare | `PREFER_ON_DEVICE` | small context, structured output |
+| 2-3 item compare | `PREFER_ON_DEVICE` | small context, structured output |
 | Cart edits ("remove the toothpaste") | `PREFER_ON_DEVICE` | tiny structured task |
 | Product quick-take / Q&A | `PREFER_ON_DEVICE` | short text |
 | Ranking candidates with reasons | `PREFER_IN_CLOUD` | heavier multi-product reasoning; falls back on-device offline |
@@ -76,9 +76,9 @@ Vercel also works (`vercel.json` included). Set the same `VITE_*` env vars in th
 
 ## Pre-existing work
 The product catalog, Nigerian place list and delivery-fee rules are ported from the Shopmate Hermes plugin
-(github.com/DaveTech2/Shopmate, Python). Everything in this repo — the web app, hybrid AI layer, Firebase integration,
-UI, compare/cart/checkout/orders — was built during the #BuildHybridAI submission period. The visual design follows an
+(github.com/DaveTech2/Shopmate, Python). Everything in this repo, the web app, hybrid AI layer, Firebase integration,
+UI, compare/cart/checkout/orders, was built during the #BuildHybridAI submission period. The visual design follows an
 earlier Shopmate design mock-up (landing + auth screens only).
 
 ## License
-Apache-2.0 — see [LICENSE](LICENSE). Image credits in [CREDITS.md](CREDITS.md).
+Apache-2.0, see [LICENSE](LICENSE). Image credits in [CREDITS.md](CREDITS.md).

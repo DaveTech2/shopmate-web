@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type FormEvent } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { ArrowUp, Sparkles, ShoppingCart } from "lucide-react";
 import { AppShell, AIBadge } from "../components/ui";
+import { BagMark } from "../components/BagMark";
 import { CompareTray, ProductCard, Thumb } from "../components/ProductCard";
 import { useShop } from "../state/shop";
 import { useAuth } from "../state/auth";
@@ -58,6 +59,7 @@ export default function Shop() {
   const ran = useRef(false);
 
   useEffect(() => { sessionStorage.setItem(KEY, JSON.stringify(msgs.filter((m) => !m.pending))); }, [msgs]);
+  useEffect(() => { document.documentElement.classList.toggle("ai-thinking", busy); return () => document.documentElement.classList.remove("ai-thinking"); }, [busy]);
   useEffect(() => { endRef.current?.scrollIntoView({ behavior: "smooth", block: "end" }); }, [msgs.length, busy]);
   useEffect(() => {
     const q = params.get("q");
@@ -169,6 +171,7 @@ export default function Shop() {
               <div key={i} className="msg user">{m.text}</div>
             ) : (
               <div key={i} className="msg bot">
+                <div className="botrow"><BagMark size={30} still={!m.pending && i !== msgs.length - 1} />
                 <div className="bubble">
                   {m.pending ? <span className="typing"><i /><i /><i /></span> : m.text}
                   {m.intent && m.intent.action === "search" && (
@@ -182,7 +185,7 @@ export default function Shop() {
                     </div>
                   )}
                   {m.badges && <div className="badges">{m.badges.map((b, j) => <AIBadge key={j} {...b} />)}</div>}
-                </div>
+                </div></div>
                 {m.picks && (
                   <div className="pgrid three" style={{ marginTop: 12 }}>
                     {m.picks.map((p) => getProduct(p.id) && <ProductCard key={p.id} p={getProduct(p.id)!} reasons={p.reasons} fit={p.fit} />)}

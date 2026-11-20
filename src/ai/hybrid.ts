@@ -150,7 +150,7 @@ async function run<T>(task: Task, prompt: string, route: Route, fallback: () => 
   await loadRemoteConfig();
   try {
     const res = await model(task).generateContent(prompt);
-    const text = res.response.text();
+    const text = res.response.text().replace(/\s*[\u2014\u2013]\s*/g, ", "); // house style: no em dashes
     const data = json ? parseJSON<T>(text) : (text as unknown as T);
     const source: Source = res.response.inferenceSource === InferenceSource.ON_DEVICE ? "on_device" : "in_cloud";
     return { data, source, route, ms: Math.round(performance.now() - t0) };
@@ -189,7 +189,7 @@ export function rankProducts(text: string, intent: Intent, candidates: Product[]
     return `${productBrief(p, cur)}; delivery to ${place.name}: ${money(q.fee, q.fee_currency, cur)} (${q.eta})`;
   });
   const prompt =
-    `Shopper said: "${text}"\nParsed need: ${JSON.stringify({ query: intent.query, budget: intent.budget_max, currency: intent.budget_currency, use: intent.use, size: intent.size })}\n` +
+    `Shopper said: "${text}"\n${intent.budget_max ? `Shopper budget: up to ${intent.budget_currency === "NGN" ? "₦" : "$"}${intent.budget_max} per item. Quote each item's own price, never call the price the budget.\n` : ""}Parsed need: ${JSON.stringify({ query: intent.query, budget: intent.budget_max, currency: intent.budget_currency, use: intent.use, size: intent.size })}\n` +
     `Catalog candidates:\n${lines.join("\n")}\n` +
     `Rank the best ${Math.min(candidates.length, Number(flag("max_results")) || 6)} (ids from the list only). Drop items that clearly don't fit.`;
   return run<RankResult>("rank", prompt, "cloud", () => mockRank(intent, candidates, cur)).then((r) => ({
