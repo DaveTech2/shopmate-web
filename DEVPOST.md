@@ -12,7 +12,9 @@ Say what you need in one sentence. Shopmate:
 3. shows the landed price, item + delivery fee and ETA to your city,
 4. compares 2-3 items side by side with an AI verdict, edits your cart from plain language, and plans bulk orders
    ("office restock for 20 staff") with a cloud agent that calls the shop's own tools,
-5. checks out (test mode, no real charges) and tracks the order.
+5. runs a **Shopmate Trust Report** before you buy (seller, price history, cheaper alternatives in other stores, return policy; honest "unclear" when data is missing),
+6. lets you **shop from a screenshot or photo**: Gemini sees the item, Shopmate finds matches across stores within your budget,
+7. checks out (test mode, no real charges) and tracks the order.
 
 Every AI answer carries a badge, **On-device · Gemini Nano** or **Cloud · Gemini**: with latency, so you can see hybrid inference working.
 

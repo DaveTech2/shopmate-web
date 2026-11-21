@@ -112,7 +112,14 @@
       "priceSource": {
         "name": "Target",
         "url": "https://www.target.com/p/head-38-shoulders-dandruff-shampoo-anti-dandruff-treatment-classic-clean-for-daily-use-paraben-free-12-5-fl-oz/-/A-13974348"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 7.99,
+          "store": "Target"
+        }
+      ]
     },
     {
       "id": "d-bea1",
@@ -127,7 +134,14 @@
         "name": "Target",
         "url": "https://www.target.com/p/nivea-essentially-enriched-dry-skin-body-lotion-with-almond-oil-scented-16-9-fl-oz/-/A-11001234"
       },
-      "photoBarcode": "4005900369581"
+      "photoBarcode": "4005900369581",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 6.79,
+          "store": "Target"
+        }
+      ]
     },
     {
       "id": "d-bea3",
@@ -144,7 +158,14 @@
         "name": "Target",
         "url": "https://www.target.com/p/dove-beauty-white-moisturizing-beauty-bar-soap-2pk-3-75oz-each/-/A-11012602"
       },
-      "photoBarcode": "8720182264664"
+      "photoBarcode": "8720182264664",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 5.49,
+          "store": "Target"
+        }
+      ]
     },
     {
       "id": "d-bea4",
@@ -161,7 +182,14 @@
       "priceSource": {
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/Vaseline-100-Pure-Skin-Protectant-Petroleum-Jelly-13-Oz/10898766"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 5.97,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-bab3",
@@ -176,7 +204,14 @@
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/Nestle-Nestum-Cerelac-Wheat-Infant-Cereal-with-Milk-14-1-oz-Canister/14711224"
       },
-      "photoBarcode": "6221007032540"
+      "photoBarcode": "6221007032540",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 6.17,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-pho4",
@@ -190,7 +225,14 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/site/questions/apple-iphone-15-5g-128gb-unlocked-black/6586081"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 539.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "d-pho6",
@@ -204,7 +246,14 @@
       "priceSource": {
         "name": "Walmart (IGM Inc)",
         "url": "https://www.walmart.com/ip/Apple-iPhone-15-Pro-Max-Carrier-Unlocked-256GB-Natural-Titanium/20823558345"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 669.97,
+          "store": "Walmart (IGM Inc)"
+        }
+      ]
     },
     {
       "id": "d-pho3",
@@ -218,7 +267,14 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/samsung-galaxy-a16-128gb-unlocked-latin-america-version-black/BGTKK3LJX3/sku/6675881"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 189.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "d-gam1",
@@ -232,7 +288,19 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/playstation-5-slim-console-1tb-playstation-5/JXHQ37TYLC"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 649.99,
+          "store": "Best Buy"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 649.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "d-foo1",
@@ -259,7 +327,19 @@
       "priceSource": {
         "name": "Nike",
         "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-DZejrQoC"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 115.0,
+          "store": "Nike"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 115.0,
+          "store": "Nike"
+        }
+      ]
     },
     {
       "id": "d-foo2",
@@ -286,7 +366,14 @@
       "priceSource": {
         "name": "DICK'S Sporting Goods",
         "url": "https://www.dickssportinggoods.com/p/adidas-mens-superstar-ii-shoes-24adimsprstrblkwhmns/24adimsprstrblkwhmns"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 49.97,
+          "store": "DICK'S Sporting Goods"
+        }
+      ]
     },
     {
       "id": "d-jew1",
@@ -300,7 +387,14 @@
       "priceSource": {
         "name": "Casio America",
         "url": "https://www.casio.com/us/watches/casio/product.F-91W-1/"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 29.95,
+          "store": "Casio America"
+        }
+      ]
     },
     {
       "id": "d-jew2",
@@ -314,7 +408,14 @@
       "priceSource": {
         "name": "Macy's",
         "url": "https://www.macys.com/shop/product/ray-ban-unisex-new-wayfarer-classic-square-sunglasses-rb2132?ID=27354523"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 133.99,
+          "store": "Macy's"
+        }
+      ]
     },
     {
       "id": "d-kid4",
@@ -328,7 +429,14 @@
       "priceSource": {
         "name": "Target",
         "url": "https://www.target.com/p/hasbro-monopoly-board-game/-/A-94111131"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 19.99,
+          "store": "Target"
+        }
+      ]
     },
     {
       "id": "d-spo2",
@@ -342,7 +450,19 @@
       "priceSource": {
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/183300567"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 22.99,
+          "store": "Walmart"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 22.99,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-ele4",
@@ -369,7 +489,14 @@
       "priceSource": {
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/HP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i5-1334U-8GB-RAM-512GB-SSD-Natural-Silver/16401519615"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 519.0,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-gar1",
@@ -383,7 +510,14 @@
       "priceSource": {
         "name": "Acme Tools",
         "url": "https://www.acmetools.com/makita-18v-lxt-lithium-ion-brushless-cordless-1-2-in-driver-drill-kit-30ah-xfd131/088381866347.html"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 179.0,
+          "store": "Acme Tools"
+        }
+      ]
     },
     {
       "id": "d-ele1",
@@ -413,7 +547,19 @@
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/samsung-galaxy-buds2-true-wireless-earbud-headphones-white/J3ZYGCFH2C"
       },
-      "brand": "Samsung"
+      "brand": "Samsung",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 96.69,
+          "store": "Best Buy"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 169.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "d-com3",
@@ -427,7 +573,14 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/samsung-870-evo-1tb-internal-ssd-sata/J3ZYGCHH2Z/sku/6447127"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 349.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "d-off3",
@@ -441,7 +594,14 @@
       "priceSource": {
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/FX-991CW-Scientific-Calculator-for-High-School-College/2559506645"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 29.98,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-toi2",
@@ -458,7 +618,14 @@
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/Oral-B-CrossAction-All-in-One-Toothbrush-Deep-Plaque-Removal-Soft-1-Ct-for-Adults-Children-3/24512082"
       },
-      "photoBarcode": "4987176130051"
+      "photoBarcode": "4987176130051",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 5.97,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-toi5",
@@ -473,7 +640,14 @@
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/MACH3-Mach3-Cartridges-8-ct/895318"
       },
-      "photoBarcode": "7702018465385"
+      "photoBarcode": "7702018465385",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 22.97,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-dri5",
@@ -487,7 +661,14 @@
       "priceSource": {
         "name": "Kroger",
         "url": "https://www.kroger.com/p/coca-cola-soda-bottles/0004900002468"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 7.49,
+          "store": "Kroger"
+        }
+      ]
     },
     {
       "id": "d-dri3",
@@ -502,7 +683,14 @@
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/Lipton-Black-Tea-Bags-100-Count/17223623484"
       },
-      "photoBarcode": "8720608632633"
+      "photoBarcode": "8720608632633",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 14.91,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-bab2",
@@ -518,7 +706,14 @@
         "name": "Target",
         "url": "https://www.target.com/p/pampers-sensitive-baby-wipes-56ct/-/A-14596962"
       },
-      "photoBarcode": "4015400636649"
+      "photoBarcode": "4015400636649",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 2.39,
+          "store": "Target"
+        }
+      ]
     },
     {
       "id": "d-toi9",
@@ -536,7 +731,14 @@
         "name": "CVS",
         "url": "https://www.cvs.com/shop/colgate-triple-action-toothpaste-4-oz-prodid-823794?skuId=823794"
       },
-      "photoBarcode": "6281001112013"
+      "photoBarcode": "6281001112013",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 2.59,
+          "store": "CVS"
+        }
+      ]
     },
     {
       "id": "d-toi10",
@@ -554,7 +756,14 @@
         "name": "Walmart",
         "url": "https://www.walmart.com/ip/Sensodyne-Repair-and-Protect-Fluoride-Toothpaste-for-Sensitive-Teeth-Mint-Flavor-3-4Oz-for-Adults/23814510"
       },
-      "photoBarcode": "5054563070951"
+      "photoBarcode": "5054563070951",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 7.47,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "d-toi13",
@@ -572,7 +781,14 @@
       "priceSource": {
         "name": "CVS",
         "url": "https://www.cvs.com/shop/nivea-men-sensitive-skin-body-wash-16-9-oz-prodid-1013088"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 10.49,
+          "store": "CVS"
+        }
+      ]
     },
     {
       "id": "d-toi14",
@@ -590,7 +806,14 @@
         "name": "CVS",
         "url": "https://www.cvs.com/shop/dove-deep-moisture-body-wash-for-dry-skin-20-oz-prodid-978106"
       },
-      "photoBarcode": "8717163742839"
+      "photoBarcode": "8717163742839",
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 10.79,
+          "store": "CVS"
+        }
+      ]
     },
     {
       "id": "w-hp3",
@@ -620,7 +843,14 @@
       "priceSource": {
         "name": "Audio Advice",
         "url": "https://www.audioadvice.com/products/jbl-live-650btnc-wireless-over-ear-noise-cancelling-headphones-black?variant=41288204943444"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 129.95,
+          "store": "Audio Advice"
+        }
+      ]
     },
     {
       "id": "w-hp4",
@@ -650,7 +880,19 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/sony-wh-ch510-wireless-on-ear-headphones-black/J7XSRH4HTT/sku/10147889"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 32.0,
+          "store": "BirdieBox"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 59.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "w-lp1",
@@ -679,7 +921,14 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/site/reviews/acer-aspire-5-15-6-laptop-intel-core-i5-8gb-memory-512gb-solid-state-drive-cha-black/6359966"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 599.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "w-lp2",
@@ -709,7 +958,14 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/lenovo-ideapad-slim-3-15-6-full-hd-laptop-amd-ryzen-5-40-2025-8gb-memory-256gb-storage-abyss-blue/JJGH3Q8P2K/sku/6668500"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 629.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "w-lp3",
@@ -739,7 +995,14 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/macbook-air-13-3-laptop-apple-m1-chip-8gb-memory-256gb-ssd-space-gray/JJ8ZHP82L3"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 779.95,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "w-rs1",
@@ -778,7 +1041,14 @@
       "priceSource": {
         "name": "DICK'S Sporting Goods",
         "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-kayano-31-running-shoes-24asimglkyn31smggmns/24asimglkyn31smggmns"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 164.99,
+          "store": "DICK'S Sporting Goods"
+        }
+      ]
     },
     {
       "id": "w-rs2",
@@ -817,7 +1087,14 @@
       "priceSource": {
         "name": "Dave's Running Shop",
         "url": "https://davesrunning.com/products/adrenaline-gts-24?variant=42247375192160"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 104.95,
+          "store": "Dave's Running Shop"
+        }
+      ]
     },
     {
       "id": "w-rs3",
@@ -855,7 +1132,14 @@
       "priceSource": {
         "name": "DICK'S Sporting Goods",
         "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-cumulus-26-running-shoes-24asimcmls26blkcnmns/24asimcmls26blkcnmns"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 85.97,
+          "store": "DICK'S Sporting Goods"
+        }
+      ]
     },
     {
       "id": "w-rs4",
@@ -891,7 +1175,14 @@
       "priceSource": {
         "name": "DICK'S Sporting Goods",
         "url": "https://www.dickssportinggoods.com/p/brooks-mens-ghost-16-gtx-running-shoes-24bromghst16gtxblmns/24bromghst16gtxblmns"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 169.99,
+          "store": "DICK'S Sporting Goods"
+        }
+      ]
     },
     {
       "id": "w-rs5",
@@ -927,7 +1218,14 @@
       "priceSource": {
         "name": "Fleet Feet",
         "url": "https://www.fleetfeet.com/products/mens-brooks-glycerin-23?upc=195394767650"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 175.0,
+          "store": "Fleet Feet"
+        }
+      ]
     },
     {
       "id": "w-sp1",
@@ -954,7 +1252,19 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/soundcore-by-anker-select-4-go-ip67-waterproof-dustproof-floatable-ultra-portable-bluetooth-speaker-with-20h-playtime-black/JJ8586KR8L"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 19.99,
+          "store": "Best Buy"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 24.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "w-sw1",
@@ -980,7 +1290,19 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/fitbit-inspire-3-health-fitness-tracker-midnight-zen-2022/J3GWJ6S29F/sku/11940127"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 69.95,
+          "store": "Best Buy"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 69.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "w-ms1",
@@ -1006,7 +1328,19 @@
       "priceSource": {
         "name": "Best Buy",
         "url": "https://www.bestbuy.com/product/logitech-m185-wireless-optical-ambidextrous-mouse-wireless-swift-gray/J7H7ZLVWQJ"
-      }
+      },
+      "priceHistory": [
+        {
+          "date": "2026-11-20",
+          "price": 12.99,
+          "store": "Logitech"
+        },
+        {
+          "date": "2026-11-21",
+          "price": 12.99,
+          "store": "Best Buy"
+        }
+      ]
     },
     {
       "id": "op-0070847012474",
@@ -1029,7 +1363,14 @@
         "source": "https://world.openfoodfacts.org/product/0070847012474",
         "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
       },
-      "addedAt": "2026-11-20"
+      "addedAt": "2026-11-20",
+      "priceHistory": [
+        {
+          "date": "2026-11-21",
+          "price": 2.88,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "op-0855352008989",
@@ -1052,7 +1393,14 @@
         "source": "https://world.openfoodfacts.org/product/0855352008989",
         "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
       },
-      "addedAt": "2026-11-20"
+      "addedAt": "2026-11-20",
+      "priceHistory": [
+        {
+          "date": "2026-11-21",
+          "price": 10.99,
+          "store": "Whole Foods Market"
+        }
+      ]
     },
     {
       "id": "op-0071117025149",
@@ -1075,7 +1423,14 @@
         "source": "https://world.openfoodfacts.org/product/0071117025149",
         "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
       },
-      "addedAt": "2026-11-20"
+      "addedAt": "2026-11-20",
+      "priceHistory": [
+        {
+          "date": "2026-11-06",
+          "price": 5.0,
+          "store": "Safeway (Open Prices receipt)"
+        }
+      ]
     },
     {
       "id": "op-0072655001053",
@@ -1098,7 +1453,14 @@
         "source": "https://world.openfoodfacts.org/product/0072655001053",
         "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
       },
-      "addedAt": "2026-11-20"
+      "addedAt": "2026-11-20",
+      "priceHistory": [
+        {
+          "date": "2026-11-21",
+          "price": 3.18,
+          "store": "Walmart"
+        }
+      ]
     },
     {
       "id": "op-0028400200684",
@@ -1121,7 +1483,14 @@
         "source": "https://world.openfoodfacts.org/product/0028400200684",
         "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
       },
-      "addedAt": "2026-11-21"
+      "addedAt": "2026-11-21",
+      "priceHistory": [
+        {
+          "date": "2026-11-06",
+          "price": 2.5,
+          "store": "Safeway (Open Prices receipt)"
+        }
+      ]
     },
     {
       "id": "op-0014100052951",
@@ -1144,7 +1513,14 @@
         "source": "https://world.openfoodfacts.org/product/0014100052951",
         "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
       },
-      "addedAt": "2026-11-21"
+      "addedAt": "2026-11-21",
+      "priceHistory": [
+        {
+          "date": "2026-11-06",
+          "price": 5.49,
+          "store": "Safeway (Open Prices receipt)"
+        }
+      ]
     }
   ],
   "pricesUpdatedAt": "2026-11-21",

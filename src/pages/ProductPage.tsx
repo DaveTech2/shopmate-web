@@ -1,12 +1,14 @@
-import { useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { Plus, Scale, Truck, Sparkles } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Link, useParams, useSearchParams } from "react-router-dom";
+import { Plus, Scale, Truck, Sparkles, ShieldCheck } from "lucide-react";
 import { AppShell, AIBadge, Footer } from "../components/ui";
 import { Thumb } from "../components/ProductCard";
 import { categoryName, getProduct, money } from "../lib/catalog";
 import { quote } from "../lib/delivery";
 import { useShop } from "../state/shop";
-import { ensureDeviceModel, summarizeProduct, type AIResult } from "../ai/hybrid";
+import { TrustReportCard } from "../components/TrustReport";
+import { ensureDeviceModel, summarizeProduct, trustReport, type AIResult } from "../ai/hybrid";
+import type { TrustReportData } from "../lib/trust";
 
 export default function ProductPage() {
   const { id = "" } = useParams();
@@ -16,6 +18,15 @@ export default function ProductPage() {
   const [ans, setAns] = useState<AIResult<string> | null>(null);
   const [question, setQuestion] = useState("");
   const [busy, setBusy] = useState(false);
+  const [report, setReport] = useState<AIResult<TrustReportData> | null>(null);
+  const [checking, setChecking] = useState(false);
+  const [params, setParams] = useSearchParams();
+  const auto = useRef(false);
+  const reportRef = useRef<HTMLDivElement>(null);
+  useEffect(() => { setReport(null); auto.current = false; }, [id, currency, place.name]);
+  useEffect(() => {
+    if (params.get("trust") && p && !auto.current) { auto.current = true; setParams({}, { replace: true }); void runTrust(); }
+  });
   if (!p) return <AppShell><main className="wrap page"><p>Product not found. <Link className="link" to="/discover">Browse</Link></p></main></AppShell>;
   const std = quote(place, [[p, qty]]);
   const exp = quote(place, [[p, qty]], "express");
@@ -24,6 +35,14 @@ export default function ProductPage() {
     setBusy(true);
     setAns(await summarizeProduct(p!, currency, q));
     setBusy(false);
+  }
+  async function runTrust() {
+    ensureDeviceModel();
+    setChecking(true);
+    const r = await trustReport(p!, currency, place);
+    setReport(r);
+    setChecking(false);
+    setTimeout(() => reportRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }), 60);
   }
   return (
     <AppShell>
@@ -48,6 +67,14 @@ export default function ProductPage() {
               <button className="btn" onClick={() => addToCart(p.id, qty)}><Plus size={15} /> Add to cart</button>
               <button className="pill" onClick={() => toggleCompare(p.id)}><Scale size={14} /> {compare.includes(p.id) ? "In compare" : "Compare"}</button>
             </div>
+            <div className="card trustcta">
+              <span className="tshield"><ShieldCheck size={20} /></span>
+              <div style={{ minWidth: 0, flex: 1 }}>
+                <b>Check before you buy</b>
+                <div className="tiny" style={{ marginTop: 2 }}>Shopmate checks the seller, price, specs, cheaper alternatives and return policy.</div>
+              </div>
+              <button className="pill orange sm" onClick={runTrust} disabled={checking}>{checking ? "Checking…" : report ? "Run again" : "Trust report"}</button>
+            </div>
             <div className="card" style={{ padding: 14 }}>
               <div className="between"><b style={{ fontSize: 13 }}><Sparkles size={13} color="var(--orange)" /> Ask about this product</b></div>
               <form className="row" style={{ marginTop: 10 }} onSubmit={(e) => { e.preventDefault(); askAI(question || undefined); }}>
@@ -59,6 +86,12 @@ export default function ProductPage() {
               {ans && <AIBadge source={ans.source} route={ans.route} ms={ans.ms} />}
             </div>
           </div>
+        </div>
+        <div ref={reportRef} className="trustwrap">
+          {checking && (
+            <div className="card tchecking" role="status"><span className="typing"><i /><i /><i /></span> Investigating {p.title}: seller, price history, alternatives, return policy…</div>
+          )}
+          {report && !checking && <TrustReportCard p={p} res={report} currency={currency} />}
         </div>
       </main>
       <Footer />

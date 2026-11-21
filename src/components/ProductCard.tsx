@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Truck, Plus, Scale, Check, ImageOff } from "lucide-react";
+import { Truck, Plus, Scale, Check, ImageOff, ShieldCheck } from "lucide-react";
 import { useState } from "react";
 import { money, type Product } from "../lib/catalog";
 import { quote } from "../lib/delivery";
@@ -44,6 +44,7 @@ export function ProductCard({ p, reasons, fit }: { p: Product; reasons?: string[
           {inCmp ? <Check size={13} /> : <Scale size={13} />} {inCmp ? "In compare" : "Compare"}
         </button>
         <Link className="pill sm ghost" to={`/p/${p.id}`}>Details</Link>
+        <Link className="pill sm ghost" to={`/p/${p.id}?trust=1`} title="Shopmate Trust Report"><ShieldCheck size={13} /> Check before you buy</Link>
       </div>
     </div>
   );

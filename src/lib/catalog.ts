@@ -19,6 +19,7 @@ export interface Product {
   barcode?: string;
   priceUpdatedAt?: string | null;
   priceSource?: { name: string; url: string };
+  priceHistory?: Array<{ date: string; price: number; store?: string | null }>;
 }
 export interface Category { id: string; name: string }
 
@@ -144,4 +145,26 @@ export function productBrief(p: Product, cur: Currency): string {
   const specs = Object.entries(p.specs || {}).map(([k, v]) => `${k}: ${v}`).join("; ");
   const sizes = p.sizes ? `; sizes EU ${p.sizes.join(",")}` : "";
   return `[${p.id}] ${p.title}: ${money(p.price, p.currency, cur)}${specs ? "; " + specs : ""}${sizes}`;
+}
+
+export interface ImageQuery { terms: string[]; category?: string; budget_max?: number; budget_currency?: string }
+/**
+ * Candidates for a picture the shopper uploaded. Tries the specific description first, then single terms, then
+ * the same category. `loose` tells the caller the match is category-level so the AI ranker must vet it.
+ */
+export function matchImage(q: ImageQuery, limit = 8): { items: Product[]; loose: boolean } {
+  const base = { budget_max: q.budget_max, budget_currency: q.budget_currency };
+  const terms = q.terms.map((t) => t.trim()).filter(Boolean);
+  let items = searchCatalog({ ...base, query: terms.join(" "), category: q.category }, limit);
+  if (items.length) return { items, loose: false };
+  const seen = new Set<string>();
+  for (const t of terms) {
+    for (const p of searchCatalog({ ...base, query: t }, limit)) if (!seen.has(p.id)) { seen.add(p.id); items.push(p); }
+  }
+  if (items.length) return { items: items.slice(0, limit), loose: false };
+  if (q.category) {
+    items = searchCatalog({ ...base, category: q.category }, limit);
+    if (items.length) return { items, loose: true };
+  }
+  return { items: [], loose: false };
 }

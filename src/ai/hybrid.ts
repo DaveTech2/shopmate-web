@@ -24,9 +24,11 @@ import { ai, flag, isFirebaseConfigured, loadRemoteConfig } from "../lib/firebas
 import { getProduct, productBrief, searchCatalog, money, symbolOf, type Currency, type Product } from "../lib/catalog";
 import { quote, resolvePlace, placeLabel, type Place } from "../lib/delivery";
 import {
-  cartOpsSchema, compareSchema, intentSchema, rankSchema,
-  type CartOps, type CompareResult, type Intent, type RankResult,
+  cartOpsSchema, compareSchema, intentSchema, rankSchema, trustSchema, visionSchema,
+  type CartOps, type CompareResult, type Intent, type RankResult, type VisionResult,
 } from "./schemas";
+import { baselineReport, buildFacts, factsForPrompt, mergeReport, type TrustReportData } from "../lib/trust";
+import { countryOf } from "../data/countries";
 import { mockCartOps, mockCompare, mockIntent, mockRank } from "./mock";
 
 export type Source = "on_device" | "in_cloud" | "demo" | "fallback";
@@ -74,22 +76,25 @@ export function ensureDeviceModel(): void {
 }
 
 // ---------- model factory ----------
-type Task = "intent" | "rank" | "compare" | "cartops" | "summary";
+type Task = "intent" | "rank" | "compare" | "cartops" | "summary" | "trust" | "vision";
 const TASK_MODE: Record<Task, keyof typeof InferenceMode> = {
   intent: "PREFER_ON_DEVICE",
   compare: "PREFER_ON_DEVICE",
   cartops: "PREFER_ON_DEVICE",
   summary: "PREFER_ON_DEVICE",
   rank: "PREFER_IN_CLOUD",
+  trust: "PREFER_IN_CLOUD", // heavier reasoning: cloud first, on-device if the network is down
+  vision: "ONLY_IN_CLOUD", // images are analysed in the cloud (Gemini Nano image input is not widely available)
 };
 const TASK_SCHEMA: Partial<Record<Task, object>> = {
-  intent: intentSchema, rank: rankSchema, compare: compareSchema, cartops: cartOpsSchema,
+  intent: intentSchema, rank: rankSchema, compare: compareSchema, cartops: cartOpsSchema, trust: trustSchema, vision: visionSchema,
 };
 const SYSTEM: Record<Task, string> = {
   intent:
     "You are Shopmate's intent parser. Convert the shopper's message into JSON that matches the schema. " +
     "Use action=search for product requests, compare when they want to compare items, cart_add/cart_remove for cart edits, " +
-    "bulk_plan for big multi-item orders (office, event, restock, many people), track_order for order status, chitchat otherwise. " +
+    "bulk_plan for big multi-item orders (office, event, restock, many people), track_order for order status, " +
+    "trust_check when they ask if a product or seller is trustworthy, legit, safe to buy, or whether to check it before buying (put the product they mean in product_refs), chitchat otherwise. " +
     "budget_currency is the ISO 4217 code of any money amount the shopper gives ($ is USD, € EUR, £ GBP, ₦ or naira NGN, ₹ INR, etc.); if they give a bare number use the shopper's current currency stated in the message. " +
     "location is any delivery city in the world they mention, with location_country as its ISO country code. Use 0 or empty string when unknown.",
   rank:
@@ -99,6 +104,19 @@ const SYSTEM: Record<Task, string> = {
     "You compare 2-3 products for a shopper. Be concrete and brief. Pick one winner for the stated need. Use only the facts given.",
   cartops:
     "You edit a shopping cart. Map the shopper's request to add/remove/set_qty operations using ONLY product ids from the given cart or catalog list.",
+  trust:
+    "You write the SHOPMATE TRUST REPORT, an honest pre-purchase check. You get verified facts and a rules-based draft. " +
+    "Use ONLY those facts. Never invent reviews, ratings, seller history, discounts, policies or prices. " +
+    "If a fact is NOT AVAILABLE or unknown, say it is unclear instead of guessing. Keep every caveat in the draft. Missing review data alone is NOT a reason for caution: mention it as a point and set the status from the other facts. " +
+    "Statuses: good (no issue found), caution (something to confirm), concern (a real warning), unclear (no data). You may make a status more cautious than the draft, never less. " +
+    "The headline must agree with the status (for good: a positive line; for caution or concern: name the issue; for unclear: say what is missing). Never say 'no red flags' unless the status is good. Write for a regular shopper in plain words, each point under 25 words. Quote amounts in the display currency given. " +
+    "Return exactly four sections: authenticity, seller, price, returns. In the summary, tell the shopper what to know before purchasing.",
+  vision:
+    "You are Shopmate's visual shopping assistant. The shopper sends a screenshot, photo or social media image of something they want to buy. " +
+    "First decide if the picture is clear enough: if it is blurry, dark, tiny, heavily cropped, or shows no purchasable item (for example a selfie, landscape or document), set usable=false and explain in one friendly sentence what a better picture looks like. " +
+    "Otherwise identify the product in plain language, list its important visual traits (colour, material, shape, pattern, style, details), and give catalog search terms. " +
+    "Name a brand only if a logo or text is clearly legible; never guess brands or prices. When the picture shows a whole outfit, pick the most prominent single item and mention the others in characteristics. " +
+    "If the shopper's message states a budget, extract it. Use confidence=low if you are unsure what the item is.",
   summary: "You are a concise shopping assistant. Answer in at most 2 short sentences using only the facts given.",
 };
 const STYLE = " Write in plain, natural language. Never use em dashes or en dashes; use commas or periods instead.";
@@ -106,6 +124,7 @@ const STYLE = " Write in plain, natural language. Never use em dashes or en dash
 
 const models = new Map<string, GenerativeModel>();
 function effectiveMode(task: Task): (typeof InferenceMode)[keyof typeof InferenceMode] {
+  if (task === "vision") return InferenceMode.ONLY_IN_CLOUD;
   const key = modeSetting === "auto" ? (task === "intent" ? (flag("inference_mode") as keyof typeof InferenceMode) : TASK_MODE[task]) : modeSetting;
   return InferenceMode[key] ?? InferenceMode.PREFER_ON_DEVICE;
 }
@@ -220,6 +239,34 @@ export function summarizeProduct(p: Product, cur: Currency, question?: string) {
     () => `${p.title} suits shoppers who want ${Object.values(p.specs || {})[0] || p.product_type || "a reliable pick"} at ${money(p.price, p.currency, cur)}. Check delivery time to your city before ordering.`,
     false,
   );
+}
+
+/** SHOPMATE TRUST REPORT: rules-based facts first, then the model words it. Never less cautious than the rules. */
+export async function trustReport(p: Product, cur: Currency, place: Place): Promise<AIResult<TrustReportData>> {
+  const facts = buildFacts(p);
+  const base = baselineReport(facts, cur);
+  const country = countryOf(place.country)?.name || place.country;
+  const r = await run<Partial<TrustReportData>>("trust", factsForPrompt(facts, cur, `${country} (delivering to ${placeLabel(place)})`), "cloud", () => base);
+  return { ...r, data: r.source === "demo" || r.source === "fallback" ? base : mergeReport(r.data, base) };
+}
+
+// ---------- screenshot to shopping (multimodal, cloud) ----------
+export interface ImagePayload { mimeType: string; base64: string }
+export async function identifyImage(img: ImagePayload, text: string, cur: Currency, place: Place): Promise<AIResult<VisionResult | null>> {
+  const t0 = performance.now();
+  if (!aiLive) return { data: null, source: "demo", route: "cloud", ms: 0, note: "Image analysis needs the cloud AI, which is not configured in demo mode." };
+  await loadRemoteConfig();
+  try {
+    const prompt =
+      `Shopper's message: ${text ? `"${text}"` : "(none)"}\nShopper delivers to ${placeLabel(place)}; display currency ${cur}. ` +
+      "Analyse the attached picture and return the JSON.";
+    const res = await model("vision").generateContent([{ type: "text", text: prompt }, { type: "inlineData", inlineData: { mimeType: img.mimeType, data: img.base64 } }]);
+    const data = parseJSON<VisionResult>(res.response.text().replace(/\s*[\u2014\u2013]\s*/g, ", "));
+    return { data, source: "in_cloud", route: "cloud", ms: Math.round(performance.now() - t0) };
+  } catch (e) {
+    console.warn("[shopmate] vision failed", e);
+    return { data: null, source: "fallback", route: "cloud", ms: Math.round(performance.now() - t0), note: String((e as Error)?.message || e) };
+  }
 }
 
 // ---------- cloud agent: bulk-order planner with function calling ----------

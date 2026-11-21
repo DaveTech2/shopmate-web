@@ -16,3 +16,4 @@ scripts/__pycache__/
 *serviceAccount*.json
 google-services.json
 GoogleService-Info.plist
+qa/

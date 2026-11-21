@@ -43,6 +43,7 @@ export function mockIntent(text: string, cur = "USD"): Intent {
   else if (/\b(remove|delete|take out)\b/.test(lower)) action = "cart_remove";
   else if (/\badd\b.*\bcart\b|\bput\b.*\bcart\b/.test(lower)) action = "cart_add";
   else if (/\b(track|where is my order|order status)\b/.test(lower)) action = "track_order";
+  else if (/\btrust\b|\blegit\b|\bscam\b|safe to buy|check before|before (i )?(buy|purchas)|worth buying|reliable seller|good deal\b/.test(lower)) action = "trust_check";
   else if (/\b(bulk|office|event|party|restock|for \d+ (people|staff|guests|students))\b/.test(lower)) action = "bulk_plan";
   else if (/^(hi|hello|hey|thanks|thank you)\b/.test(lower)) action = "chitchat";
   const query = lower

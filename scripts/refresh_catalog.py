@@ -85,6 +85,10 @@ def apply_offers(cat, files, report):
 def set_price(p, price, date, name, url, report):
     old = p["price"]
     p.update(price=round(float(price), 2), currency="USD", priceUpdatedAt=date, priceSource={"name": name, "url": url})
+    # Keep a dated price history (one point per check date). The Trust Report uses it to judge price moves.
+    hist = [h for h in p.get("priceHistory", []) if h.get("date") != date]
+    hist.append({"date": date, "price": p["price"], "store": name})
+    p["priceHistory"] = sorted(hist, key=lambda h: h["date"])[-30:]
     report["refreshed"].append((p["id"], old, p["price"], name))
 
 
@@ -213,7 +217,7 @@ def main():
         print(f"  x {r[0]}: {r[1]}")
     if a.dry_run:
         return
-    json.dump(cat, open(CATALOG, "w"), indent=1, ensure_ascii=False)
+    json.dump(cat, open(CATALOG, "w"), indent=2, ensure_ascii=False)
     write_credits(cat)
     if a.deploy:
         sh(["npm", "run", "build"])
