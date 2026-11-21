@@ -14,6 +14,15 @@
     ],
     "headers": [
       {
+        "source": "**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache"
+          }
+        ]
+      },
+      {
         "source": "/assets/**",
         "headers": [
           {
@@ -22,7 +31,8 @@
           }
         ]
       }
-    ]
+    ],
+    "site": "shopmate-58cb5"
   },
   "firestore": {
     "database": "(default)",

@@ -7,7 +7,8 @@ Built for **#BuildHybridAI 2026** on **Firebase AI Logic hybrid inference**: the
 latency-sensitive run **on your device with Gemini Nano** (Chrome Prompt API), and the heavier reasoning runs on **cloud Gemini** , 
 with automatic fallback in both directions, and a badge on every AI answer showing which one actually replied.
 
-**Live app:** https://shopmate-web-xi.vercel.app  
+**Live app:** https://shopmate-58cb5.web.app  
+**Also on Vercel:** https://shopmate-web-xi.vercel.app  
 **Source:** https://github.com/DaveTech2/shopmate-web
 
 ## Value proposition
@@ -74,9 +75,9 @@ npm run dev                  # http://localhost:5173
 ## Deploy
 ```bash
 npm run build
-firebase deploy --only hosting      # uses firebase.json (SPA rewrites) and .firebaserc
+npx -y firebase-tools@latest deploy --only hosting
 ```
-Vercel also works (`vercel.json` included). Set the same `VITE_*` env vars in the host.
+Live at https://shopmate-58cb5.web.app (also https://shopmate-58cb5.firebaseapp.com). Vercel stays up as a backup at https://shopmate-web-xi.vercel.app (`vercel.json` included). Set the same `VITE_*` env vars in the host.
 
 ## Pre-existing work
 The product catalog, Nigerian place list and delivery-fee rules are ported from the Shopmate Hermes plugin

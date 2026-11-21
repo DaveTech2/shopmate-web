@@ -58,5 +58,6 @@ Catalog data and delivery-fee rules come from the open-source Shopmate Hermes pl
 layer and all Firebase integration were built during the submission period.
 
 ## Links
-- Live app: https://shopmate-web-xi.vercel.app
+- Live app: https://shopmate-58cb5.web.app
+- Also on Vercel: https://shopmate-web-xi.vercel.app
 - Source: https://github.com/DaveTech2/shopmate-web
