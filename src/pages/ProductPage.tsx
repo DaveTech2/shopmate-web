@@ -73,7 +73,7 @@ export default function ProductPage() {
             <div className="row">
               <div className="qty"><button onClick={() => setQty(Math.max(1, qty - 1))}>−</button><span>{qty}</span><button onClick={() => setQty(qty + 1)}>+</button></div>
               <button className="btn" onClick={() => addToCart(p.id, qty)}><Plus size={15} /> Add to cart</button>
-              <button className="pill" onClick={() => toggleCompare(p.id)}><Scale size={14} /> {compare.includes(p.id) ? "In compare" : "Compare"}</button>
+              <button className={`pill${compare.includes(p.id) ? " on" : ""}`} onClick={() => toggleCompare(p.id)}><Scale size={14} /> {compare.includes(p.id) ? "In compare" : "Compare"}</button>
             </div>
             <div className="card trustcta">
               <span className="tshield"><ShieldCheck size={20} /></span>
