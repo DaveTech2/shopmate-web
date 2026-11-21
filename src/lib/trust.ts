@@ -9,6 +9,49 @@
  */
 import { products, money, toCurrency, categoryName, type Currency, type Product } from "./catalog";
 import { POLICY_REVIEWED, resolveStore, type StoreInfo } from "../data/retailers";
+import { STORES_REVIEWED, hasLocalStores, searchUrl, storesFor } from "../data/localStores";
+import { countryOf } from "../data/countries";
+import localPrices from "../data/local_prices.json";
+
+export interface LocalPrice { country: string; store: string; currency: string; date: string; title: string; price: number; url: string }
+export interface LocalBuy {
+  name: string; url: string; delivery: string; returns?: string; returnsUrl?: string; note?: string; international?: boolean;
+  price?: LocalPrice;
+}
+export interface LocalInfo {
+  country: string; countryName: string;
+  /** Can the store the price was checked at deliver to this country? */
+  delivers: "yes" | "no" | "maybe" | "unknown";
+  deliversText: string;
+  hasLocal: boolean;
+  stores: LocalBuy[];
+  prices: LocalPrice[];
+  reviewed: string;
+}
+const PRICES = (localPrices as { prices: Record<string, LocalPrice[]> }).prices;
+/** Product name for store searches: drop bracketed colour or condition notes. */
+export const searchName = (p: Product) => p.title.replace(/\([^)]*\)/g, "").replace(/\s+/g, " ").trim();
+
+export function localInfo(p: Product, country: string): LocalInfo | null {
+  if (!country || country === "US") return null;
+  const cname = countryOf(country)?.name || country;
+  const st = resolveStore(p.priceSource?.name);
+  const r = st.retailer;
+  let delivers: LocalInfo["delivers"] = "unknown";
+  let deliversText = `${st.store} is a US store. Shopmate has no evidence it delivers to ${cname}.`;
+  if (r?.shipsTo === "global-eligible") { delivers = "maybe"; deliversText = `${r.shipsNote} Check that checkout accepts a ${cname} address.`; }
+  else if (r?.shipsTo === "US" && r.shipsVerified) { delivers = "no"; deliversText = `${st.store} does not deliver to ${cname}. ${r.shipsNote || ""}`.trim(); }
+  else if (r?.shipsTo === "US") { deliversText = `${st.store} sells to US addresses; Shopmate has no evidence it delivers to ${cname}.${r.shipsNote ? " " + r.shipsNote : ""}`; }
+  const prices = (PRICES[p.id] || []).filter((x) => x.country === country);
+  const q = searchName(p);
+  const stores: LocalBuy[] = storesFor(country).map((s) => ({
+    name: s.name, url: searchUrl(s, q), delivery: s.delivery, returns: s.returns, returnsUrl: s.returnsUrl, note: s.note, international: s.international,
+    price: prices.find((x) => s.name.toLowerCase().startsWith(x.store.toLowerCase())),
+  }));
+  // Stores with a real local price first, then local stores, then international ones.
+  stores.sort((a, b) => Number(!!b.price) - Number(!!a.price) || Number(!!a.international) - Number(!!b.international));
+  return { country, countryName: cname, delivers, deliversText, hasLocal: hasLocalStores(country), stores, prices, reviewed: STORES_REVIEWED };
+}
 
 export type TStatus = "good" | "caution" | "concern" | "unclear";
 export type SectionKey = "authenticity" | "seller" | "price" | "returns";
@@ -18,6 +61,8 @@ export interface TrustReportData {
   overall: TStatus;
   summary: string;
   alternative_ids: string[];
+  /** Set when the shopper is outside the US: where the item can really be bought and delivered. */
+  local?: LocalInfo | null;
 }
 
 export const SECTION_TITLE: Record<SectionKey, string> = {
@@ -77,9 +122,11 @@ export interface TrustFacts {
   photoEquivalent: boolean;
   refurbished: boolean;
   returnsInfo: { text: string; days: number | null; rules: string[]; holiday: string | null; known: boolean; url: string | null };
+  local: LocalInfo | null;
 }
 
-export function buildFacts(p: Product): TrustFacts {
+export function buildFacts(p: Product, country = "US"): TrustFacts {
+  const local = localInfo(p, country);
   const store = resolveStore(p.priceSource?.name);
   const hist = [...(p.priceHistory || [])].sort((a, b) => a.date.localeCompare(b.date));
   let change: TrustFacts["change"] = null;
@@ -94,6 +141,8 @@ export function buildFacts(p: Product): TrustFacts {
   const mine = usd(p);
   const alts: Alt[] = peersAll
     .filter((q) => usd(q) < mine * 0.95)
+    // Outside the US, only suggest catalog items whose store can deliver there.
+    .filter((q) => !local || resolveStore(q.priceSource?.name).retailer?.shipsTo === "global-eligible")
     .sort((a, b) => usd(a) - usd(b))
     .slice(0, 3)
     .map((q) => ({ id: q.id, store: resolveStore(q.priceSource?.name).store, savePct: (mine - usd(q)) / mine }));
@@ -120,6 +169,7 @@ export function buildFacts(p: Product): TrustFacts {
       known: !!r?.returns && !store.thirdParty,
       url: r?.url || null,
     },
+    local,
   };
 }
 
@@ -149,6 +199,17 @@ export function baselineReport(f: TrustFacts, cur: Currency): TrustReportData {
   else if (r) { s = "unclear"; sp.push(`${store.store}: ${r.profile} Shopmate has no further seller data.`); }
   else { s = "unclear"; sp.push(`${store.store} is not a store Shopmate has seller facts for. Check its reviews and contact details before paying.`); }
   if (!store.unchecked) sp.push(f.checked.url ? `The price was checked at ${store.store}, listing linked below.` : `Checked at ${store.store}.`);
+  const L = f.local;
+  const localNames = L ? L.stores.filter((x) => !x.international).slice(0, 3).map((x) => x.name) : [];
+  if (L) {
+    if (L.delivers === "no") s = worse(s, "concern");
+    else if (L.delivers === "unknown") s = worse(s, "caution");
+    else if (L.delivers === "maybe") s = worse(s, "caution");
+    sp.unshift(L.deliversText);
+    sp.push(localNames.length
+      ? `Retailers that deliver in ${L.countryName}: ${localNames.join(", ")}. See Where to buy below.`
+      : `Shopmate has no verified local retailer for ${L.countryName} yet; international stores that ship there are listed below.`);
+  }
 
   // ---- price ----
   let pr: TStatus = "good"; const pp: string[] = [];
@@ -165,6 +226,11 @@ export function baselineReport(f: TrustFacts, cur: Currency): TrustReportData {
   } else if (f.history.length >= 2) pp.push("The price has been stable across our checks.");
   else pp.push("There is only one price check on record, so there is no price trend yet.");
   pp.push("Shopmate does not record a 'was' price, so it cannot confirm that an advertised discount is real.");
+  if (L) {
+    pp.unshift(`This price is from a US store. Prices in ${L.countryName} differ, and shipping or import costs may apply.`);
+    if (L.prices.length) for (const lp of L.prices) pp.push(`${lp.store} (${L.countryName}): ${money(lp.price, lp.currency, cur)} for "${lp.title}", checked ${lp.date}.`);
+    else if (localNames.length) pp.push(`Shopmate has no local price for this item yet. Check the price at ${localNames.slice(0, 2).join(" or ")}.`);
+  }
   if (f.alts.length) {
     const best = f.alts[0], bp = products.find((x) => x.id === best.id)!;
     pp.push(`Cheaper alternatives in our catalog: ${bp.title} at ${best.store} is ${pct(best.savePct)} less (${money(bp.price, bp.currency, cur)}).`);
@@ -183,20 +249,30 @@ export function baselineReport(f: TrustFacts, cur: Currency): TrustReportData {
     rt = ri.days !== null && ri.days <= 15 && !ri.holiday ? "caution" : "good";
   } else if (store.receipt) { rt = "unclear"; rp.push(`${store.store} groceries: Shopmate has no return policy on file. Perishables are often non-returnable.`); }
   else { rt = "unclear"; rp.push(`Shopmate has no published return policy on file for ${store.store}. Find it on the store's site before you pay.`); }
-  rp.push(`Policy facts reviewed ${POLICY_REVIEWED}. Policies change, so confirm at checkout.`);
+  if (L && L.delivers !== "yes") {
+    rp.length = 0;
+    rp.push(`${store.store}'s return policy only covers its own US orders.`);
+    const withPolicy = L.stores.filter((x) => !x.international && x.returns).slice(0, 2);
+    withPolicy.forEach((x) => rp.push(`${x.name}: ${x.returns}`));
+    rt = withPolicy.length ? "caution" : "unclear";
+    if (!withPolicy.length) rp.push(`Shopmate has no return policy on file for retailers in ${L.countryName}. Check before you pay.`);
+  }
+  rp.push(`Policy facts reviewed ${L ? L.reviewed : POLICY_REVIEWED}. Policies change, so confirm at checkout.`);
 
   const sections: TrustSection[] = [
     { key: "authenticity", status: a, headline: a === "good" ? "No red flags in what we can check" : "A few things to confirm", points: ap },
-    { key: "seller", status: s, headline: s === "good" ? `${store.store} is an established seller` : s === "unclear" ? "Not enough seller information" : "Check the seller first", points: sp },
+    { key: "seller", status: s, headline: L && L.delivers === "no" ? `${store.store} does not deliver to ${L.countryName}` : L && L.delivers === "unknown" ? `${store.store} may not deliver to ${L.countryName}` : s === "good" ? `${store.store} is an established seller` : s === "unclear" ? "Not enough seller information" : "Check the seller first", points: sp },
     { key: "price", status: pr, headline: pr === "good" ? "Price looks competitive" : pr === "unclear" ? "Price not verified" : "Worth a second look", points: pp },
     { key: "returns", status: rt, headline: rt === "good" ? "Clear return policy" : rt === "unclear" ? "Return policy unclear" : "Returns need a closer look", points: rp },
   ];
   const overall = overallOf(sections);
   const flagged = sections.filter((x) => x.status === "caution" || x.status === "concern" || x.status === "unclear").map((x) => SECTION_TITLE[x.key].toLowerCase());
-  const summary = flagged.length
+  const summary = L && L.delivers !== "yes"
+    ? `${L.deliversText.split(". ")[0].replace(/\.$/, "")}. ${localNames.length ? `Buy from a retailer that delivers in ${L.countryName}, such as ${localNames.slice(0, 2).join(" or ")}, and check its price and return terms before you pay.` : `Use an international store that ships to ${L.countryName} and check fees and returns before you pay.`}`
+    : flagged.length
     ? `${p.title} at ${store.store}: confirm ${flagged.join(", ")} before you pay. Shopmate has no review data, so read recent verified reviews on the store page too.`
     : `${p.title} at ${store.store} looks fine on everything Shopmate can check. Shopmate has no review data, so still skim recent verified reviews on the store page.`;
-  return { sections, overall, summary, alternative_ids: f.alts.map((x) => x.id) };
+  return { sections, overall, summary, alternative_ids: f.alts.map((x) => x.id), local: L };
 }
 
 export function overallOf(sections: TrustSection[]): TStatus {
@@ -221,6 +297,11 @@ export function factsForPrompt(f: TrustFacts, cur: Currency, country: string): s
     `Seller facts: ${store.retailer ? store.retailer.profile : "none on file"}`,
     `Return policy facts (reviewed ${POLICY_REVIEWED}): ${store.thirdParty ? "third-party seller, terms unknown" : f.returnsInfo.known ? [f.returnsInfo.text, ...f.returnsInfo.rules, f.returnsInfo.holiday].filter(Boolean).join(" ") : "none on file"}`,
     `Cheaper similar items in the catalog from other stores: ${f.alts.length ? f.alts.map((a) => { const q = products.find((x) => x.id === a.id)!; return `[${a.id}] ${q.title} ${money(q.price, q.currency, cur)} at ${a.store} (${pct(a.savePct)} cheaper)`; }).join("; ") : "none"}.`,
+    ...(f.local ? [
+      `Delivery: ${f.local.deliversText}`,
+      `Retailers that deliver in ${f.local.countryName} (use these, never suggest US-only stores): ${f.local.stores.map((x) => `${x.name}${x.returns ? ` (returns: ${x.returns})` : " (return policy unclear)"}`).join("; ")}.`,
+      `Local prices fetched: ${f.local.prices.length ? f.local.prices.map((x) => `${x.store} ${money(x.price, x.currency, cur)} for "${x.title}" on ${x.date}`).join("; ") : "none, so do not quote any local price"}.`,
+    ] : []),
     "",
     "Rules-based draft (keep every caveat; you may reword and tighten, and make a status more cautious but never less):",
     JSON.stringify({ sections: b.sections.map((s) => ({ key: s.key, status: s.status, headline: s.headline, points: s.points })) }),
@@ -235,7 +316,13 @@ export function mergeReport(ai: Partial<TrustReportData> | undefined, base: Trus
     const m = ai.sections!.find((x) => x?.key === b.key);
     if (!m || !m.headline || !Array.isArray(m.points) || !m.points.length) return b;
     const st: TStatus = (["good", "caution", "concern", "unclear"] as const).includes(m.status as TStatus) ? (m.status as TStatus) : b.status;
-    return { key: b.key, status: worse(b.status, st), headline: String(m.headline), points: m.points.map(String).slice(0, 5) };
+    const pts = m.points.map(String).slice(0, 5);
+    // Outside the US, the seller and returns sections must keep naming the local retailers; if the AI dropped them, keep the verified draft.
+    if (base.local?.hasLocal && (b.key === "seller" || b.key === "returns")) {
+      const names = base.local.stores.filter((x) => !x.international).map((x) => x.name.toLowerCase());
+      if (!pts.some((t) => names.some((n) => t.toLowerCase().includes(n)))) return b;
+    }
+    return { key: b.key, status: worse(b.status, st), headline: String(m.headline), points: pts };
   });
   const alts = (ai.alternative_ids || []).filter((id) => products.some((q) => q.id === id));
   const overall = worse(overallOf(sections), (ai.overall as TStatus) && RANK[ai.overall as TStatus] !== undefined ? (ai.overall as TStatus) : "good");
@@ -243,6 +330,7 @@ export function mergeReport(ai: Partial<TrustReportData> | undefined, base: Trus
     sections,
     overall: worse(overall, base.overall),
     summary: ai.summary ? String(ai.summary) : base.summary,
-    alternative_ids: alts.length ? alts : base.alternative_ids,
+    alternative_ids: base.local ? base.alternative_ids : alts.length ? alts : base.alternative_ids,
+    local: base.local,
   };
 }

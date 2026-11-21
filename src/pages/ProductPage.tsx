@@ -7,6 +7,9 @@ import { categoryName, getProduct, money } from "../lib/catalog";
 import { quote } from "../lib/delivery";
 import { useShop } from "../state/shop";
 import { TrustReportCard } from "../components/TrustReport";
+import { storesFor, searchUrl } from "../data/localStores";
+import { searchName } from "../lib/trust";
+import { countryOf } from "../data/countries";
 import { ensureDeviceModel, summarizeProduct, trustReport, type AIResult } from "../ai/hybrid";
 import type { TrustReportData } from "../lib/trust";
 
@@ -53,7 +56,12 @@ export default function ProductPage() {
             <span className="tiny">{categoryName(p.category)} · {p.merchant}</span>
             <h1 className="pagetitle" style={{ margin: 0 }}>{p.title}</h1>
             <div className="price" style={{ fontSize: 26 }}>{money(p.price, p.currency, currency)} {currency !== "USD" && <small>{money(p.price, p.currency, "USD")}</small>}</div>
-            {p.priceSource?.url && p.priceUpdatedAt && <span className="tiny">Price checked {p.priceUpdatedAt} at <a className="link" href={p.priceSource.url} target="_blank" rel="noopener noreferrer">{p.priceSource.name}</a></span>}
+            {p.priceSource?.url && p.priceUpdatedAt && <span className="tiny">Price checked {p.priceUpdatedAt} at <a className="link" href={p.priceSource.url} target="_blank" rel="noopener noreferrer">{p.priceSource.name}</a>{place.country !== "US" && " (US store)"}</span>}
+            {place.country !== "US" && (
+              <span className="tiny localbuy">Buy in {countryOf(place.country)?.name || place.country}: {storesFor(place.country).slice(0, 4).map((s, i) => (
+                <span key={s.name}>{i > 0 && " · "}<a className="link" href={searchUrl(s, searchName(p))} target="_blank" rel="noopener noreferrer">{s.name}</a></span>
+              ))}</span>
+            )}
             {p.specs && (
               <table className="ctable"><tbody>{Object.entries(p.specs).map(([k, v]) => <tr key={k}><th>{k}</th><td>{v}</td></tr>)}</tbody></table>
             )}

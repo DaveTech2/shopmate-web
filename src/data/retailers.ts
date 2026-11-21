@@ -23,6 +23,13 @@ export interface Retailer {
   /** Seasonal extension, shown only while it applies. */
   holiday?: { from: string; to: string; text: string; skip?: (cat: string, title: string) => boolean };
   url?: string;
+  /**
+   * Where the store delivers. "US" = US addresses only. `shipsVerified` is true when the store's own help pages
+   * say so (checked 2026-11-21); otherwise the UI only says it is a US store with no evidence it delivers abroad.
+   */
+  shipsTo?: "US" | "global-eligible";
+  shipsVerified?: boolean;
+  shipsNote?: string;
 }
 
 const phone = (c: string, t: string) => c === "phones" || /iphone|galaxy|smartphone/i.test(t);
@@ -31,7 +38,7 @@ const electronics = (c: string) => ["electronics", "computing", "gaming", "phone
 
 export const RETAILERS: Record<string, Retailer> = {
   "best buy": {
-    name: "Best Buy", kind: "major",
+    name: "Best Buy", kind: "major", shipsTo: "US", shipsVerified: true, shipsNote: "Best Buy ships only to US addresses and does not ship to freight forwarders.",
     profile: "Large US electronics retailer with its own stores, customer service and a published returns promise.",
     days: 15,
     returns: "15 days for most products (60 days for My Best Buy Plus and Total members, not on Marketplace items).",
@@ -46,7 +53,7 @@ export const RETAILERS: Record<string, Retailer> = {
     url: "https://www.bestbuy.com/site/help-topics/return-exchange-policy/pcmcat260800050014.c",
   },
   walmart: {
-    name: "Walmart", kind: "major",
+    name: "Walmart", kind: "major", shipsTo: "US", shipsVerified: true, shipsNote: "Walmart.com ships within the US (and some eligible items to Mexico and Canada).",
     profile: "Large US retailer. Items sold by Walmart itself follow its published policy; Marketplace sellers can differ.",
     days: 90,
     returns: "90 days for most items sold by Walmart.",
@@ -57,7 +64,7 @@ export const RETAILERS: Record<string, Retailer> = {
     url: "https://www.walmart.com/cp/returns/1231920",
   },
   target: {
-    name: "Target", kind: "major",
+    name: "Target", kind: "major", shipsTo: "US", shipsVerified: true, shipsNote: "Target.com does not ship internationally or to freight forwarders.",
     profile: "Large US retailer with a published returns policy. Target Plus partner items have their own terms.",
     days: 90,
     returns: "90 days for most unopened items sold by Target.",
@@ -73,7 +80,7 @@ export const RETAILERS: Record<string, Retailer> = {
     url: "https://www.target.com/help/articles/returns-exchanges/returns",
   },
   amazon: {
-    name: "Amazon", kind: "major",
+    name: "Amazon", kind: "major", shipsTo: "global-eligible", shipsVerified: true, shipsNote: "Amazon.com ships eligible items to many countries through AmazonGlobal; import fees are charged at checkout.",
     profile: "Large online marketplace. Sold by Amazon and sold by third-party sellers are different things, so check the seller line.",
     days: 30,
     returns: "30 days for most items, with free returns at many drop-off locations.",
@@ -82,14 +89,14 @@ export const RETAILERS: Record<string, Retailer> = {
     url: "https://www.amazon.com/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
   },
   cvs: {
-    name: "CVS", kind: "major",
+    name: "CVS", kind: "major", shipsTo: "US",
     profile: "Large US pharmacy and drugstore chain.",
     days: 60,
     returns: "60 days for most new, unopened items. Some health and personal care items cannot be returned.",
     url: "https://www.cvs.com/retail/help/return_policy/",
   },
   "dick's sporting goods": {
-    name: "DICK'S Sporting Goods", kind: "major",
+    name: "DICK'S Sporting Goods", kind: "major", shipsTo: "US",
     profile: "Large US sporting goods chain.",
     days: 90,
     returns: "90 days for most items with proof of purchase.",
@@ -97,14 +104,14 @@ export const RETAILERS: Record<string, Retailer> = {
     url: "https://www.dickssportinggoods.com/s/return-policy",
   },
   "macy's": {
-    name: "Macy's", kind: "major",
+    name: "Macy's", kind: "major", shipsTo: "US", shipsVerified: true, shipsNote: "Macy's international shipping is currently paused.",
     profile: "Large US department store.",
     days: 30,
     returns: "30 days for most items. Returns by mail cost $9.99 for non-members. Watches and jewelry are inspected before a refund.",
     url: "https://www.macys.com/customer-service/articles/what-is-macys-return-policy",
   },
   nike: {
-    name: "Nike", kind: "brand",
+    name: "Nike", kind: "brand", shipsTo: "US", shipsNote: "This is the price on Nike's US store; other countries have their own Nike store and prices.",
     profile: "Sold directly by the brand, so the stock comes from the maker.",
     days: 60,
     returns: "60 day return window for Nike Members, including worn shoes.",
@@ -115,9 +122,9 @@ export const RETAILERS: Record<string, Retailer> = {
     profile: "Sold directly by the brand, so the stock comes from the maker.",
     url: "https://www.casio.com/us/",
   },
-  kroger: { name: "Kroger", kind: "grocery", profile: "Large US grocery chain." },
-  safeway: { name: "Safeway", kind: "grocery", profile: "Large US grocery chain." },
-  "whole foods market": { name: "Whole Foods Market", kind: "grocery", profile: "US grocery chain owned by Amazon." },
+  kroger: { name: "Kroger", kind: "grocery", shipsTo: "US", profile: "Large US grocery chain." },
+  safeway: { name: "Safeway", kind: "grocery", shipsTo: "US", profile: "Large US grocery chain." },
+  "whole foods market": { name: "Whole Foods Market", kind: "grocery", shipsTo: "US", profile: "US grocery chain owned by Amazon." },
 };
 
 export interface StoreInfo {

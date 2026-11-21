@@ -477,3 +477,13 @@ html, body { overflow-x: hidden; max-width: 100%; }
 [data-theme="light"] .vtraits span { background: #fff; }
 [data-theme="light"] .vcard { background: #fff3ea; }
 [data-theme="light"] .vcard.unclear { background: #eef2f8; }
+/* Trust Report: where to buy locally */
+.tlocal .tsec-t { display: flex; align-items: center; gap: 6px; }
+.tstore { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-top: 1px dashed var(--line2); font-size: 13px; }
+.tstore b { font-weight: 700; }
+.tstore .tiny { margin-top: 2px; line-height: 1.45; overflow-wrap: anywhere; }
+.tstore .talt-p a { color: inherit; }
+.tstore .talt-p small { color: var(--muted); font-weight: 500; }
+.tret { color: var(--text); font-weight: 600; }
+.tintl { margin-left: 6px; font-size: 10px; font-weight: 700; padding: 1px 7px; border-radius: 999px; border: 1px solid var(--line); color: var(--muted); vertical-align: 1px; }
+@media (max-width: 480px) { .tstore { flex-wrap: wrap; } .tstore .talt-p { margin-left: 0; text-align: left; } }

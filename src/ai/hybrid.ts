@@ -29,6 +29,15 @@ import {
 } from "./schemas";
 import { baselineReport, buildFacts, factsForPrompt, mergeReport, type TrustReportData } from "../lib/trust";
 import { countryOf } from "../data/countries";
+import { storesFor } from "../data/localStores";
+
+/** Store context for prompts outside the US, so the model never pushes US-only stores to non-US shoppers. */
+export function localContext(place: Place): string {
+  if (!place.country || place.country === "US") return "";
+  const name = countryOf(place.country)?.name || place.country;
+  const st = storesFor(place.country);
+  return `Shopper is in ${name}. Catalog prices were checked at US stores, most of which do not deliver to ${name}. Retailers that sell and deliver in ${name}: ${st.map((x) => x.name).join(", ")}. Never say a US-only store (Best Buy, Walmart, Target, CVS and similar) delivers to ${name}; if you mention where to buy, use these retailers.\n`;
+}
 import { mockCartOps, mockCompare, mockIntent, mockRank } from "./mock";
 
 export type Source = "on_device" | "in_cloud" | "demo" | "fallback";
@@ -213,6 +222,7 @@ export function rankProducts(text: string, intent: Intent, candidates: Product[]
   });
   const prompt =
     `Shopper said: "${text}"\nShopper delivers to ${placeLabel(place)} and sees prices in ${cur}. Quote all prices and fees in ${cur}.\n${intent.budget_max ? `Shopper budget: up to ${symbolOf(intent.budget_currency || cur)}${intent.budget_max} per item. Quote each item's own price, never call the price the budget.\n` : ""}Parsed need: ${JSON.stringify({ query: intent.query, budget: intent.budget_max, currency: intent.budget_currency, use: intent.use, size: intent.size })}\n` +
+    localContext(place) +
     `Catalog candidates:\n${lines.join("\n")}\n` +
     `Rank the best ${Math.min(candidates.length, Number(flag("max_results")) || 6)} (ids from the list only). Drop items that clearly don't fit.`;
   return run<RankResult>("rank", prompt, "cloud", () => mockRank(intent, candidates, cur)).then((r) => ({
@@ -243,7 +253,7 @@ export function summarizeProduct(p: Product, cur: Currency, question?: string) {
 
 /** SHOPMATE TRUST REPORT: rules-based facts first, then the model words it. Never less cautious than the rules. */
 export async function trustReport(p: Product, cur: Currency, place: Place): Promise<AIResult<TrustReportData>> {
-  const facts = buildFacts(p);
+  const facts = buildFacts(p, place.country);
   const base = baselineReport(facts, cur);
   const country = countryOf(place.country)?.name || place.country;
   const r = await run<Partial<TrustReportData>>("trust", factsForPrompt(facts, cur, `${country} (delivering to ${placeLabel(place)})`), "cloud", () => base);

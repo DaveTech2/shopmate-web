@@ -1,0 +1,100 @@
+{
+  "checkedAt": "2026-11-21",
+  "note": "Real listings matched by required title tokens. Not estimates.",
+  "prices": {
+    "d-pho4": [
+      {
+        "country": "ZA",
+        "store": "Takealot",
+        "currency": "ZAR",
+        "date": "2026-11-21",
+        "title": "Apple iPhone 15 128GB",
+        "price": 13999.0,
+        "url": "https://www.takealot.com/apple-iphone-15-128gb/PLID93936606",
+        "inStock": true
+      }
+    ],
+    "d-pho3": [
+      {
+        "country": "ZA",
+        "store": "Takealot",
+        "currency": "ZAR",
+        "date": "2026-11-21",
+        "title": "Samsung Galaxy A16 128GB LTE Dual Sim - Black",
+        "price": 3799.0,
+        "url": "https://www.takealot.com/samsung-galaxy-a16-128gb-lte-dual-sim-black/PLID96480036",
+        "inStock": true
+      }
+    ],
+    "d-gam1": [
+      {
+        "country": "ZA",
+        "store": "Takealot",
+        "currency": "ZAR",
+        "date": "2026-11-21",
+        "title": "Playstation 5 Slim Disk - Fortnite Voucher included",
+        "price": 15499.0,
+        "url": "https://www.takealot.com/playstation-5-slim-disk-fortnite-voucher-included/PLID100775551",
+        "inStock": true
+      }
+    ],
+    "w-lp2": [
+      {
+        "country": "ZA",
+        "store": "Takealot",
+        "currency": "ZAR",
+        "date": "2026-11-21",
+        "title": "Lenovo Ideapad Slim 3 15.6\" FHD Ryzen 5-5625U 8GB 512GB Win 11 Notebook",
+        "price": 10498.0,
+        "url": "https://www.takealot.com/lenovo-ideapad-slim-3-15-6-fhd-ryzen-5-5625u-8gb-512gb-win-11-no/PLID103099517",
+        "inStock": true
+      }
+    ],
+    "w-ms1": [
+      {
+        "country": "ZA",
+        "store": "Takealot",
+        "currency": "ZAR",
+        "date": "2026-11-21",
+        "title": "Logitech M185 Wireless Mouse, 2.4GHz with USB Mini Receiver",
+        "price": 189.0,
+        "url": "https://www.takealot.com/logitech-m185-wireless-mouse-2-4ghz-with-usb-mini-receiver/PLID27300513",
+        "inStock": true
+      }
+    ],
+    "w-sp1": [
+      {
+        "country": "NG",
+        "store": "Pointek",
+        "currency": "NGN",
+        "date": "2026-11-21",
+        "title": "soundcore Select 4 Go Speaker",
+        "price": 35000.0,
+        "url": "https://www.pointekonline.com/product/soundcore-select-4-go-speaker/",
+        "inStock": true
+      },
+      {
+        "country": "ZA",
+        "store": "Takealot",
+        "currency": "ZAR",
+        "date": "2026-11-21",
+        "title": "soundcore Select 4 Go 5w Portable Waterproof Bluetooth Speaker",
+        "price": 279.0,
+        "url": "https://www.takealot.com/soundcore-select-4-go-5w-portable-waterproof-bluetooth-speaker/PLID96315739",
+        "inStock": true
+      }
+    ],
+    "w-sw1": [
+      {
+        "country": "ZA",
+        "store": "Takealot",
+        "currency": "ZAR",
+        "date": "2026-11-21",
+        "title": "Fitbit Inspire 3 Health & Fitness Tracker Morning Glow",
+        "price": 4499.0,
+        "url": "https://www.takealot.com/fitbit-inspire-3-health-fitness-tracker-morning-glow/PLID91437496",
+        "inStock": true
+      }
+    ]
+  }
+}

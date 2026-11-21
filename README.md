@@ -121,3 +121,6 @@ Daily routine (7 AM Lagos):
 Only US barcodes are kept in the `barcode` field (Open Prices lookups). Photos taken from another market's Open Food/Beauty Facts page keep that code in `photoBarcode`, so a receipt for a different pack size can never overwrite a checked US price.
 
 `scripts/process_image.py SRC OUT_DARK OUT_LIGHT [--framed]` turns any product photo into the 600x600 WebP tiles used by the app (rembg cutout when available, framed card otherwise).
+
+### Country-aware stores
+Outside the US, Shopmate points shoppers at retailers that actually deliver there (`src/data/localStores.ts`, reviewed 2026-11-21: store URL, delivery coverage, return window and policy link; unknown policies are marked unclear). US-only stores such as Best Buy, Walmart and Target are flagged as not delivering. `scripts/local_prices.py` fetches real local prices from public store APIs (Takealot ZA, Pointek NG) into `src/data/local_prices.json`; everything else is a "Check price" search link.

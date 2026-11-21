@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ShieldCheck, Check, TriangleAlert, OctagonAlert, CircleHelp, ExternalLink } from "lucide-react";
+import { ShieldCheck, Check, TriangleAlert, OctagonAlert, CircleHelp, ExternalLink, MapPin } from "lucide-react";
 import { AIBadge } from "./ui";
 import { Thumb } from "./ProductCard";
 import { getProduct, money, toCurrency, type Currency, type Product } from "../lib/catalog";
@@ -65,6 +65,31 @@ export function TrustReportCard({ p, res, currency }: { p: Product; res: AIResul
               </Link>
             );
           })}
+        </div>
+      )}
+
+      {r.local && (
+        <div className="talts tlocal">
+          <div className="tsec-t" style={{ marginBottom: 4 }}><MapPin size={13} /> Where to buy in {r.local.countryName}</div>
+          <div className="tiny" style={{ marginBottom: 8 }}>{r.local.hasLocal ? "Retailers that sell and deliver there, then international stores that ship there." : `No local retailer verified for ${r.local.countryName} yet. These international stores ship there.`}</div>
+          {r.local.stores.slice(0, 6).map((s) => (
+            <div key={s.name} className="tstore">
+              <div style={{ minWidth: 0, flex: 1 }}>
+                <b>{s.name}</b>{s.international && <span className="tintl">ships from abroad</span>}
+                <div className="tiny">{s.delivery}</div>
+                <div className="tiny"><span className="tret">Returns:</span> {s.returns || "Policy not on file, unclear. Check before you pay."}{s.returnsUrl && <> <a className="link" href={s.returnsUrl} target="_blank" rel="noopener noreferrer">policy</a></>}</div>
+                {s.note && <div className="tiny">{s.note}</div>}
+              </div>
+              <div className="talt-p">
+                {s.price ? (
+                  <a href={s.price.url} target="_blank" rel="noopener noreferrer" title={`${s.price.title}, checked ${s.price.date}`}>{money(s.price.price, s.price.currency, currency)}<small>checked {s.price.date}</small></a>
+                ) : (
+                  <a className="pill sm ghost" href={s.url} target="_blank" rel="noopener noreferrer">Check price <ExternalLink size={11} /></a>
+                )}
+              </div>
+            </div>
+          ))}
+          <div className="tiny" style={{ marginTop: 6 }}>Store facts reviewed {r.local.reviewed}. Prices shown are real listings Shopmate checked; others link to the store's search.</div>
         </div>
       )}
 

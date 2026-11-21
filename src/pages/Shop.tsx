@@ -8,6 +8,7 @@ import { useShop } from "../state/shop";
 import { useAuth } from "../state/auth";
 import { getProduct, matchImage, money, searchCatalog, symbolOf, toCurrency, withinBudget, type Product } from "../lib/catalog";
 import { resolveStore } from "../data/retailers";
+import { storesFor, searchUrl } from "../data/localStores";
 import { prepareImage, type PreparedImage } from "../lib/image";
 import { TrustReportCard } from "../components/TrustReport";
 import { mockIntent } from "../ai/mock";
@@ -309,13 +310,13 @@ export default function Shop() {
                 )}
                 {m.vision && !m.vision.unclear && m.vision.searchQ && (!m.picks || m.picks.length < 3) && (
                   <div className="searchlinks">
-                    <span className="tiny">Search this look in other stores:</span>
-                    {[
+                    <span className="tiny">{place.country === "US" ? "Search this look in other stores:" : `Search this look in stores that deliver to ${countryOf(place.country)?.name || place.country}:`}</span>
+                    {(place.country === "US" ? [
                       ["Google Shopping", `https://www.google.com/search?tbm=shop&q=${encodeURIComponent(m.vision.searchQ)}`],
                       ["Amazon", `https://www.amazon.com/s?k=${encodeURIComponent(m.vision.searchQ)}`],
                       ["Walmart", `https://www.walmart.com/search?q=${encodeURIComponent(m.vision.searchQ)}`],
                       ["Target", `https://www.target.com/s?searchTerm=${encodeURIComponent(m.vision.searchQ)}`],
-                    ].map(([n, u]) => <a key={n} className="pill sm ghost" href={u} target="_blank" rel="noopener noreferrer">{n} <ExternalLink size={11} /></a>)}
+                    ] : storesFor(place.country).slice(0, 4).map((st) => [st.name, searchUrl(st, m.vision!.searchQ!)])).map(([n, u]) => <a key={n} className="pill sm ghost" href={u} target="_blank" rel="noopener noreferrer">{n} <ExternalLink size={11} /></a>)}
                   </div>
                 )}
                 {m.trust && getProduct(m.trust.id) && (
