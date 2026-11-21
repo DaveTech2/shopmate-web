@@ -1,0 +1,90 @@
+[
+ {
+  "id": "op-0070847012474",
+  "price": 2.88,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/Monster-Energy-Zero-Ultra-Energy-Drink-16-fl-oz/36716922",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "op-0072655001053",
+  "price": 3.18,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/Healthy-Choice-Cafe-Steamers-Chicken-Margherita-Balsamic-Bowl-Frozen-Meal-9-5oz-Frozen/37523997",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "op-0855352008989",
+  "price": 10.99,
+  "currency": "USD",
+  "seller": "Whole Foods Market",
+  "url": "https://www.wholefoodsmarket.com/grocery/product/athletic-brewing-company-athletic-brewing-company-non-alcoholic-beer-cerveza-atletica-6pk-12-fl-oz-cans-0-5-abv-b0bpzwtsgj",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "d-ele1",
+  "price": 169.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/samsung-galaxy-buds2-true-wireless-earbud-headphones-white/J3ZYGCFH2C",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "w-hp4",
+  "price": 59.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/sony-wh-ch510-wireless-on-ear-headphones-black/J7XSRH4HTT/sku/10147889",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "w-ms1",
+  "price": 12.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/logitech-m185-wireless-optical-ambidextrous-mouse-wireless-swift-gray/J7H7ZLVWQJ",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "w-sw1",
+  "price": 69.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/fitbit-inspire-3-health-fitness-tracker-midnight-zen-2022/J3GWJ6S29F/sku/11940127",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "w-sp1",
+  "price": 24.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/soundcore-by-anker-select-4-go-ip67-waterproof-dustproof-floatable-ultra-portable-bluetooth-speaker-with-20h-playtime-black/JJ8586KR8L",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "d-spo2",
+  "price": 22.99,
+  "currency": "USD",
+  "seller": "Walmart",
+  "url": "https://www.walmart.com/ip/183300567",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "d-gam1",
+  "price": 649.99,
+  "currency": "USD",
+  "seller": "Best Buy",
+  "url": "https://www.bestbuy.com/product/playstation-5-slim-console-1tb-playstation-5/JXHQ37TYLC",
+  "date": "2026-11-21"
+ },
+ {
+  "id": "d-foo1",
+  "price": 115.0,
+  "currency": "USD",
+  "seller": "Nike",
+  "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-DZejrQoC",
+  "date": "2026-11-21"
+ }
+]

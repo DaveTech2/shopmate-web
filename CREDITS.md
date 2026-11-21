@@ -52,6 +52,8 @@ Every product photo is a real photo of that product. A few listings use a close 
 | Athletic Brewing Co Cerveza Atletica | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0855352008989) | CC BY-SA 3.0 (Open Food Facts contributors) |
 | Reser's Main St. Bistro Signature Macaroni & Cheese | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0071117025149) | CC BY-SA 3.0 (Open Food Facts contributors) |
 | Healthy Choice CAFÉ STEAMERS Chicken Margherita with Balsamic 9.5 oz | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0072655001053) | CC BY-SA 3.0 (Open Food Facts contributors) |
+| Lay's Honey Barbecue 7.75 oz | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0028400200684) | CC BY-SA 3.0 (Open Food Facts contributors) |
+| Goldfish Cheddar 10 oz (283g) | [world.openfoodfacts.org](https://world.openfoodfacts.org/product/0014100052951) | CC BY-SA 3.0 (Open Food Facts contributors) |
 
 Close equivalents: the price is for the US listing named in the title, while the photo shows the same product line in another market or an earlier model: Head & Shoulders, Nivea body lotion, Dove bar, Cerelac, Oral-B toothbrush, Gillette Mach3, Lipton, Colgate, Sensodyne and Dove body wash (non-US packaging), Gaiam yoga mat (unbranded pink 6mm mat), HP 15.6" laptop (HP 15s), Makita drill kit (Makita 18V drill), Casio fx-991CW (fx-991DE CW), Coca-Cola 6 pack (single bottle), ASICS Gel-Cumulus 26, Brooks Ghost 16 GTX, Glycerin 23 and Adrenaline GTS 24 (earlier versions of each shoe), Lenovo IdeaPad Slim 3 (earlier IdeaPad).
 

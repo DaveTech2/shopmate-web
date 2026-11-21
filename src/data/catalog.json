@@ -1,1112 +1,1158 @@
 {
- "categories": [
-  {
-   "id": "groceries",
-   "name": "Groceries & Food"
-  },
-  {
-   "id": "phones",
-   "name": "Phones & Tablets"
-  },
-  {
-   "id": "electronics",
-   "name": "Electronics"
-  },
-  {
-   "id": "fashion",
-   "name": "Fashion"
-  },
-  {
-   "id": "home-kitchen",
-   "name": "Home & Kitchen"
-  },
-  {
-   "id": "beauty",
-   "name": "Beauty & Personal Care"
-  },
-  {
-   "id": "baby",
-   "name": "Baby Products"
-  },
-  {
-   "id": "health",
-   "name": "Health & Wellness"
-  },
-  {
-   "id": "sports",
-   "name": "Sports & Fitness"
-  },
-  {
-   "id": "automotive",
-   "name": "Automotive"
-  },
-  {
-   "id": "toiletries",
-   "name": "Toiletries & Personal Care"
-  },
-  {
-   "id": "household",
-   "name": "Household & Cleaning"
-  },
-  {
-   "id": "pharmacy",
-   "name": "Pharmacy (Over-the-counter)"
-  },
-  {
-   "id": "drinks",
-   "name": "Drinks & Beverages"
-  },
-  {
-   "id": "footwear",
-   "name": "Shoes & Sneakers"
-  },
-  {
-   "id": "kids-toys",
-   "name": "Kids, Toys & Games"
-  },
-  {
-   "id": "computing",
-   "name": "Computers & Accessories"
-  },
-  {
-   "id": "gaming",
-   "name": "Gaming"
-  },
-  {
-   "id": "office",
-   "name": "Office & Stationery"
-  },
-  {
-   "id": "pets",
-   "name": "Pet Supplies"
-  },
-  {
-   "id": "jewelry-watches",
-   "name": "Watches, Bags & Accessories"
-  },
-  {
-   "id": "garden-tools",
-   "name": "Tools, DIY & Garden"
-  },
-  {
-   "id": "furniture",
-   "name": "Furniture"
-  },
-  {
-   "id": "books",
-   "name": "Books"
+  "categories": [
+    {
+      "id": "groceries",
+      "name": "Groceries & Food"
+    },
+    {
+      "id": "phones",
+      "name": "Phones & Tablets"
+    },
+    {
+      "id": "electronics",
+      "name": "Electronics"
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion"
+    },
+    {
+      "id": "home-kitchen",
+      "name": "Home & Kitchen"
+    },
+    {
+      "id": "beauty",
+      "name": "Beauty & Personal Care"
+    },
+    {
+      "id": "baby",
+      "name": "Baby Products"
+    },
+    {
+      "id": "health",
+      "name": "Health & Wellness"
+    },
+    {
+      "id": "sports",
+      "name": "Sports & Fitness"
+    },
+    {
+      "id": "automotive",
+      "name": "Automotive"
+    },
+    {
+      "id": "toiletries",
+      "name": "Toiletries & Personal Care"
+    },
+    {
+      "id": "household",
+      "name": "Household & Cleaning"
+    },
+    {
+      "id": "pharmacy",
+      "name": "Pharmacy (Over-the-counter)"
+    },
+    {
+      "id": "drinks",
+      "name": "Drinks & Beverages"
+    },
+    {
+      "id": "footwear",
+      "name": "Shoes & Sneakers"
+    },
+    {
+      "id": "kids-toys",
+      "name": "Kids, Toys & Games"
+    },
+    {
+      "id": "computing",
+      "name": "Computers & Accessories"
+    },
+    {
+      "id": "gaming",
+      "name": "Gaming"
+    },
+    {
+      "id": "office",
+      "name": "Office & Stationery"
+    },
+    {
+      "id": "pets",
+      "name": "Pet Supplies"
+    },
+    {
+      "id": "jewelry-watches",
+      "name": "Watches, Bags & Accessories"
+    },
+    {
+      "id": "garden-tools",
+      "name": "Tools, DIY & Garden"
+    },
+    {
+      "id": "furniture",
+      "name": "Furniture"
+    },
+    {
+      "id": "books",
+      "name": "Books"
+    }
+  ],
+  "products": [
+    {
+      "id": "d-toi8",
+      "title": "Head & Shoulders Classic Clean Shampoo 13.5 fl oz",
+      "category": "toiletries",
+      "price": 7.99,
+      "currency": "USD",
+      "image": "/products/d-toi8.webp",
+      "merchant": "Shopmate demo catalog",
+      "product_type": "shampoo",
+      "brand": "Head & Shoulders",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Target",
+        "url": "https://www.target.com/p/head-38-shoulders-dandruff-shampoo-anti-dandruff-treatment-classic-clean-for-daily-use-paraben-free-12-5-fl-oz/-/A-13974348"
+      }
+    },
+    {
+      "id": "d-bea1",
+      "title": "Nivea Essentially Enriched Body Lotion 16.9 fl oz",
+      "category": "beauty",
+      "price": 6.79,
+      "currency": "USD",
+      "image": "/products/d-bea1.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Target",
+        "url": "https://www.target.com/p/nivea-essentially-enriched-dry-skin-body-lotion-with-almond-oil-scented-16-9-fl-oz/-/A-11001234"
+      },
+      "photoBarcode": "4005900369581"
+    },
+    {
+      "id": "d-bea3",
+      "title": "Dove White Beauty Bar (2 x 3.75 oz)",
+      "category": "beauty",
+      "price": 5.49,
+      "currency": "USD",
+      "image": "/products/d-bea3.webp",
+      "merchant": "Shopmate demo catalog",
+      "product_type": "soap",
+      "brand": "Dove",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Target",
+        "url": "https://www.target.com/p/dove-beauty-white-moisturizing-beauty-bar-soap-2pk-3-75oz-each/-/A-11012602"
+      },
+      "photoBarcode": "8720182264664"
+    },
+    {
+      "id": "d-bea4",
+      "title": "Vaseline Original Healing Jelly 368g",
+      "category": "beauty",
+      "price": 5.97,
+      "currency": "USD",
+      "image": "/products/d-bea4.webp",
+      "merchant": "Shopmate demo catalog",
+      "brand": "Vaseline",
+      "size": "368g",
+      "barcode": "0305210691001",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/Vaseline-100-Pure-Skin-Protectant-Petroleum-Jelly-13-Oz/10898766"
+      }
+    },
+    {
+      "id": "d-bab3",
+      "title": "Nestlé Cerelac Wheat with Milk Infant Cereal 14.1 oz",
+      "category": "baby",
+      "price": 6.17,
+      "currency": "USD",
+      "image": "/products/d-bab3.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/Nestle-Nestum-Cerelac-Wheat-Infant-Cereal-with-Milk-14-1-oz-Canister/14711224"
+      },
+      "photoBarcode": "6221007032540"
+    },
+    {
+      "id": "d-pho4",
+      "title": "Apple iPhone 15 128GB (Black, Refurbished Excellent)",
+      "category": "phones",
+      "price": 539.99,
+      "currency": "USD",
+      "image": "/products/d-pho4.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/site/questions/apple-iphone-15-5g-128gb-unlocked-black/6586081"
+      }
+    },
+    {
+      "id": "d-pho6",
+      "title": "Apple iPhone 15 Pro Max 256GB (Natural Titanium, Unlocked)",
+      "category": "phones",
+      "price": 669.97,
+      "currency": "USD",
+      "image": "/products/d-pho6.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart (IGM Inc)",
+        "url": "https://www.walmart.com/ip/Apple-iPhone-15-Pro-Max-Carrier-Unlocked-256GB-Natural-Titanium/20823558345"
+      }
+    },
+    {
+      "id": "d-pho3",
+      "title": "Samsung Galaxy A16 128GB",
+      "category": "phones",
+      "price": 189.99,
+      "currency": "USD",
+      "image": "/products/d-pho3.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/samsung-galaxy-a16-128gb-unlocked-latin-america-version-black/BGTKK3LJX3/sku/6675881"
+      }
+    },
+    {
+      "id": "d-gam1",
+      "title": "PlayStation 5 Slim Console 1TB",
+      "category": "gaming",
+      "price": 649.99,
+      "currency": "USD",
+      "image": "/products/d-gam1.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/playstation-5-slim-console-1tb-playstation-5/JXHQ37TYLC"
+      }
+    },
+    {
+      "id": "d-foo1",
+      "title": "Nike Air Force 1 Sneakers",
+      "category": "footwear",
+      "price": 115.0,
+      "currency": "USD",
+      "image": "/products/d-foo1.webp",
+      "merchant": "Shopmate demo catalog",
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "tags": [
+        "sneakers",
+        "casual"
+      ],
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Nike",
+        "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-DZejrQoC"
+      }
+    },
+    {
+      "id": "d-foo2",
+      "title": "Adidas Superstar Sneakers",
+      "category": "footwear",
+      "price": 49.97,
+      "currency": "USD",
+      "image": "/products/d-foo2.webp",
+      "merchant": "Shopmate demo catalog",
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "tags": [
+        "sneakers",
+        "casual"
+      ],
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "DICK'S Sporting Goods",
+        "url": "https://www.dickssportinggoods.com/p/adidas-mens-superstar-ii-shoes-24adimsprstrblkwhmns/24adimsprstrblkwhmns"
+      }
+    },
+    {
+      "id": "d-jew1",
+      "title": "Casio Digital Watch",
+      "category": "jewelry-watches",
+      "price": 29.95,
+      "currency": "USD",
+      "image": "/products/d-jew1.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Casio America",
+        "url": "https://www.casio.com/us/watches/casio/product.F-91W-1/"
+      }
+    },
+    {
+      "id": "d-jew2",
+      "title": "Ray-Ban New Wayfarer Sunglasses",
+      "category": "jewelry-watches",
+      "price": 133.99,
+      "currency": "USD",
+      "image": "/products/d-jew2.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Macy's",
+        "url": "https://www.macys.com/shop/product/ray-ban-unisex-new-wayfarer-classic-square-sunglasses-rb2132?ID=27354523"
+      }
+    },
+    {
+      "id": "d-kid4",
+      "title": "Board Game: Monopoly",
+      "category": "kids-toys",
+      "price": 19.99,
+      "currency": "USD",
+      "image": "/products/d-kid4.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Target",
+        "url": "https://www.target.com/p/hasbro-monopoly-board-game/-/A-94111131"
+      }
+    },
+    {
+      "id": "d-spo2",
+      "title": "Gaiam Essentials Yoga Mat 6mm",
+      "category": "sports",
+      "price": 22.99,
+      "currency": "USD",
+      "image": "/products/d-spo2.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/183300567"
+      }
+    },
+    {
+      "id": "d-ele4",
+      "title": "HP 15.6\" Touch Laptop Core i5 8GB/512GB SSD",
+      "category": "electronics",
+      "price": 519.0,
+      "currency": "USD",
+      "image": "/products/d-ele4.webp",
+      "merchant": "Shopmate demo catalog",
+      "product_type": "laptop",
+      "specs": {
+        "CPU": "Intel Core i5",
+        "RAM": "8GB",
+        "Storage": "512GB SSD",
+        "Screen": "15.6\""
+      },
+      "tags": [
+        "laptop",
+        "programming",
+        "office",
+        "student"
+      ],
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/HP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i5-1334U-8GB-RAM-512GB-SSD-Natural-Silver/16401519615"
+      }
+    },
+    {
+      "id": "d-gar1",
+      "title": "Makita XFD131 18V LXT Brushless 1/2\" Drill Driver Kit",
+      "category": "garden-tools",
+      "price": 179.0,
+      "currency": "USD",
+      "image": "/products/d-gar1.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Acme Tools",
+        "url": "https://www.acmetools.com/makita-18v-lxt-lithium-ion-brushless-cordless-1-2-in-driver-drill-kit-30ah-xfd131/088381866347.html"
+      }
+    },
+    {
+      "id": "d-ele1",
+      "title": "Samsung Galaxy Buds2 True Wireless Earbuds",
+      "category": "electronics",
+      "price": 169.99,
+      "currency": "USD",
+      "image": "/products/d-ele1.webp",
+      "merchant": "Shopmate demo catalog",
+      "product_type": "earbuds",
+      "specs": {
+        "Type": "True wireless earbuds",
+        "Noise cancelling": "Active",
+        "Battery": "Up to 20 hours with case",
+        "Charging": "USB-C, wireless"
+      },
+      "tags": [
+        "wireless",
+        "earbuds",
+        "headphones",
+        "bluetooth",
+        "battery",
+        "noise cancelling"
+      ],
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/samsung-galaxy-buds2-true-wireless-earbud-headphones-white/J3ZYGCFH2C"
+      },
+      "brand": "Samsung"
+    },
+    {
+      "id": "d-com3",
+      "title": "Samsung 1TB SATA SSD",
+      "category": "computing",
+      "price": 349.99,
+      "currency": "USD",
+      "image": "/products/d-com3.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/samsung-870-evo-1tb-internal-ssd-sata/J3ZYGCHH2Z/sku/6447127"
+      }
+    },
+    {
+      "id": "d-off3",
+      "title": "Casio fx-991CW ClassWiz Scientific Calculator",
+      "category": "office",
+      "price": 29.98,
+      "currency": "USD",
+      "image": "/products/d-off3.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/FX-991CW-Scientific-Calculator-for-High-School-College/2559506645"
+      }
+    },
+    {
+      "id": "d-toi2",
+      "title": "Oral-B CrossAction All in One Toothbrush (Soft)",
+      "category": "toiletries",
+      "price": 5.97,
+      "currency": "USD",
+      "image": "/products/d-toi2.webp",
+      "merchant": "Shopmate demo catalog",
+      "product_type": "toothbrush",
+      "brand": "Oral-B",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/Oral-B-CrossAction-All-in-One-Toothbrush-Deep-Plaque-Removal-Soft-1-Ct-for-Adults-Children-3/24512082"
+      },
+      "photoBarcode": "4987176130051"
+    },
+    {
+      "id": "d-toi5",
+      "title": "Gillette Mach3 Razor Blade Refills (8 count)",
+      "category": "toiletries",
+      "price": 22.97,
+      "currency": "USD",
+      "image": "/products/d-toi5.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/MACH3-Mach3-Cartridges-8-ct/895318"
+      },
+      "photoBarcode": "7702018465385"
+    },
+    {
+      "id": "d-dri5",
+      "title": "Coca-Cola Classic 16.9 fl oz Bottles (6 pack)",
+      "category": "drinks",
+      "price": 7.49,
+      "currency": "USD",
+      "image": "/products/d-dri5.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Kroger",
+        "url": "https://www.kroger.com/p/coca-cola-soda-bottles/0004900002468"
+      }
+    },
+    {
+      "id": "d-dri3",
+      "title": "Lipton Black Tea Bags 100 ct (3 pack)",
+      "category": "drinks",
+      "price": 14.91,
+      "currency": "USD",
+      "image": "/products/d-dri3.webp",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/Lipton-Black-Tea-Bags-100-Count/17223623484"
+      },
+      "photoBarcode": "8720608632633"
+    },
+    {
+      "id": "d-bab2",
+      "title": "Pampers Sensitive Baby Wipes (56 count)",
+      "category": "baby",
+      "price": 2.39,
+      "currency": "USD",
+      "image": "/products/d-bab2.webp",
+      "merchant": "Shopmate demo catalog",
+      "size": "56 wipes",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Target",
+        "url": "https://www.target.com/p/pampers-sensitive-baby-wipes-56ct/-/A-14596962"
+      },
+      "photoBarcode": "4015400636649"
+    },
+    {
+      "id": "d-toi9",
+      "title": "Colgate Triple Action Toothpaste 4 oz",
+      "category": "toiletries",
+      "price": 2.59,
+      "currency": "USD",
+      "brand": "Colgate",
+      "size": "150g",
+      "product_type": "toothpaste",
+      "merchant": "Shopmate demo catalog",
+      "image": "/products/d-toi9.webp",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "CVS",
+        "url": "https://www.cvs.com/shop/colgate-triple-action-toothpaste-4-oz-prodid-823794?skuId=823794"
+      },
+      "photoBarcode": "6281001112013"
+    },
+    {
+      "id": "d-toi10",
+      "title": "Sensodyne Repair & Protect Toothpaste 3.4 oz",
+      "category": "toiletries",
+      "price": 7.47,
+      "currency": "USD",
+      "brand": "Sensodyne",
+      "size": "75ml",
+      "product_type": "toothpaste",
+      "merchant": "Shopmate demo catalog",
+      "image": "/products/d-toi10.webp",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/Sensodyne-Repair-and-Protect-Fluoride-Toothpaste-for-Sensitive-Teeth-Mint-Flavor-3-4Oz-for-Adults/23814510"
+      },
+      "photoBarcode": "5054563070951"
+    },
+    {
+      "id": "d-toi13",
+      "title": "Nivea Men Sensitive 3-in-1 Body Wash 16.9 fl oz",
+      "category": "toiletries",
+      "price": 10.49,
+      "currency": "USD",
+      "brand": "Nivea",
+      "size": "500ml",
+      "product_type": "body wash",
+      "merchant": "Shopmate demo catalog",
+      "image": "/products/d-toi13.webp",
+      "barcode": "0072140810849",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "CVS",
+        "url": "https://www.cvs.com/shop/nivea-men-sensitive-skin-body-wash-16-9-oz-prodid-1013088"
+      }
+    },
+    {
+      "id": "d-toi14",
+      "title": "Dove Deep Moisture Body Wash 20 fl oz",
+      "category": "toiletries",
+      "price": 10.79,
+      "currency": "USD",
+      "brand": "Dove",
+      "size": "500ml",
+      "product_type": "body wash",
+      "merchant": "Shopmate demo catalog",
+      "image": "/products/d-toi14.webp",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "CVS",
+        "url": "https://www.cvs.com/shop/dove-deep-moisture-body-wash-for-dry-skin-20-oz-prodid-978106"
+      },
+      "photoBarcode": "8717163742839"
+    },
+    {
+      "id": "w-hp3",
+      "title": "JBL Live 650BTNC Noise Cancelling Headphones",
+      "category": "electronics",
+      "price": 129.95,
+      "brand": "JBL",
+      "product_type": "headphones",
+      "image": "/products/w-hp3.webp",
+      "specs": {
+        "Type": "Over-ear, Bluetooth",
+        "Battery": "20 hours (ANC on)",
+        "Noise cancelling": "Active",
+        "Mic": "Yes"
+      },
+      "tags": [
+        "wireless",
+        "headphones",
+        "noise cancelling",
+        "anc",
+        "over-ear",
+        "battery"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Audio Advice",
+        "url": "https://www.audioadvice.com/products/jbl-live-650btnc-wireless-over-ear-noise-cancelling-headphones-black?variant=41288204943444"
+      }
+    },
+    {
+      "id": "w-hp4",
+      "title": "Sony WH-CH510 Wireless On-Ear Headphones",
+      "category": "electronics",
+      "price": 59.99,
+      "brand": "Sony",
+      "product_type": "headphones",
+      "image": "/products/w-hp4.webp",
+      "specs": {
+        "Type": "On-ear, Bluetooth",
+        "Battery": "35 hours",
+        "Charging": "USB-C quick charge",
+        "Mic": "Yes"
+      },
+      "tags": [
+        "wireless",
+        "headphones",
+        "over-ear",
+        "bluetooth",
+        "long battery",
+        "battery"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/sony-wh-ch510-wireless-on-ear-headphones-black/J7XSRH4HTT/sku/10147889"
+      }
+    },
+    {
+      "id": "w-lp1",
+      "title": "Acer Aspire 5 15.6\" Laptop Core i5 8GB/512GB SSD",
+      "category": "computing",
+      "price": 599.99,
+      "brand": "Acer",
+      "product_type": "laptop",
+      "image": "/products/w-lp1.webp",
+      "specs": {
+        "CPU": "Intel Core i5",
+        "RAM": "8GB",
+        "Storage": "512GB SSD",
+        "Screen": "15.6\" FHD",
+        "Battery": "Up to 8 hours"
+      },
+      "tags": [
+        "laptop",
+        "programming",
+        "student",
+        "office"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/site/reviews/acer-aspire-5-15-6-laptop-intel-core-i5-8gb-memory-512gb-solid-state-drive-cha-black/6359966"
+      }
+    },
+    {
+      "id": "w-lp2",
+      "title": "Lenovo IdeaPad Slim 3 15.6\" Laptop Ryzen 5 8GB/256GB SSD",
+      "category": "computing",
+      "price": 629.99,
+      "brand": "Lenovo",
+      "product_type": "laptop",
+      "image": "/products/w-lp2.webp",
+      "specs": {
+        "CPU": "AMD Ryzen 5",
+        "RAM": "16GB",
+        "Storage": "512GB SSD",
+        "Screen": "15.6\" FHD",
+        "Battery": "Up to 9 hours"
+      },
+      "tags": [
+        "laptop",
+        "programming",
+        "developer",
+        "multitasking",
+        "16gb"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/lenovo-ideapad-slim-3-15-6-full-hd-laptop-amd-ryzen-5-40-2025-8gb-memory-256gb-storage-abyss-blue/JJGH3Q8P2K/sku/6668500"
+      }
+    },
+    {
+      "id": "w-lp3",
+      "title": "Apple MacBook Air 13.3\" M1 8GB/256GB",
+      "category": "computing",
+      "price": 779.95,
+      "brand": "Apple",
+      "product_type": "laptop",
+      "image": "/products/w-lp3.webp",
+      "specs": {
+        "CPU": "Apple M1",
+        "RAM": "8GB",
+        "Storage": "256GB SSD",
+        "Screen": "13.3\" Retina",
+        "Battery": "Up to 18 hours"
+      },
+      "tags": [
+        "laptop",
+        "programming",
+        "ios development",
+        "battery",
+        "lightweight"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/macbook-air-13-3-laptop-apple-m1-chip-8gb-memory-256gb-ssd-space-gray/JJ8ZHP82L3"
+      }
+    },
+    {
+      "id": "w-rs1",
+      "title": "ASICS GEL-Kayano Stability Running Shoes",
+      "category": "footwear",
+      "price": 164.99,
+      "brand": "ASICS",
+      "product_type": "running shoes",
+      "image": "/products/w-rs1.webp",
+      "specs": {
+        "Support": "Stability (overpronation / flat feet)",
+        "Sizes (EU)": "40–46",
+        "Drop": "10mm",
+        "Use": "Road running"
+      },
+      "sizes": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "tags": [
+        "running",
+        "shoes",
+        "stability",
+        "flat feet",
+        "overpronation",
+        "arch support"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "DICK'S Sporting Goods",
+        "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-kayano-31-running-shoes-24asimglkyn31smggmns/24asimglkyn31smggmns"
+      }
+    },
+    {
+      "id": "w-rs2",
+      "title": "Brooks Adrenaline GTS 24 Running Shoes",
+      "category": "footwear",
+      "price": 104.95,
+      "brand": "Brooks",
+      "product_type": "running shoes",
+      "image": "/products/w-rs2.webp",
+      "specs": {
+        "Support": "Stability (GuideRails, flat feet)",
+        "Sizes (EU)": "39–45",
+        "Drop": "12mm",
+        "Use": "Road running"
+      },
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "tags": [
+        "running",
+        "shoes",
+        "stability",
+        "flat feet",
+        "overpronation",
+        "arch support"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Dave's Running Shop",
+        "url": "https://davesrunning.com/products/adrenaline-gts-24?variant=42247375192160"
+      }
+    },
+    {
+      "id": "w-rs3",
+      "title": "ASICS Gel-Cumulus 26 Running Shoes",
+      "category": "footwear",
+      "price": 85.97,
+      "brand": "ASICS",
+      "product_type": "running shoes",
+      "image": "/products/w-rs3.webp",
+      "specs": {
+        "Support": "Neutral",
+        "Sizes (EU)": "39–46",
+        "Drop": "10mm",
+        "Use": "Daily training"
+      },
+      "sizes": [
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "tags": [
+        "running",
+        "shoes",
+        "neutral",
+        "cushioning"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "DICK'S Sporting Goods",
+        "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-cumulus-26-running-shoes-24asimcmls26blkcnmns/24asimcmls26blkcnmns"
+      }
+    },
+    {
+      "id": "w-rs4",
+      "title": "Brooks Ghost 16 GTX Running Shoes",
+      "category": "footwear",
+      "price": 169.99,
+      "brand": "Brooks",
+      "product_type": "running shoes",
+      "image": "/products/w-rs4.webp",
+      "specs": {
+        "Support": "Neutral",
+        "Sizes (EU)": "40 to 45",
+        "Drop": "12mm",
+        "Use": "Waterproof road running (GORE-TEX)"
+      },
+      "sizes": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45
+      ],
+      "tags": [
+        "running",
+        "shoes",
+        "neutral",
+        "waterproof"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "DICK'S Sporting Goods",
+        "url": "https://www.dickssportinggoods.com/p/brooks-mens-ghost-16-gtx-running-shoes-24bromghst16gtxblmns/24bromghst16gtxblmns"
+      }
+    },
+    {
+      "id": "w-rs5",
+      "title": "Brooks Glycerin 23 Max-Cushion Running Shoes",
+      "category": "footwear",
+      "price": 175.0,
+      "brand": "Brooks",
+      "product_type": "running shoes",
+      "image": "/products/w-rs5.webp",
+      "specs": {
+        "Support": "Neutral, max cushion",
+        "Sizes (EU)": "41–46",
+        "Drop": "10mm",
+        "Use": "Long runs"
+      },
+      "sizes": [
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "tags": [
+        "running",
+        "shoes",
+        "cushioning",
+        "neutral"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-20",
+      "priceSource": {
+        "name": "Fleet Feet",
+        "url": "https://www.fleetfeet.com/products/mens-brooks-glycerin-23?upc=195394767650"
+      }
+    },
+    {
+      "id": "w-sp1",
+      "title": "Soundcore Select 4 Go Portable Bluetooth Speaker (Blue)",
+      "category": "electronics",
+      "price": 24.99,
+      "brand": "Soundcore",
+      "product_type": "speaker",
+      "image": "/products/w-sp1.webp",
+      "specs": {
+        "Battery": "20 hours",
+        "Water resistance": "IP67, floats"
+      },
+      "tags": [
+        "speaker",
+        "bluetooth",
+        "portable",
+        "waterproof",
+        "party"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/soundcore-by-anker-select-4-go-ip67-waterproof-dustproof-floatable-ultra-portable-bluetooth-speaker-with-20h-playtime-black/JJ8586KR8L"
+      }
+    },
+    {
+      "id": "w-sw1",
+      "title": "Fitbit Inspire 3 Fitness Tracker (Midnight Zen)",
+      "category": "jewelry-watches",
+      "price": 69.99,
+      "brand": "Fitbit",
+      "product_type": "smartwatch",
+      "image": "/products/w-sw1.webp",
+      "specs": {
+        "Battery": "Up to 10 days",
+        "Sensors": "Heart rate, sleep, SpO2"
+      },
+      "tags": [
+        "smartwatch",
+        "fitness",
+        "running",
+        "tracker"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/fitbit-inspire-3-health-fitness-tracker-midnight-zen-2022/J3GWJ6S29F/sku/11940127"
+      }
+    },
+    {
+      "id": "w-ms1",
+      "title": "Logitech M185 Wireless Mouse",
+      "category": "computing",
+      "price": 12.99,
+      "brand": "Logitech",
+      "product_type": "mouse",
+      "image": "/products/w-ms1.webp",
+      "specs": {
+        "Connection": "2.4GHz USB receiver",
+        "Battery": "AA, up to 12 months"
+      },
+      "tags": [
+        "mouse",
+        "wireless",
+        "office",
+        "programming"
+      ],
+      "currency": "USD",
+      "merchant": "Shopmate demo catalog",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Best Buy",
+        "url": "https://www.bestbuy.com/product/logitech-m185-wireless-optical-ambidextrous-mouse-wireless-swift-gray/J7H7ZLVWQJ"
+      }
+    },
+    {
+      "id": "op-0070847012474",
+      "title": "Monster Zero Ultra 1 can (16 oz)",
+      "category": "drinks",
+      "price": 2.88,
+      "currency": "USD",
+      "image": "/products/op-0070847012474.webp",
+      "merchant": "Shopmate partner store",
+      "brand": "Monster",
+      "product_type": "ultra",
+      "size": "1 can (16 oz)",
+      "barcode": "0070847012474",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/Monster-Energy-Zero-Ultra-Energy-Drink-16-fl-oz/36716922"
+      },
+      "imageCredit": {
+        "source": "https://world.openfoodfacts.org/product/0070847012474",
+        "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+      },
+      "addedAt": "2026-11-20"
+    },
+    {
+      "id": "op-0855352008989",
+      "title": "Athletic Brewing Co Cerveza Atletica",
+      "category": "drinks",
+      "price": 10.99,
+      "currency": "USD",
+      "image": "/products/op-0855352008989.webp",
+      "merchant": "Shopmate partner store",
+      "brand": "Athletic Brewing Co",
+      "product_type": "atletica",
+      "size": null,
+      "barcode": "0855352008989",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Whole Foods Market",
+        "url": "https://www.wholefoodsmarket.com/grocery/product/athletic-brewing-company-athletic-brewing-company-non-alcoholic-beer-cerveza-atletica-6pk-12-fl-oz-cans-0-5-abv-b0bpzwtsgj"
+      },
+      "imageCredit": {
+        "source": "https://world.openfoodfacts.org/product/0855352008989",
+        "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+      },
+      "addedAt": "2026-11-20"
+    },
+    {
+      "id": "op-0071117025149",
+      "title": "Reser's Main St. Bistro Signature Macaroni & Cheese",
+      "category": "groceries",
+      "price": 5.0,
+      "currency": "USD",
+      "image": "/products/op-0071117025149.webp",
+      "merchant": "Shopmate partner store",
+      "brand": "Reser's Main St. Bistro",
+      "product_type": "cheese",
+      "size": null,
+      "barcode": "0071117025149",
+      "priceUpdatedAt": "2026-11-06",
+      "priceSource": {
+        "name": "Safeway (Open Prices receipt)",
+        "url": "https://prices.openfoodfacts.org/products/0071117025149"
+      },
+      "imageCredit": {
+        "source": "https://world.openfoodfacts.org/product/0071117025149",
+        "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+      },
+      "addedAt": "2026-11-20"
+    },
+    {
+      "id": "op-0072655001053",
+      "title": "Healthy Choice CAFÉ STEAMERS Chicken Margherita with Balsamic 9.5 oz",
+      "category": "groceries",
+      "price": 3.18,
+      "currency": "USD",
+      "image": "/products/op-0072655001053.webp",
+      "merchant": "Shopmate partner store",
+      "brand": "Healthy Choice CAFÉ STEAMERS",
+      "product_type": "balsamic",
+      "size": "9.5 oz",
+      "barcode": "0072655001053",
+      "priceUpdatedAt": "2026-11-21",
+      "priceSource": {
+        "name": "Walmart",
+        "url": "https://www.walmart.com/ip/Healthy-Choice-Cafe-Steamers-Chicken-Margherita-Balsamic-Bowl-Frozen-Meal-9-5oz-Frozen/37523997"
+      },
+      "imageCredit": {
+        "source": "https://world.openfoodfacts.org/product/0072655001053",
+        "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+      },
+      "addedAt": "2026-11-20"
+    },
+    {
+      "id": "op-0028400200684",
+      "title": "Lay's Honey Barbecue 7.75 oz",
+      "category": "drinks",
+      "price": 2.5,
+      "currency": "USD",
+      "image": "/products/op-0028400200684.webp",
+      "merchant": "Shopmate partner store",
+      "brand": "Lay's",
+      "product_type": "barbecue",
+      "size": "7.75 oz",
+      "barcode": "0028400200684",
+      "priceUpdatedAt": "2026-11-06",
+      "priceSource": {
+        "name": "Safeway (Open Prices receipt)",
+        "url": "https://prices.openfoodfacts.org/products/0028400200684"
+      },
+      "imageCredit": {
+        "source": "https://world.openfoodfacts.org/product/0028400200684",
+        "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+      },
+      "addedAt": "2026-11-21"
+    },
+    {
+      "id": "op-0014100052951",
+      "title": "Goldfish Cheddar 10 oz (283g)",
+      "category": "groceries",
+      "price": 5.49,
+      "currency": "USD",
+      "image": "/products/op-0014100052951.webp",
+      "merchant": "Shopmate partner store",
+      "brand": "Goldfish",
+      "product_type": "cheddar",
+      "size": "10 oz (283g)",
+      "barcode": "0014100052951",
+      "priceUpdatedAt": "2026-11-06",
+      "priceSource": {
+        "name": "Safeway (Open Prices receipt)",
+        "url": "https://prices.openfoodfacts.org/products/0014100052951"
+      },
+      "imageCredit": {
+        "source": "https://world.openfoodfacts.org/product/0014100052951",
+        "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
+      },
+      "addedAt": "2026-11-21"
+    }
+  ],
+  "pricesUpdatedAt": "2026-11-21",
+  "refreshedAt": "2026-11-21",
+  "refreshStats": {
+    "refreshed": 15,
+    "added": 4,
+    "kept": 34,
+    "total": 50
   }
- ],
- "products": [
-  {
-   "id": "d-toi8",
-   "title": "Head & Shoulders Classic Clean Shampoo 13.5 fl oz",
-   "category": "toiletries",
-   "price": 7.99,
-   "currency": "USD",
-   "image": "/products/d-toi8.webp",
-   "merchant": "Shopmate demo catalog",
-   "product_type": "shampoo",
-   "brand": "Head & Shoulders",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Target",
-    "url": "https://www.target.com/p/head-38-shoulders-dandruff-shampoo-anti-dandruff-treatment-classic-clean-for-daily-use-paraben-free-12-5-fl-oz/-/A-13974348"
-   }
-  },
-  {
-   "id": "d-bea1",
-   "title": "Nivea Essentially Enriched Body Lotion 16.9 fl oz",
-   "category": "beauty",
-   "price": 6.79,
-   "currency": "USD",
-   "image": "/products/d-bea1.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Target",
-    "url": "https://www.target.com/p/nivea-essentially-enriched-dry-skin-body-lotion-with-almond-oil-scented-16-9-fl-oz/-/A-11001234"
-   },
-   "photoBarcode": "4005900369581"
-  },
-  {
-   "id": "d-bea3",
-   "title": "Dove White Beauty Bar (2 x 3.75 oz)",
-   "category": "beauty",
-   "price": 5.49,
-   "currency": "USD",
-   "image": "/products/d-bea3.webp",
-   "merchant": "Shopmate demo catalog",
-   "product_type": "soap",
-   "brand": "Dove",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Target",
-    "url": "https://www.target.com/p/dove-beauty-white-moisturizing-beauty-bar-soap-2pk-3-75oz-each/-/A-11012602"
-   },
-   "photoBarcode": "8720182264664"
-  },
-  {
-   "id": "d-bea4",
-   "title": "Vaseline Original Healing Jelly 368g",
-   "category": "beauty",
-   "price": 5.97,
-   "currency": "USD",
-   "image": "/products/d-bea4.webp",
-   "merchant": "Shopmate demo catalog",
-   "brand": "Vaseline",
-   "size": "368g",
-   "barcode": "0305210691001",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/Vaseline-100-Pure-Skin-Protectant-Petroleum-Jelly-13-Oz/10898766"
-   }
-  },
-  {
-   "id": "d-bab3",
-   "title": "Nestlé Cerelac Wheat with Milk Infant Cereal 14.1 oz",
-   "category": "baby",
-   "price": 6.17,
-   "currency": "USD",
-   "image": "/products/d-bab3.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/Nestle-Nestum-Cerelac-Wheat-Infant-Cereal-with-Milk-14-1-oz-Canister/14711224"
-   },
-   "photoBarcode": "6221007032540"
-  },
-  {
-   "id": "d-pho4",
-   "title": "Apple iPhone 15 128GB (Black, Refurbished Excellent)",
-   "category": "phones",
-   "price": 539.99,
-   "currency": "USD",
-   "image": "/products/d-pho4.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/site/questions/apple-iphone-15-5g-128gb-unlocked-black/6586081"
-   }
-  },
-  {
-   "id": "d-pho6",
-   "title": "Apple iPhone 15 Pro Max 256GB (Natural Titanium, Unlocked)",
-   "category": "phones",
-   "price": 669.97,
-   "currency": "USD",
-   "image": "/products/d-pho6.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart (IGM Inc)",
-    "url": "https://www.walmart.com/ip/Apple-iPhone-15-Pro-Max-Carrier-Unlocked-256GB-Natural-Titanium/20823558345"
-   }
-  },
-  {
-   "id": "d-pho3",
-   "title": "Samsung Galaxy A16 128GB",
-   "category": "phones",
-   "price": 189.99,
-   "currency": "USD",
-   "image": "/products/d-pho3.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/product/samsung-galaxy-a16-128gb-unlocked-latin-america-version-black/BGTKK3LJX3/sku/6675881"
-   }
-  },
-  {
-   "id": "d-gam1",
-   "title": "PlayStation 5 Slim Console 1TB",
-   "category": "gaming",
-   "price": 649.99,
-   "currency": "USD",
-   "image": "/products/d-gam1.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/product/playstation-5-slim-console-1tb/JXHQ37TYLC"
-   }
-  },
-  {
-   "id": "d-foo1",
-   "title": "Nike Air Force 1 Sneakers",
-   "category": "footwear",
-   "price": 115.0,
-   "currency": "USD",
-   "image": "/products/d-foo1.webp",
-   "merchant": "Shopmate demo catalog",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45
-   ],
-   "tags": [
-    "sneakers",
-    "casual"
-   ],
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Nike",
-    "url": "https://www.nike.com/t/air-force-1-07-mens-shoes-DZejrQoC"
-   }
-  },
-  {
-   "id": "d-foo2",
-   "title": "Adidas Superstar Sneakers",
-   "category": "footwear",
-   "price": 49.97,
-   "currency": "USD",
-   "image": "/products/d-foo2.webp",
-   "merchant": "Shopmate demo catalog",
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45
-   ],
-   "tags": [
-    "sneakers",
-    "casual"
-   ],
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "DICK'S Sporting Goods",
-    "url": "https://www.dickssportinggoods.com/p/adidas-mens-superstar-ii-shoes-24adimsprstrblkwhmns/24adimsprstrblkwhmns"
-   }
-  },
-  {
-   "id": "d-jew1",
-   "title": "Casio Digital Watch",
-   "category": "jewelry-watches",
-   "price": 29.95,
-   "currency": "USD",
-   "image": "/products/d-jew1.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Casio America",
-    "url": "https://www.casio.com/us/watches/casio/product.F-91W-1/"
-   }
-  },
-  {
-   "id": "d-jew2",
-   "title": "Ray-Ban New Wayfarer Sunglasses",
-   "category": "jewelry-watches",
-   "price": 133.99,
-   "currency": "USD",
-   "image": "/products/d-jew2.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Macy's",
-    "url": "https://www.macys.com/shop/product/ray-ban-unisex-new-wayfarer-classic-square-sunglasses-rb2132?ID=27354523"
-   }
-  },
-  {
-   "id": "d-kid4",
-   "title": "Board Game: Monopoly",
-   "category": "kids-toys",
-   "price": 19.99,
-   "currency": "USD",
-   "image": "/products/d-kid4.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Target",
-    "url": "https://www.target.com/p/hasbro-monopoly-board-game/-/A-94111131"
-   }
-  },
-  {
-   "id": "d-spo2",
-   "title": "Gaiam Essentials Yoga Mat 6mm",
-   "category": "sports",
-   "price": 22.99,
-   "currency": "USD",
-   "image": "/products/d-spo2.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/Essentials-Yoga-Mat-6mm/183300567"
-   }
-  },
-  {
-   "id": "d-ele4",
-   "title": "HP 15.6\" Touch Laptop Core i5 8GB/512GB SSD",
-   "category": "electronics",
-   "price": 519.0,
-   "currency": "USD",
-   "image": "/products/d-ele4.webp",
-   "merchant": "Shopmate demo catalog",
-   "product_type": "laptop",
-   "specs": {
-    "CPU": "Intel Core i5",
-    "RAM": "8GB",
-    "Storage": "512GB SSD",
-    "Screen": "15.6\""
-   },
-   "tags": [
-    "laptop",
-    "programming",
-    "office",
-    "student"
-   ],
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/HP-15-6-inch-Windows-Touch-Laptop-Intel-Core-i5-1334U-8GB-RAM-512GB-SSD-Natural-Silver/16401519615"
-   }
-  },
-  {
-   "id": "d-gar1",
-   "title": "Makita XFD131 18V LXT Brushless 1/2\" Drill Driver Kit",
-   "category": "garden-tools",
-   "price": 179.0,
-   "currency": "USD",
-   "image": "/products/d-gar1.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Acme Tools",
-    "url": "https://www.acmetools.com/makita-18v-lxt-lithium-ion-brushless-cordless-1-2-in-driver-drill-kit-30ah-xfd131/088381866347.html"
-   }
-  },
-  {
-   "id": "d-ele1",
-   "title": "Samsung Galaxy Buds2 True Wireless Earbuds",
-   "category": "electronics",
-   "price": 96.69,
-   "currency": "USD",
-   "image": "/products/d-ele1.webp",
-   "merchant": "Shopmate demo catalog",
-   "product_type": "earbuds",
-   "specs": {
-    "Type": "True wireless earbuds",
-    "Noise cancelling": "Active",
-    "Battery": "Up to 20 hours with case",
-    "Charging": "USB-C, wireless"
-   },
-   "tags": [
-    "wireless",
-    "earbuds",
-    "headphones",
-    "bluetooth",
-    "battery",
-    "noise cancelling"
-   ],
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/site/questions/samsung-galaxy-buds2-true-wireless-earbud-headphones-white/12374208"
-   },
-   "brand": "Samsung"
-  },
-  {
-   "id": "d-com3",
-   "title": "Samsung 1TB SATA SSD",
-   "category": "computing",
-   "price": 349.99,
-   "currency": "USD",
-   "image": "/products/d-com3.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/product/samsung-870-evo-1tb-internal-ssd-sata/J3ZYGCHH2Z/sku/6447127"
-   }
-  },
-  {
-   "id": "d-off3",
-   "title": "Casio fx-991CW ClassWiz Scientific Calculator",
-   "category": "office",
-   "price": 29.98,
-   "currency": "USD",
-   "image": "/products/d-off3.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/FX-991CW-Scientific-Calculator-for-High-School-College/2559506645"
-   }
-  },
-  {
-   "id": "d-toi2",
-   "title": "Oral-B CrossAction All in One Toothbrush (Soft)",
-   "category": "toiletries",
-   "price": 5.97,
-   "currency": "USD",
-   "image": "/products/d-toi2.webp",
-   "merchant": "Shopmate demo catalog",
-   "product_type": "toothbrush",
-   "brand": "Oral-B",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/Oral-B-CrossAction-All-in-One-Toothbrush-Deep-Plaque-Removal-Soft-1-Ct-for-Adults-Children-3/24512082"
-   },
-   "photoBarcode": "4987176130051"
-  },
-  {
-   "id": "d-toi5",
-   "title": "Gillette Mach3 Razor Blade Refills (8 count)",
-   "category": "toiletries",
-   "price": 22.97,
-   "currency": "USD",
-   "image": "/products/d-toi5.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/MACH3-Mach3-Cartridges-8-ct/895318"
-   },
-   "photoBarcode": "7702018465385"
-  },
-  {
-   "id": "d-dri5",
-   "title": "Coca-Cola Classic 16.9 fl oz Bottles (6 pack)",
-   "category": "drinks",
-   "price": 7.49,
-   "currency": "USD",
-   "image": "/products/d-dri5.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Kroger",
-    "url": "https://www.kroger.com/p/coca-cola-soda-bottles/0004900002468"
-   }
-  },
-  {
-   "id": "d-dri3",
-   "title": "Lipton Black Tea Bags 100 ct (3 pack)",
-   "category": "drinks",
-   "price": 14.91,
-   "currency": "USD",
-   "image": "/products/d-dri3.webp",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/Lipton-Black-Tea-Bags-100-Count/17223623484"
-   },
-   "photoBarcode": "8720608632633"
-  },
-  {
-   "id": "d-bab2",
-   "title": "Pampers Sensitive Baby Wipes (56 count)",
-   "category": "baby",
-   "price": 2.39,
-   "currency": "USD",
-   "image": "/products/d-bab2.webp",
-   "merchant": "Shopmate demo catalog",
-   "size": "56 wipes",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Target",
-    "url": "https://www.target.com/p/pampers-sensitive-baby-wipes-56ct/-/A-14596962"
-   },
-   "photoBarcode": "4015400636649"
-  },
-  {
-   "id": "d-toi9",
-   "title": "Colgate Triple Action Toothpaste 4 oz",
-   "category": "toiletries",
-   "price": 2.59,
-   "currency": "USD",
-   "brand": "Colgate",
-   "size": "150g",
-   "product_type": "toothpaste",
-   "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi9.webp",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "CVS",
-    "url": "https://www.cvs.com/shop/colgate-triple-action-toothpaste-4-oz-prodid-823794?skuId=823794"
-   },
-   "photoBarcode": "6281001112013"
-  },
-  {
-   "id": "d-toi10",
-   "title": "Sensodyne Repair & Protect Toothpaste 3.4 oz",
-   "category": "toiletries",
-   "price": 7.47,
-   "currency": "USD",
-   "brand": "Sensodyne",
-   "size": "75ml",
-   "product_type": "toothpaste",
-   "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi10.webp",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Walmart",
-    "url": "https://www.walmart.com/ip/Sensodyne-Repair-and-Protect-Fluoride-Toothpaste-for-Sensitive-Teeth-Mint-Flavor-3-4Oz-for-Adults/23814510"
-   },
-   "photoBarcode": "5054563070951"
-  },
-  {
-   "id": "d-toi13",
-   "title": "Nivea Men Sensitive 3-in-1 Body Wash 16.9 fl oz",
-   "category": "toiletries",
-   "price": 10.49,
-   "currency": "USD",
-   "brand": "Nivea",
-   "size": "500ml",
-   "product_type": "body wash",
-   "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi13.webp",
-   "barcode": "0072140810849",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "CVS",
-    "url": "https://www.cvs.com/shop/nivea-men-sensitive-skin-body-wash-16-9-oz-prodid-1013088"
-   }
-  },
-  {
-   "id": "d-toi14",
-   "title": "Dove Deep Moisture Body Wash 20 fl oz",
-   "category": "toiletries",
-   "price": 10.79,
-   "currency": "USD",
-   "brand": "Dove",
-   "size": "500ml",
-   "product_type": "body wash",
-   "merchant": "Shopmate demo catalog",
-   "image": "/products/d-toi14.webp",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "CVS",
-    "url": "https://www.cvs.com/shop/dove-deep-moisture-body-wash-for-dry-skin-20-oz-prodid-978106"
-   },
-   "photoBarcode": "8717163742839"
-  },
-  {
-   "id": "w-hp3",
-   "title": "JBL Live 650BTNC Noise Cancelling Headphones",
-   "category": "electronics",
-   "price": 129.95,
-   "brand": "JBL",
-   "product_type": "headphones",
-   "image": "/products/w-hp3.webp",
-   "specs": {
-    "Type": "Over-ear, Bluetooth",
-    "Battery": "20 hours (ANC on)",
-    "Noise cancelling": "Active",
-    "Mic": "Yes"
-   },
-   "tags": [
-    "wireless",
-    "headphones",
-    "noise cancelling",
-    "anc",
-    "over-ear",
-    "battery"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Audio Advice",
-    "url": "https://www.audioadvice.com/products/jbl-live-650btnc-wireless-over-ear-noise-cancelling-headphones-black?variant=41288204943444"
-   }
-  },
-  {
-   "id": "w-hp4",
-   "title": "Sony WH-CH510 Wireless On-Ear Headphones",
-   "category": "electronics",
-   "price": 32.0,
-   "brand": "Sony",
-   "product_type": "headphones",
-   "image": "/products/w-hp4.webp",
-   "specs": {
-    "Type": "On-ear, Bluetooth",
-    "Battery": "35 hours",
-    "Charging": "USB-C quick charge",
-    "Mic": "Yes"
-   },
-   "tags": [
-    "wireless",
-    "headphones",
-    "over-ear",
-    "bluetooth",
-    "long battery",
-    "battery"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "BirdieBox",
-    "url": "https://birdiebox.com/products/sony-wh-ch510-wireless-headphones"
-   }
-  },
-  {
-   "id": "w-lp1",
-   "title": "Acer Aspire 5 15.6\" Laptop Core i5 8GB/512GB SSD",
-   "category": "computing",
-   "price": 599.99,
-   "brand": "Acer",
-   "product_type": "laptop",
-   "image": "/products/w-lp1.webp",
-   "specs": {
-    "CPU": "Intel Core i5",
-    "RAM": "8GB",
-    "Storage": "512GB SSD",
-    "Screen": "15.6\" FHD",
-    "Battery": "Up to 8 hours"
-   },
-   "tags": [
-    "laptop",
-    "programming",
-    "student",
-    "office"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/site/reviews/acer-aspire-5-15-6-laptop-intel-core-i5-8gb-memory-512gb-solid-state-drive-cha-black/6359966"
-   }
-  },
-  {
-   "id": "w-lp2",
-   "title": "Lenovo IdeaPad Slim 3 15.6\" Laptop Ryzen 5 8GB/256GB SSD",
-   "category": "computing",
-   "price": 629.99,
-   "brand": "Lenovo",
-   "product_type": "laptop",
-   "image": "/products/w-lp2.webp",
-   "specs": {
-    "CPU": "AMD Ryzen 5",
-    "RAM": "16GB",
-    "Storage": "512GB SSD",
-    "Screen": "15.6\" FHD",
-    "Battery": "Up to 9 hours"
-   },
-   "tags": [
-    "laptop",
-    "programming",
-    "developer",
-    "multitasking",
-    "16gb"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/product/lenovo-ideapad-slim-3-15-6-full-hd-laptop-amd-ryzen-5-40-2025-8gb-memory-256gb-storage-abyss-blue/JJGH3Q8P2K/sku/6668500"
-   }
-  },
-  {
-   "id": "w-lp3",
-   "title": "Apple MacBook Air 13.3\" M1 8GB/256GB",
-   "category": "computing",
-   "price": 779.95,
-   "brand": "Apple",
-   "product_type": "laptop",
-   "image": "/products/w-lp3.webp",
-   "specs": {
-    "CPU": "Apple M1",
-    "RAM": "8GB",
-    "Storage": "256GB SSD",
-    "Screen": "13.3\" Retina",
-    "Battery": "Up to 18 hours"
-   },
-   "tags": [
-    "laptop",
-    "programming",
-    "ios development",
-    "battery",
-    "lightweight"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/product/macbook-air-13-3-laptop-apple-m1-chip-8gb-memory-256gb-ssd-space-gray/JJ8ZHP82L3"
-   }
-  },
-  {
-   "id": "w-rs1",
-   "title": "ASICS GEL-Kayano Stability Running Shoes",
-   "category": "footwear",
-   "price": 164.99,
-   "brand": "ASICS",
-   "product_type": "running shoes",
-   "image": "/products/w-rs1.webp",
-   "specs": {
-    "Support": "Stability (overpronation / flat feet)",
-    "Sizes (EU)": "40–46",
-    "Drop": "10mm",
-    "Use": "Road running"
-   },
-   "sizes": [
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "tags": [
-    "running",
-    "shoes",
-    "stability",
-    "flat feet",
-    "overpronation",
-    "arch support"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "DICK'S Sporting Goods",
-    "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-kayano-31-running-shoes-24asimglkyn31smggmns/24asimglkyn31smggmns"
-   }
-  },
-  {
-   "id": "w-rs2",
-   "title": "Brooks Adrenaline GTS 24 Running Shoes",
-   "category": "footwear",
-   "price": 104.95,
-   "brand": "Brooks",
-   "product_type": "running shoes",
-   "image": "/products/w-rs2.webp",
-   "specs": {
-    "Support": "Stability (GuideRails, flat feet)",
-    "Sizes (EU)": "39–45",
-    "Drop": "12mm",
-    "Use": "Road running"
-   },
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45
-   ],
-   "tags": [
-    "running",
-    "shoes",
-    "stability",
-    "flat feet",
-    "overpronation",
-    "arch support"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Dave's Running Shop",
-    "url": "https://davesrunning.com/products/adrenaline-gts-24?variant=42247375192160"
-   }
-  },
-  {
-   "id": "w-rs3",
-   "title": "ASICS Gel-Cumulus 26 Running Shoes",
-   "category": "footwear",
-   "price": 85.97,
-   "brand": "ASICS",
-   "product_type": "running shoes",
-   "image": "/products/w-rs3.webp",
-   "specs": {
-    "Support": "Neutral",
-    "Sizes (EU)": "39–46",
-    "Drop": "10mm",
-    "Use": "Daily training"
-   },
-   "sizes": [
-    39,
-    40,
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "tags": [
-    "running",
-    "shoes",
-    "neutral",
-    "cushioning"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "DICK'S Sporting Goods",
-    "url": "https://www.dickssportinggoods.com/p/asics-mens-gel-cumulus-26-running-shoes-24asimcmls26blkcnmns/24asimcmls26blkcnmns"
-   }
-  },
-  {
-   "id": "w-rs4",
-   "title": "Brooks Ghost 16 GTX Running Shoes",
-   "category": "footwear",
-   "price": 169.99,
-   "brand": "Brooks",
-   "product_type": "running shoes",
-   "image": "/products/w-rs4.webp",
-   "specs": {
-    "Support": "Neutral",
-    "Sizes (EU)": "40 to 45",
-    "Drop": "12mm",
-    "Use": "Waterproof road running (GORE-TEX)"
-   },
-   "sizes": [
-    40,
-    41,
-    42,
-    43,
-    44,
-    45
-   ],
-   "tags": [
-    "running",
-    "shoes",
-    "neutral",
-    "waterproof"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "DICK'S Sporting Goods",
-    "url": "https://www.dickssportinggoods.com/p/brooks-mens-ghost-16-gtx-running-shoes-24bromghst16gtxblmns/24bromghst16gtxblmns"
-   }
-  },
-  {
-   "id": "w-rs5",
-   "title": "Brooks Glycerin 23 Max-Cushion Running Shoes",
-   "category": "footwear",
-   "price": 175.0,
-   "brand": "Brooks",
-   "product_type": "running shoes",
-   "image": "/products/w-rs5.webp",
-   "specs": {
-    "Support": "Neutral, max cushion",
-    "Sizes (EU)": "41–46",
-    "Drop": "10mm",
-    "Use": "Long runs"
-   },
-   "sizes": [
-    41,
-    42,
-    43,
-    44,
-    45,
-    46
-   ],
-   "tags": [
-    "running",
-    "shoes",
-    "cushioning",
-    "neutral"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Fleet Feet",
-    "url": "https://www.fleetfeet.com/products/mens-brooks-glycerin-23?upc=195394767650"
-   }
-  },
-  {
-   "id": "w-sp1",
-   "title": "Soundcore Select 4 Go Portable Bluetooth Speaker (Blue)",
-   "category": "electronics",
-   "price": 19.99,
-   "brand": "Soundcore",
-   "product_type": "speaker",
-   "image": "/products/w-sp1.webp",
-   "specs": {
-    "Battery": "20 hours",
-    "Water resistance": "IP67, floats"
-   },
-   "tags": [
-    "speaker",
-    "bluetooth",
-    "portable",
-    "waterproof",
-    "party"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/product/soundcore-by-anker-select-4-go-ip67-waterproof-dustproof-floatable-ultra-portable-bluetooth-speaker-with-20h-playtime-black/JJ858RX2QX/sku/12091095"
-   }
-  },
-  {
-   "id": "w-sw1",
-   "title": "Fitbit Inspire 3 Fitness Tracker (Midnight Zen)",
-   "category": "jewelry-watches",
-   "price": 69.95,
-   "brand": "Fitbit",
-   "product_type": "smartwatch",
-   "image": "/products/w-sw1.webp",
-   "specs": {
-    "Battery": "Up to 10 days",
-    "Sensors": "Heart rate, sleep, SpO2"
-   },
-   "tags": [
-    "smartwatch",
-    "fitness",
-    "running",
-    "tracker"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Best Buy",
-    "url": "https://www.bestbuy.com/product/google-fitbit-inspire-3-health-fitness-tracker-works-with-android-and-ios-midnight-zen-2022/J3GWJ6S29F/sku/6514030"
-   }
-  },
-  {
-   "id": "w-ms1",
-   "title": "Logitech M185 Wireless Mouse",
-   "category": "computing",
-   "price": 12.99,
-   "brand": "Logitech",
-   "product_type": "mouse",
-   "image": "/products/w-ms1.webp",
-   "specs": {
-    "Connection": "2.4GHz USB receiver",
-    "Battery": "AA, up to 12 months"
-   },
-   "tags": [
-    "mouse",
-    "wireless",
-    "office",
-    "programming"
-   ],
-   "currency": "USD",
-   "merchant": "Shopmate demo catalog",
-   "priceUpdatedAt": "2026-11-20",
-   "priceSource": {
-    "name": "Logitech",
-    "url": "https://www.logitech.com/en-us/shop/p/m185-wireless-mouse.910-002225"
-   }
-  },
-  {
-   "id": "op-0070847012474",
-   "title": "Monster Zero Ultra 1 can (16 oz)",
-   "category": "drinks",
-   "price": 2.5,
-   "currency": "USD",
-   "image": "/products/op-0070847012474.webp",
-   "merchant": "Shopmate partner store",
-   "brand": "Monster",
-   "product_type": "ultra",
-   "size": "1 can (16 oz)",
-   "barcode": "0070847012474",
-   "priceUpdatedAt": "2026-11-06",
-   "priceSource": {
-    "name": "Safeway (Open Prices receipt)",
-    "url": "https://prices.openfoodfacts.org/products/0070847012474"
-   },
-   "imageCredit": {
-    "source": "https://world.openfoodfacts.org/product/0070847012474",
-    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
-   },
-   "addedAt": "2026-11-20"
-  },
-  {
-   "id": "op-0855352008989",
-   "title": "Athletic Brewing Co Cerveza Atletica",
-   "category": "drinks",
-   "price": 10.99,
-   "currency": "USD",
-   "image": "/products/op-0855352008989.webp",
-   "merchant": "Shopmate partner store",
-   "brand": "Athletic Brewing Co",
-   "product_type": "atletica",
-   "size": null,
-   "barcode": "0855352008989",
-   "priceUpdatedAt": "2026-11-11",
-   "priceSource": {
-    "name": "Whole Foods Market (Open Prices receipt)",
-    "url": "https://prices.openfoodfacts.org/products/0855352008989"
-   },
-   "imageCredit": {
-    "source": "https://world.openfoodfacts.org/product/0855352008989",
-    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
-   },
-   "addedAt": "2026-11-20"
-  },
-  {
-   "id": "op-0071117025149",
-   "title": "Reser's Main St. Bistro Signature Macaroni & Cheese",
-   "category": "groceries",
-   "price": 5.0,
-   "currency": "USD",
-   "image": "/products/op-0071117025149.webp",
-   "merchant": "Shopmate partner store",
-   "brand": "Reser's Main St. Bistro",
-   "product_type": "cheese",
-   "size": null,
-   "barcode": "0071117025149",
-   "priceUpdatedAt": "2026-11-06",
-   "priceSource": {
-    "name": "Safeway (Open Prices receipt)",
-    "url": "https://prices.openfoodfacts.org/products/0071117025149"
-   },
-   "imageCredit": {
-    "source": "https://world.openfoodfacts.org/product/0071117025149",
-    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
-   },
-   "addedAt": "2026-11-20"
-  },
-  {
-   "id": "op-0072655001053",
-   "title": "Healthy Choice CAFÉ STEAMERS Chicken Margherita with Balsamic 9.5 oz",
-   "category": "groceries",
-   "price": 3.99,
-   "currency": "USD",
-   "image": "/products/op-0072655001053.webp",
-   "merchant": "Shopmate partner store",
-   "brand": "Healthy Choice CAFÉ STEAMERS",
-   "product_type": "balsamic",
-   "size": "9.5 oz",
-   "barcode": "0072655001053",
-   "priceUpdatedAt": "2026-11-06",
-   "priceSource": {
-    "name": "Safeway (Open Prices receipt)",
-    "url": "https://prices.openfoodfacts.org/products/0072655001053"
-   },
-   "imageCredit": {
-    "source": "https://world.openfoodfacts.org/product/0072655001053",
-    "license": "CC BY-SA 3.0 (Open Food Facts contributors)"
-   },
-   "addedAt": "2026-11-20"
-  }
- ],
- "pricesUpdatedAt": "2026-11-20",
- "refreshedAt": "2026-11-20",
- "refreshStats": {
-  "refreshed": 37,
-  "added": 0,
-  "kept": 9,
-  "total": 46
- }
 }
